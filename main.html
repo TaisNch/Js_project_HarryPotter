@@ -12,15 +12,20 @@
       //предлагаю здесь сделать ссылки на разделы страницы, можно еще сделать
       выпадающий список страниц с факультетами
     </header>
-    <main class="main">
-      <!--слайдер с факультетами-->
-      <div class="main__slyder"></div>
-      <!--рандомайзер шляпа-->
-      <div class="main__hat"></div>
-      <!--игра с карточками-->
-      <div class="main__play"></div>
-      <!--рандомайзер заклинания-->
-      <div class="main__spell"></div>
+    <main class="container">
+      <div class="container__box hatbox">
+        <img src="./assets/images/img_main/hat.png" alt="Sorting Hat" />
+        <div class="hatbox__text">
+          I've sorted high, I've sorted low, I've done the job through thick and
+          thin So put me on and you will know Which house you should be in...
+        </div>
+      </div>
+      <audio
+        src="./assets/581.mp3"
+        id="song1"
+        autoplay="autoplay"
+        loop="loop"
+      ></audio>
     </main>
     <footer></footer>
     <script src="assets/js/slyder.js"></script>
