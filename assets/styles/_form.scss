@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .form__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .form__label {
+        font-weight: 800;
+    }
+    .form__input {
+        min-width: 20px;
+        max-width: 250px;
+    }
+    .agreement-wrap {
+        flex-direction: row;
+    }
+}
