@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Room of Requirement</title>
+        <link rel="stylesheet" href="assets/styles/normalize.css" />
+        <link rel="stylesheet" href="assets/styles/main.css" />
+    </head>
+    <body>
+        <form name="" class="form" novalidate>
+            <h2 class="form__title">Let's join our community</h2>
+            <div class="form__wrapper">
+                <label for="userName" class="form__label"
+                    >What's your name?</label
+                >
+                <input
+                    name="userName"
+                    type="text"
+                    class="form__input"
+                    placeholder="your name"
+                    minlength="2"
+                    maxlength="20"
+                    id="userName"
+                    required
+                />
+            </div>
+            <div class="form__wrapper">
+                <label for="userEmail" class="form__label"
+                    >What's your e-mail?</label
+                >
+                <input
+                    name="userEmail"
+                    type="email"
+                    class="form__input"
+                    id="userEmail"
+                    placeholder="your e-mail"
+                    required
+                />
+            </div>
+            <div class="form__wrapper">
+                <label for="userAge" class="form__label"
+                    >How old are you?</label
+                >
+                <input
+                    name="userAge"
+                    type="number"
+                    class="form__input"
+                    id="userAge"
+                    min="0"
+                    max="200"
+                    placeholder="your age"
+                    required
+                />
+            </div>
+            <div class="form__wrapper">
+                <div class="form__label">Sex</div>
+                <div class="form__sex">
+                    <input
+                        name="radio"
+                        class="form__input"
+                        type="radio"
+                        id="m"
+                        value="male"
+                    />
+                    <label for="m" class="form__minilabel">male</label>
+                </div>
+                <div class="form__sex">
+                    <input
+                        name="radio"
+                        class="form__input"
+                        type="radio"
+                        id="w"
+                        value="female"
+                    />
+                    <label for="w" class="form__minilabel">female</label>
+                </div>
+            </div>
+            <div class="form__wrapper">
+                <label for="house" class="form__label">Choose your house</label>
+                <select
+                    name="userJob"
+                    id="house"
+                    class="form__input userJob"
+                    required
+                >
+                    <option value="">your house</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                </select>
+            </div>
+            <div class="form__wrapper">
+                <label for="userPassword" class="form__label">Password</label>
+                <div class="form__text">
+                    Password must contain at least 1 capital letter, 1 number
+                </div>
+                <input
+                    name="userPassword"
+                    type="password"
+                    class="form__input"
+                    id="userPassword"
+                    placeholder="password"
+                    required
+                    minlength="8"
+                    pattern="^(?=.*\d)\w{8,}$"
+                />
+            </div>
+            <div class="form__wrapper agreement-wrap">
+                <input
+                    type="checkbox"
+                    name="userAgreement"
+                    value="I agree with the user agreement"
+                    class="form__agreement userAgreement"
+                />
+                <span class="form__agreeText"
+                    >I agree with the user agreement</span
+                >
+            </div>
+            <div class="form__wrapper">
+                <input
+                    type="submit"
+                    name="submitButton"
+                    value="Submit"
+                    class="form__button"
+                    disabled
+                />
+            </div>
+        </form>
+        <script type="module" src="./assets/js/form.js"></script>
+    </body>
+</html>
