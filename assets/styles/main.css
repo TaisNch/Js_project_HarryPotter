@@ -17,6 +17,12 @@
   min-width: 20px;
   max-width: 250px;
 }
+.form .form__input:required:valid {
+  border: 1.5px solid green;
+}
 .form .agreement-wrap {
   flex-direction: row;
+}
+.form .error {
+  color: red;
 }/*# sourceMappingURL=main.css.map */

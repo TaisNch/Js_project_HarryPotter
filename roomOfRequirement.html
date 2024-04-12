@@ -22,7 +22,7 @@
             </div>
         </header>
 
-        <form name="" class="form" novalidate>
+        <form name="form" class="form" novalidate>
             <h2 class="form__title">Fill in the form to join our community</h2>
             <div class="form__wrapper">
                 <label for="userName" class="form__label"
@@ -127,6 +127,7 @@
                     name="userAgreement"
                     value="I agree with the user agreement"
                     class="form__agreement userAgreement"
+                    required
                 />
                 <span class="form__agreeText"
                     >I solemnly swear that I'm up to no good.
@@ -138,9 +139,9 @@
                     name="submitButton"
                     value="Submit"
                     class="form__button"
-                    disabled
                 />
             </div>
+            <div class="errInfo"></div>
         </form>
         <script type="module" src="./assets/js/form.js"></script>
     </body>
