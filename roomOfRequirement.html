@@ -22,7 +22,7 @@
             </div>
         </header>
 
-        <form name="" class="form" novalidate>
+        <form name="form" class="form" novalidate>
             <h2 class="form__title">Fill in the form to join our community</h2>
             <div class="form__wrapper">
                 <label for="userName" class="form__label"
@@ -71,7 +71,7 @@
                 <div class="form__label">Sex</div>
                 <div class="form__sex">
                     <input
-                        name="radio"
+                        name="radioOne"
                         class="form__input"
                         type="radio"
                         id="m"
@@ -81,23 +81,20 @@
                 </div>
                 <div class="form__sex">
                     <input
-                        name="radio"
+                        name="radioTwo"
                         class="form__input"
                         type="radio"
                         id="w"
                         value="female"
                     />
-                    <label for="w" class="form__minilabel">female</label>
+                    <label for="w" class="form__minilabel" id="sex"
+                        >female</label
+                    >
                 </div>
             </div>
             <div class="form__wrapper">
                 <label for="house" class="form__label">Choose your house</label>
-                <select
-                    name="userJob"
-                    id="house"
-                    class="form__input userJob"
-                    required
-                >
+                <select name="house" id="house" class="form__input" required>
                     <option value="">your house</option>
                     <option value="Gryffindor">Gryffindor</option>
                     <option value="Ravenclaw">Ravenclaw</option>
@@ -125,21 +122,24 @@
                 <input
                     type="checkbox"
                     name="userAgreement"
-                    value="I agree with the user agreement"
+                    value="I solemnly swear that I'm up to no good."
                     class="form__agreement userAgreement"
+                    required
                 />
                 <span class="form__agreeText"
                     >I solemnly swear that I'm up to no good.
                 </span>
             </div>
             <div class="form__wrapper">
-                <input
+                <button
                     type="submit"
                     name="submitButton"
                     value="Submit"
                     class="form__button"
                     disabled
-                />
+                >
+                    Submit
+                </button>
             </div>
         </form>
         <script type="module" src="./assets/js/form.js"></script>
