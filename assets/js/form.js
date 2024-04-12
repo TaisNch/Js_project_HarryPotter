@@ -1,27 +1,44 @@
 const form = document.forms.form;
+const inputs = document.querySelectorAll('input');
+const formAgreement = form.elements.userAgreement;
+const formButton = form.elements.submitButton;
+
 form.addEventListener('submit', checkAllInputs);
 
+formAgreement.addEventListener('change', () => {
+    formButton.disabled = !formAgreement.checked;
+    if (formAgreement.checked === true) {
+        formButton.removeAttribute(disabled);
+    }
+});
+
+for (let input of inputs) {
+    input.addEventListener('focus', function () {
+        input.style.border = '2px solid yellow';
+    });
+    input.addEventListener('blur', function () {
+        input.style.border = '';
+    });
+}
 function checkValidity(input) {
     const validity = input.validity;
     if (validity.valueMissing) {
-        createNewElement('This field is empty', 'error', input);
+        createNewErrorMessage('This field is empty', input);
     }
     if (validity.patternMismatch) {
-        createNewElement('Invalid data format', 'error', input);
+        createNewErrorMessage('Invalid data format', input);
     }
     if (validity.rangeOverflow) {
         const max = getAttributeValue(input, 'max');
-        createNewElement(
+        createNewErrorMessage(
             `The maximum value cannot be greater than ${max}`,
-            'error',
             input
         );
     }
     if (validity.rangeUnderflow) {
         const min = getAttributeValue(input, 'min');
-        createNewElement(
+        createNewErrorMessage(
             `The minimum value cannot be less than ${min}`,
-            'error',
             input
         );
     }
@@ -29,16 +46,30 @@ function checkValidity(input) {
 
 function checkAllInputs(e) {
     e.preventDefault();
-    errors = [];
-    let inputs = document.querySelectorAll('input');
+    if (document.querySelectorAll('.error')) {
+        document.querySelectorAll('.error').forEach((error) => {
+            error.remove();
+        });
+    }
     for (let input of inputs) {
         checkValidity(input);
     }
+    if (
+        form.elements.radioOne.checked === false &&
+        form.elements.radioTwo.checked === false
+    ) {
+        createNewErrorMessage('Choose one', document.getElementById('sex'));
+    }
+    if (form.elements.house.value === '') {
+        createNewErrorMessage('Choose one', form.elements.house);
+    }
+    formAgreement.checked = false;
+    formButton.disabled = !formAgreement.checked;
 }
 
-function createNewElement(content, classElem, elem) {
-    const textBox = document.createElement('div');
-    textBox.classList.add(classElem);
-    textBox.textContent = content;
-    elem.after(textBox);
+function createNewErrorMessage(content, elem) {
+    const errorMessage = document.createElement('div');
+    errorMessage.classList.add('error');
+    errorMessage.textContent = content;
+    elem.after(errorMessage);
 }
