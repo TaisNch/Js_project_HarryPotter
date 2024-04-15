@@ -1,5 +1,7 @@
 const hat = document.querySelector('.hatbox');
 const container = document.querySelector('.container');
+const houseBox = document.createElement('div');
+container.append(houseBox);
 hat.addEventListener('click',sortHouse);
 const houses = [
     {
@@ -26,15 +28,14 @@ const houses = [
 function sortHouse() {
     let randomIndex = Math.floor(Math.random() * houses.length);
     let randomHouse = houses[randomIndex]; 
-    console.log(randomHouse);
     hat.style.display='none';
     houses.splice(randomIndex,1);
-    console.log(houses);
-    showSorted(randomHouse,houses);
+    showRandom(randomHouse);
+    setInterval(function() {
+        showOthers(houses);
+    },1000)
 }
-function showSorted(randomHouse,houses) {
-    const houseBox = document.createElement('div');
-    container.append(houseBox);
+function showRandom(randomHouse) {
     houseBox.innerText = 'Your house is: ';
     const chosenHouse = document.createElement('a');
     houseBox.appendChild(chosenHouse);
@@ -42,6 +43,8 @@ function showSorted(randomHouse,houses) {
     const imgChH = document.createElement('img');
     imgChH.src = randomHouse.img;
     chosenHouse.appendChild(imgChH);
+}
+function showOthers (houses) {
     const otherHouses = document.createElement('div');
     houseBox.appendChild(otherHouses);
     otherHouses.innerText = 'To see information about the other houses - click the house logo:';

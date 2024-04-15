@@ -1,0 +1,16 @@
+* {
+  border: 1px solid;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("//assets/images/img_main/wand.png"), pointer;
+}
+.header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=template.css.map */

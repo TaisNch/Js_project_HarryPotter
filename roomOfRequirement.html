@@ -8,18 +8,25 @@
         <link rel="stylesheet" href="assets/styles/style.css" />
     </head>
     <body>
-        <header class="header">
-            <div class="header__wrapper">
-                <a href="./Gryffindor.html">Gryffindor</a>
-                <a href="./Hufflepuff.html">Hufflepuff</a>
-                <a href="./roomOfRequirement.html"
-                    ><img
-                        src="./assets/images/img_main/logo.png"
-                        alt="Houses logo"
-                /></a>
-                <a href="./Ravenclaw.html">Ravenclaw</a>
-                <a href="./Slytherin.html">Slytherin</a>
-            </div>
+        <header>
+            <header class="header">
+                <div class="header__wrapper">
+                    <a href="./Gryffindor.html">Gryffindor</a>
+                    <a href="./Hufflepuff.html">Hufflepuff</a>
+                    <div class="header__center">
+                        <a href="./roomOfRequirement.html"
+                            >Room of Requirement</a
+                        >
+                        <a href="./main.html">
+                            <img
+                                src="./assets/images/img_main/logo.png"
+                                alt="Houses logo"
+                        /></a>
+                    </div>
+                    <a href="./Ravenclaw.html">Ravenclaw</a>
+                    <a href="./Slytherin.html">Slytherin</a>
+                </div>
+            </header>
         </header>
         <div class="spell">
             <h2 class="spell__header h2">Choose your spell of the day</h2>
@@ -31,7 +38,8 @@
                     <img
                         class="rndm__img"
                         src="assets/images/img_spell/magic_wand.png"
-                        alt="wand" />
+                        alt="wand"
+                    />
                 </button>
                 <div class="rndm__spell">
                     <p class="rndm__p" id="rndm__p">Vingardium leviosa!</p>
@@ -64,7 +72,8 @@
                     minlength="2"
                     maxlength="20"
                     id="userName"
-                    required />
+                    required
+                />
             </div>
             <div class="form__wrapper">
                 <label for="userEmail" class="form__label"
@@ -76,7 +85,8 @@
                     class="form__input"
                     id="userEmail"
                     placeholder="your e-mail"
-                    required />
+                    required
+                />
             </div>
             <div class="form__wrapper">
                 <label for="userAge" class="form__label"
@@ -90,7 +100,8 @@
                     min="0"
                     max="200"
                     placeholder="your age"
-                    required />
+                    required
+                />
             </div>
             <div class="form__wrapper">
                 <div class="form__label">Sex</div>
@@ -100,7 +111,8 @@
                         class="form__input"
                         type="radio"
                         id="m"
-                        value="male" />
+                        value="male"
+                    />
                     <label for="m" class="form__minilabel">male</label>
                 </div>
                 <div class="form__sex">
@@ -109,7 +121,8 @@
                         class="form__input"
                         type="radio"
                         id="w"
-                        value="female" />
+                        value="female"
+                    />
                     <label for="w" class="form__minilabel" id="sex"
                         >female</label
                     >
@@ -138,7 +151,8 @@
                     placeholder="password"
                     required
                     minlength="8"
-                    pattern="^(?=.*\d)\w{8,}$" />
+                    pattern="^(?=.*\d)\w{8,}$"
+                />
             </div>
             <div class="form__wrapper agreement-wrap">
                 <input
@@ -146,7 +160,8 @@
                     name="userAgreement"
                     value="I solemnly swear that I'm up to no good."
                     class="form__agreement userAgreement"
-                    required />
+                    required
+                />
                 <span class="form__agreeText"
                     >I solemnly swear that I'm up to no good.
                 </span>
@@ -157,7 +172,8 @@
                     name="submitButton"
                     value="Submit"
                     class="form__button"
-                    disabled>
+                    disabled
+                >
                     Submit
                 </button>
             </div>
