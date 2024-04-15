@@ -1,36 +1,34 @@
-const game = document.getElementById("cards")
-const startBtn = document.getElementById("startBtn")
+const game = document.getElementById("game")
+const cardsCount = 4;
 
-const cardsNumberArray = []
-  const firstCard = null
-  const secondCard = null
-  const cardCount = 4;
 
-//const startGame  = () =>{
-  
-// Создание массива чисел
-  for (let i = 1; i <= cardCount; i++) {
+function startGame(game) {
+  const cardsNumberArray = []
+  let firstCard = null
+  let secondCard = null
+
+
+  // Создание массива чисел
+  for (let i = 1; i <= cardsCount; i++) {
     cardsNumberArray.push(i, i)
-    console.log(cardsNumberArray)
   }
 
   // Перемешивание массива чисел
   for (let i = 0; i < cardsNumberArray.length; i++) {
-    const randomIndex = Math.floor(Math.random() * cardsNumberArray.length)
-    const temp = cardsNumberArray[i]
+    let randomIndex = Math.floor(Math.random() * cardsNumberArray.length)
+
+    let temp = cardsNumberArray[i]
     cardsNumberArray[i] = cardsNumberArray[randomIndex]
     cardsNumberArray[randomIndex] = temp
-    console.log(cardsNumberArray)
   }
 
- // Создание карточек
+  // Создание карточек
   for (const cardNumber of cardsNumberArray) {
-    const card = document.createElement("div")
+    let card = document.createElement("div")
     card.textContent = cardNumber
     card.classList.add("card")
-    console.log(card)
 
-    //Клик по карточке
+    // Клик по карточке
     card.addEventListener("click", function () {
       if (card.classList.contains("open") || card.classList.contains("success")) {
         return
@@ -59,20 +57,19 @@ const cardsNumberArray = []
           firstCard.classList.add("success")
           secondCard.classList.add("success")
         }
-       }})}
+      }
+      if (cardsNumberArray.length === document.querySelectorAll(".success").length) {
+        setTimeout(function () {
+          game.innerHTML = ""
+          alert("You winn! Start one more time")
+          startGame(game)
+        }, 400)
+      }
 
-    //   // Проверка финала игры
-    //   if (cardsNumberArray.length === document.querySelectorAll(".success").length) {
-    //     setTimeout(function () {
-    //       game.innerHTML = ""
-    //       alert("Try again")
-    //       startGame(game)
-    //     }, 400)
-    //   }
+    })
 
-  //  })
-   //   }
-//}
-//}
+    game.append(card)
+  }
+}
 
-//startBtn.addEventListener('click', startGame);
+startGame(game)

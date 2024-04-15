@@ -9,8 +9,9 @@ const randomSpell = ()=> {
   .then((data) => {
     const length = data.length;
     const a = Math.floor (Math.random()*length);
-    spell.innerHTML = data[a].name;
-    description.innerHTML = data[a].description}
+    spell.innerHTML = `Your spell of the day is -  ${data[a].name}`;
+    description.innerHTML = `What does it do? -  ${data[a].description}`;
+  }
 )
 .catch ((error) => (console.log(error)));
     }
