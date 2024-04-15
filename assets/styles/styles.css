@@ -1,8 +1,12 @@
-header .header__wrapper {
+.header__wrapper {
   display: flex;
   flex-direction: row;
 }
-header .header__wrapper .header__center {
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
   display: flex;
   flex-direction: column;
 }
@@ -58,20 +62,28 @@ header .header__wrapper .header__center {
   background-color: #009705;
 }
 
-header .header__wrapper {
+.header__wrapper {
   display: flex;
   flex-direction: row;
 }
-header .header__wrapper .header__center {
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
   display: flex;
   flex-direction: column;
 }
 
-header .header__wrapper {
+.header__wrapper {
   display: flex;
   flex-direction: row;
 }
-header .header__wrapper .header__center {
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
   display: flex;
   flex-direction: column;
 }
@@ -113,11 +125,15 @@ header .header__wrapper .header__center {
   text-align: center;
 }
 
-header .header__wrapper {
+.header__wrapper {
   display: flex;
   flex-direction: row;
 }
-header .header__wrapper .header__center {
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
   display: flex;
   flex-direction: column;
 }
@@ -152,11 +168,15 @@ header .header__wrapper .header__center {
   color: red;
 }
 
-header .header__wrapper {
+.header__wrapper {
   display: flex;
   flex-direction: row;
 }
-header .header__wrapper .header__center {
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
   display: flex;
   flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
