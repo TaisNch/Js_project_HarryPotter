@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Room of Requirement</title>
         <link rel="stylesheet" href="assets/styles/normalize.css" />
-        <link rel="stylesheet" href="assets/styles/main.css" />
+        <link rel="stylesheet" href="assets/styles/style.css" />
     </head>
     <body>
         <header class="header">
@@ -33,8 +33,21 @@
                         src="assets/images/img_spell/magic_wand.png"
                         alt="wand" />
                 </button>
-                <p class="rndm__p" id="rndm__p">Vingardium leviosa!</p>
+                <div class="rndm__spell">
+                    <p class="rndm__p" id="rndm__p">Vingardium leviosa!</p>
+                    <p class="rndm__p" id="rndm__p1">
+                        Causes an object to levitate; but remember what Hermione
+                        said: \"It's Wing-gar-dium Levi-o-sa, make the 'gar'
+                        nice and long.'\
+                    </p>
+                </div>
             </div>
+        </div>
+        <div class="cards">
+            <p class="spell__header h2">
+                Have fun and play! Find to same cards
+            </p>
+            <div class="cards__game game" id="game"></div>
         </div>
 
         <form name="form" class="form" novalidate>
@@ -149,7 +162,8 @@
                 </button>
             </div>
         </form>
-        <script type="module" src="./assets/js/form.js"></script>
-        <script type="module" src="./assets/js/random_spell.js"></script>
+        <script src="./assets/js/form.js"></script>
+        <script src="assets/js/random_spell.js"></script>
+        <script src="assets/js/play_cards.js"></script>
     </body>
 </html>

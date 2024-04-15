@@ -3,30 +3,20 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 40px 15px;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
 .card {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
-  height: 240px;
-  padding: 30px;
-  background-color: rgb(226, 187, 137);
-  font-size: 0;
-  color: transparent;
+  height: 50vh;
+  padding: 30vw;
+  background-image: url("../images/img_main/logo.png");
+  background-size: auto;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.card:hover {
-  background-color: rgb(241, 213, 176);
-}
-
-.card:active {
-  background-color: rgb(204, 159, 100);
+  transition: background-image 0.3s;
 }
 
 .open {
@@ -124,4 +114,4 @@
 }
 .form .error {
   color: red;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styles.css.map */
