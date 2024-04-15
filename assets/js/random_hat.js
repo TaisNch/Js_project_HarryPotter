@@ -31,7 +31,7 @@ function sortHouse() {
     hat.style.display='none';
     houses.splice(randomIndex,1);
     showRandom(randomHouse);
-    setInterval(function() {
+    setTimeout(function() {
         showOthers(houses);
     },1000)
 }
