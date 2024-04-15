@@ -1,3 +1,4 @@
+@import "./template";
 .game {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -10,13 +11,13 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    height:50vh;
+    height: 50vh;
     padding: 30vw;
-    background-image: url('../images/img_main/logo.png');
+    background-image: url("../images/img_main/logo.png");
     background-size: auto;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-image .3s;
+    transition: background-image 0.3s;
 }
 
 // .card:hover {
@@ -35,11 +36,11 @@
     cursor: default;
 }
 
-.open:hover{
+.open:hover {
     background-color: rgb(37, 60, 188);
 }
 
-.open:active{
+.open:active {
     background-color: rgb(37, 60, 188);
 }
 
@@ -50,10 +51,10 @@
     cursor: default;
 }
 
-.success:hover{
+.success:hover {
     background-color: #009705;
 }
 
-.success:active{
+.success:active {
     background-color: #009705;
 }

@@ -1,3 +1,12 @@
+header .header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+header .header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
+}
+
 .game {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -49,6 +58,24 @@
   background-color: #009705;
 }
 
+header .header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+header .header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
+}
+
+header .header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+header .header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
+}
+
 .spell {
   text-align: center;
 }
@@ -86,6 +113,15 @@
   text-align: center;
 }
 
+header .header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+header .header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -114,4 +150,13 @@
 }
 .form .error {
   color: red;
+}
+
+header .header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+header .header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
