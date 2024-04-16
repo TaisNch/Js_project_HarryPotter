@@ -12,11 +12,13 @@
     border-radius: 10%;
 }
 
-.rndm__spell {
+.rndm__spell,
+.rndm__wrapper {
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-items: center; 
 }
+
 
 .rndm__btn :hover {
     cursor: pointer;

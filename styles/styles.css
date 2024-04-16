@@ -13,7 +13,8 @@
   height: 50vh;
   padding: 30vw;
   background-image: url("../images/img_main/logo.png");
-  background-size: auto;
+  background-position: center;
+  background-size: cover;
   border-radius: 8px;
   cursor: pointer;
   transition: background-image 0.3s;
@@ -22,6 +23,7 @@
 .open {
   font-size: 36px;
   color: white;
+  background-image: none;
   background-color: rgb(37, 60, 188);
   cursor: default;
 }
@@ -37,53 +39,19 @@
 .success {
   font-size: 36px;
   color: white;
+  background-image: none;
   background-color: #009705;
   cursor: default;
 }
 
 .success:hover {
+  background-image: none;
   background-color: #009705;
 }
 
 .success:active {
+  background-image: none;
   background-color: #009705;
-}
-
-.spell {
-  text-align: center;
-}
-
-.rndm {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-}
-
-.rndm__btn {
-  border-radius: 10%;
-}
-
-.rndm__spell {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-}
-
-.rndm__btn :hover {
-  cursor: pointer;
-}
-
-.rndm__btn :active {
-  transform: scale(1.2);
-  box-shadow: grey;
-}
-
-.rndm__img {
-  border-radius: 10%;
-}
-
-.rndm__p {
-  text-align: center;
 }
 
 .form {
@@ -114,4 +82,42 @@
 }
 .form .error {
   color: red;
+}
+
+.spell {
+  text-align: center;
+}
+
+.rndm {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.rndm__btn {
+  border-radius: 10%;
+}
+
+.rndm__spell,
+.rndm__wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+.rndm__btn :hover {
+  cursor: pointer;
+}
+
+.rndm__btn :active {
+  transform: scale(1.2);
+  box-shadow: grey;
+}
+
+.rndm__img {
+  border-radius: 10%;
+}
+
+.rndm__p {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

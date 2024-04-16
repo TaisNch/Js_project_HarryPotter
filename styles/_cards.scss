@@ -13,7 +13,8 @@
     height:50vh;
     padding: 30vw;
     background-image: url('../images/img_main/logo.png');
-    background-size: auto;
+    background-position: center;
+    background-size: cover;
     border-radius: 8px;
     cursor: pointer;
     transition: background-image .3s;
@@ -31,6 +32,7 @@
 .open {
     font-size: 36px;
     color: white;
+    background-image: none;
     background-color: rgb(37, 60, 188);
     cursor: default;
 }
@@ -46,14 +48,17 @@
 .success {
     font-size: 36px;
     color: white;
-    background-color: #009705;
+    background-image: none;
+     background-color: #009705;
     cursor: default;
 }
 
 .success:hover{
+    background-image: none;
     background-color: #009705;
 }
 
 .success:active{
+    background-image: none;
     background-color: #009705;
 }
