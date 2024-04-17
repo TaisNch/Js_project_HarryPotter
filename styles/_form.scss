@@ -1,3 +1,9 @@
+.user {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+}
 .form {
     display: flex;
     flex-direction: column;
@@ -17,7 +23,7 @@
         max-width: 250px;
     }
     .form__input:required:valid {
-        border: 1.5px solid green;
+        border: 1.5px solid #433f77;
     }
     .agreement-wrap {
         flex-direction: row;
@@ -25,5 +31,13 @@
     }
     .error {
         color: red;
+    }
+}
+.usercard {
+    .usercard__label {
+        font-weight: 800;
+    }
+    .usercard__info {
+        margin: 20px 0;
     }
 }

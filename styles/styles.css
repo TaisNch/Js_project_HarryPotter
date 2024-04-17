@@ -54,6 +54,13 @@
   background-color: #009705;
 }
 
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -74,7 +81,7 @@
   max-width: 250px;
 }
 .form .form__input:required:valid {
-  border: 1.5px solid green;
+  border: 1.5px solid #433f77;
 }
 .form .agreement-wrap {
   flex-direction: row;
@@ -82,6 +89,13 @@
 }
 .form .error {
   color: red;
+}
+
+.usercard .usercard__label {
+  font-weight: 800;
+}
+.usercard .usercard__info {
+  margin: 20px 0;
 }
 
 .spell {
