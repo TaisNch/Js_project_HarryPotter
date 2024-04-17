@@ -54,19 +54,6 @@
   background-color: #009705;
 }
 
-.header__wrapper {
-  display: flex;
-  flex-direction: row;
-}
-.header__wrapper a {
-  text-decoration: none;
-  cursor: url("../assets/images/img_main/wand.png");
-}
-.header__wrapper .header__center {
-  display: flex;
-  flex-direction: column;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -95,19 +82,6 @@
 }
 .form .error {
   color: red;
-}
-
-.header__wrapper {
-  display: flex;
-  flex-direction: row;
-}
-.header__wrapper a {
-  text-decoration: none;
-  cursor: url("../assets/images/img_main/wand.png");
-}
-.header__wrapper .header__center {
-  display: flex;
-  flex-direction: column;
 }
 
 .spell {
@@ -146,4 +120,17 @@
 
 .rndm__p {
   text-align: center;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
