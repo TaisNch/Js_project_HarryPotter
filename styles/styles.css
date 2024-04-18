@@ -54,17 +54,11 @@
   background-color: #009705;
 }
 
-.header__wrapper {
-  display: flex;
-  flex-direction: row;
-}
-.header__wrapper a {
-  text-decoration: none;
-  cursor: url("../assets/images/img_main/wand.png");
-}
-.header__wrapper .header__center {
-  display: flex;
-  flex-direction: column;
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
 }
 
 .form {
@@ -87,7 +81,7 @@
   max-width: 250px;
 }
 .form .form__input:required:valid {
-  border: 1.5px solid green;
+  border: 1.5px solid #433f77;
 }
 .form .agreement-wrap {
   flex-direction: row;
@@ -97,17 +91,11 @@
   color: red;
 }
 
-.header__wrapper {
-  display: flex;
-  flex-direction: row;
+.usercard .usercard__label {
+  font-weight: 800;
 }
-.header__wrapper a {
-  text-decoration: none;
-  cursor: url("../assets/images/img_main/wand.png");
-}
-.header__wrapper .header__center {
-  display: flex;
-  flex-direction: column;
+.usercard .usercard__info {
+  margin: 20px 0;
 }
 
 .spell {
@@ -146,4 +134,17 @@
 
 .rndm__p {
   text-align: center;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.header__wrapper a {
+  text-decoration: none;
+  cursor: url("../assets/images/img_main/wand.png");
+}
+.header__wrapper .header__center {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
