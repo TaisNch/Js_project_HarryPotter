@@ -10,7 +10,6 @@ const allMembers = {
  Hufflepuff: [],
  Ravenclaw: [],
 };
-let decision = '';
 
 document.addEventListener('DOMContentLoaded', function (event) {
  getData();
