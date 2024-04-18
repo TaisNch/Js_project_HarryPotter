@@ -3,32 +3,34 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>HarryPotter</title>
-        <link rel="stylesheet" href="assets/styles/normalize.css" />
+        <title>Harry Potter Fan Page</title>
+        <link rel="stylesheet" href="styles/normalize.css" />
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
-        <header>
-            <header class="header">
-                <div class="header__wrapper">
-                    <a href="./Gryffindor.html">Gryffindor</a>
-                    <a href="./Hufflepuff.html">Hufflepuff</a>
-                    <a href="./roomOfRequirement.html"
-                        ><img
+        <header class="header">
+            <div class="header__wrapper">
+                <a href="./Gryffindor.html">Gryffindor</a>
+                <a href="./Hufflepuff.html">Hufflepuff</a>
+                <div class="header__center">
+                    <a href="./roomOfRequirement.html">Room of Requirement</a>
+                    <a href="./index.html">
+                        <img
                             src="./assets/images/img_main/logo.png"
                             alt="Houses logo"
                     /></a>
-                    <a href="./Ravenclaw.html">Ravenclaw</a>
-                    <a href="./Slytherin.html">Slytherin</a>
                 </div>
-            </header>
+                <a href="./Ravenclaw.html">Ravenclaw</a>
+                <a href="./Slytherin.html">Slytherin</a>
+            </div>
         </header>
         <main class="container">
             <div class="container__box hatbox">
                 <img
                     src="./assets/images/img_main/hat.png"
                     alt="Sorting Hat"
-                    id="hat" />
+                    id="hat"
+                />
                 <div class="hatbox__text" id="hatText">
                     I've sorted high, I've sorted low, I've done the job through
                     thick and thin So put me on and you will know Which house
@@ -38,9 +40,7 @@
             <audio src="./assets/581.mp3" id="song1"></audio>
         </main>
         <footer></footer>
-        <script src="js/slyder.js"></script>
         <script src="js/random_hat.js"></script>
-        <script src="js/random_spell.js"></script>
-        <script src="js/play_cards.js"></script>
+        <script src="js/common.js"></script>
     </body>
 </html>

@@ -1,0 +1,32 @@
+@mixin flex($fd, $jc, $ai) {
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+* {
+    border: 1px solid;
+    cursor: url("/assets/images/img_main/wand.png"), auto;
+}
+body {
+    background-color: #000000;
+    color: goldenrod;
+}
+header {
+    max-width: 100%;
+}
+.header__wrapper {
+    display: flex;
+    @include flex(row, center, space-between);
+    a {
+        text-decoration: none;
+    }
+    .header__center {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.member__img {
+    width: 100%;
+}
