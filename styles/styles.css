@@ -98,6 +98,11 @@
   margin: 20px 0;
 }
 
+.container__box {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+}
+
 .spell {
   text-align: center;
 }
@@ -136,15 +141,34 @@
   text-align: center;
 }
 
+* {
+  border: 1px solid;
+  cursor: url("/assets/images/img_main/wand.png"), auto;
+}
+
+body {
+  background-color: #000000;
+  color: goldenrod;
+}
+
+header {
+  max-width: 100%;
+}
+
 .header__wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 .header__wrapper a {
   text-decoration: none;
-  cursor: url("../assets/images/img_main/wand.png");
 }
 .header__wrapper .header__center {
   display: flex;
   flex-direction: column;
+}
+
+.member__img {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
