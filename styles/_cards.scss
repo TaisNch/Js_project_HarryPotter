@@ -1,48 +1,53 @@
 .RRhello__p {
     text-align: center;
 }
-.game {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.game__p {
-text-align: center;
+.play__p {
+    text-align: center;
+    }
+
+.play {
+background-color: white;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-.game__card {
+.play__cards {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
    margin: auto;
+   perspective: 1000px;
       }
 
-.cards__item {
-    border: solid 1px black;
+.card {
     width: 20vw;
     height: 30vh;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
-    }
+    transform-style: preserve-3d;
+       }
+ .card:active {
+  transform: scale(0.95);
+     transition: transform 0.3s;
+       }
 
-.cards__item:active {
-    transform: scale(0.97);
-    transition: transform 0.3s;
-}
-.cards__item.flip {
-    transform: rotateY(180deg);
-}
-.card__FF,
-.card__BF
- {
-border-radius: 10px;
-padding: 10px;
-//background-color: lightblue;
-position: absolute;
-backface-visibility: hidden;
- }
+.card.flip {
+   transform: rotateY('180deg');  
+       }
        
 .card__FF {
-    transform: rotateY(180deg);
+padding: 20px;
+border-radius: 5px;
+position: absolute;
+backface-visibility: hidden;
+transform: rotateY('180deg');
+}
+
+.card__BF {
+padding: 20px;
+border-radius: 5px;
+position: absolute;
+backface-visibility: hidden;
 }

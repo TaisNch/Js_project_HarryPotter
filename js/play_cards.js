@@ -4,8 +4,9 @@ let blockLocked = false;
 let firstCard, secondCard;
 
 const flipCard = e => {
-if (blockLocked) return;
+   if (blockLocked) return;
 const trgt= e.target.parentElement;
+
 if (trgt === firstCard) return;
 trgt.classList.add('flip');
 

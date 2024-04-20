@@ -2,51 +2,63 @@
   text-align: center;
 }
 
-.game {
+.play__p {
+  text-align: center;
+}
+
+.play {
+  background-color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.game__p {
-  text-align: center;
-}
-
-.game__card {
+.play__cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
+  perspective: 1000px;
 }
 
-.cards__item {
-  border: solid 1px black;
+.card {
   width: 20vw;
   height: 30vh;
   transform: scale(1);
   transition: transform 0.5s;
   position: relative;
+  transform-style: preserve-3d;
 }
 
-.cards__item:active {
-  transform: scale(0.97);
+.card:active {
+  transform: scale(0.95);
   transition: transform 0.3s;
 }
 
-.cards__item.flip {
-  transform: rotateY(180deg);
+.card.flip {
+  rotate: y 180deg;
 }
 
-.card__FF,
+.card__FF {
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  backface-visibility: hidden;
+  rotate: y 180deg;
+}
+
 .card__BF {
-  border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 5px;
   position: absolute;
   backface-visibility: hidden;
 }
 
-.card__FF {
-  transform: rotateY(180deg);
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
 }
 
 .form {
@@ -77,6 +89,18 @@
 }
 .form .error {
   color: red;
+}
+
+.usercard .usercard__label {
+  font-weight: 800;
+}
+.usercard .usercard__info {
+  margin: 20px 0;
+}
+
+.container__box {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
 }
 
 .spell {
@@ -121,15 +145,34 @@
   text-align: center;
 }
 
+* {
+  border: 1px solid;
+  cursor: url("/assets/images/img_main/wand.png"), auto;
+}
+
+body {
+  background-color: #000000;
+  color: goldenrod;
+}
+
+header {
+  max-width: 100%;
+}
+
 .header__wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
 }
 .header__wrapper a {
   text-decoration: none;
-  cursor: url("../assets/images/img_main/wand.png");
 }
 .header__wrapper .header__center {
   display: flex;
   flex-direction: column;
+}
+
+.member__img {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
