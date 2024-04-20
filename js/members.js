@@ -2,80 +2,89 @@ const box = {
     boxForGryffindor: document.getElementById('membersBoxGryffindor'),
     boxForHufflepuff: document.getElementById('membersBoxHufflepuff'),
     boxForRavenclaw: document.getElementById('membersBoxRavenclaw'),
-    boxForSlytherin: document.getElementById('membersBoxSlytherin'),}
+    boxForSlytherin: document.getElementById('membersBoxSlytherin'),
+};
 
 const allMembers = {
- Gryffindor: [],
- Slytherin: [],
- Hufflepuff: [],
- Ravenclaw: [],
+    Gryffindor: [],
+    Slytherin: [],
+    Hufflepuff: [],
+    Ravenclaw: [],
 };
 
 document.addEventListener('DOMContentLoaded', function (event) {
- getData();
+    getData();
 });
 
 const getData = () => {
- return fetch('https://potterhead-api.vercel.app/api/characters')
-  .then((response) => response.json())
-  .then((response) => {
-   response.forEach((element) => {
-    if (element.house === 'Gryffindor') {
-     allMembers.Gryffindor.push(element);
-    } else if (element.house === 'Slytherin') {
-     allMembers.Slytherin.push(element);
-    } else if (element.house === 'Hufflepuff') {
-     allMembers.Hufflepuff.push(element);
-    } else if (element.house === 'Ravenclaw') {
-     allMembers.Ravenclaw.push(element);
-    }
-   });
-  })
-  .catch((error) => console.error(error));
+    return fetch('https://potterhead-api.vercel.app/api/characters')
+        .then((response) => response.json())
+        .then((response) => {
+            response.forEach((element) => {
+                if (element.house === 'Gryffindor') {
+                    allMembers.Gryffindor.push(element);
+                } else if (element.house === 'Slytherin') {
+                    allMembers.Slytherin.push(element);
+                } else if (element.house === 'Hufflepuff') {
+                    allMembers.Hufflepuff.push(element);
+                } else if (element.house === 'Ravenclaw') {
+                    allMembers.Ravenclaw.push(element);
+                }
+            });
+        })
+        .catch((error) => console.error(error));
 };
 
 function addNew(response, box) {
     const member = document.createElement('div');
     member.className = 'member';
     const memberPic = document.createElement('img');
-    memberPic.src = response.image === '' ? '/assets/images/img_main/card.png' : response.image;
+    memberPic.src =
+        response.image === ''
+            ? '/assets/images/img_main/card.png'
+            : response.image;
     memberPic.className = 'member__img';
     const memberInfo = document.createElement('div');
-    memberInfo.innerHTML =`
-  <h2>${response.name}</h2>` +
-  (response.yearOfBirth === null
-   ? `<div>Year of birth: No information available</div>`
-   : `<div>Year of birth: ${response.yearOfBirth}</div>`) +
-  (response.ancestry === ''
-   ? `<div>Ancestry: No information available</div>`
-   : `<div>Ancestry: ${response.ancestry}</div>`) +
-  (response.actor === ''
-   ? `<div>Actor: No information available</div>`
-   : `<div>Actor: ${response.actor}</div>`);
- box.appendChild(member);
- member.appendChild(memberPic);
- member.appendChild(memberInfo)
+    memberInfo.innerHTML =
+        `
+  <h2 class="member__name">${response.name}</h2>` +
+        (response.yearOfBirth === null
+            ? `<div class="member__text">Year of birth: No information available</div>`
+            : `<div class="member__text">Year of birth: ${response.yearOfBirth}</div>`) +
+        (response.ancestry === ''
+            ? `<div class="member__text">Ancestry: No information available</div>`
+            : `<div class="member__text">Ancestry: ${response.ancestry}</div>`) +
+        (response.actor === ''
+            ? `<div class="member__text">Actor: No information available</div>`
+            : `<div class="member__text">Actor: ${response.actor}</div>`);
+    box.appendChild(member);
+    member.appendChild(memberPic);
+    member.appendChild(memberInfo);
 }
 
-
 setTimeout(() => {
- allMembers.Gryffindor.forEach((element) => 
- addNew(element, box.boxForGryffindor));
+    allMembers.Gryffindor.forEach((element) =>
+        addNew(element, box.boxForGryffindor)
+    );
 }, 200);
 
 setTimeout(() => {
- allMembers.Ravenclaw.forEach((element) => addNew(element, box.boxForRavenclaw));
+    allMembers.Ravenclaw.forEach((element) =>
+        addNew(element, box.boxForRavenclaw)
+    );
 }, 200);
 
 setTimeout(() => {
- allMembers.Slytherin.forEach((element) => addNew(element, box.boxForSlytherin));
+    allMembers.Slytherin.forEach((element) =>
+        addNew(element, box.boxForSlytherin)
+    );
 }, 200);
 
 setTimeout(() => {
- allMembers.Hufflepuff.forEach((element) => addNew(element, box.boxForHufflepuff));
+    allMembers.Hufflepuff.forEach((element) =>
+        addNew(element, box.boxForHufflepuff)
+    );
 }, 200);
-
-
 
 // const boxForGryffindor = document.getElementById('membersBoxGryffindor');
 // const boxForHufflepuff = document.getElementById('membersBoxHufflepuff');
