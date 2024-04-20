@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
-        <header class="header">
+        <div class="bodycontainer">
+      <header class="header">
             <div class="header__wrapper">
                 <a href="./Gryffindor.html">Gryffindor</a>
                 <a href="./Hufflepuff.html">Hufflepuff</a>
                 <div class="header__center">
                     <a href="./roomOfRequirement.html">Room of Requirement</a>
-                    <a href="./index.html">
+                    <a class="header__logo" href="./index.html">
                         <img
                             src="./assets/images/img_main/logo.png"
                             alt="Houses logo"
@@ -26,23 +27,22 @@
             <button id="play">
                 <img
                     src="./assets/images/img_main/speaker.svg"
-                    alt="Play music"
-                />
+                    alt="Play music" />
             </button>
             <audio id="audio" src="./assets/581.mp3"></audio>
         </header>
-        <div class="RRhello">
-            <h1 class="RRhello__p">
-                Hello! and welcome to the Room of Requirements! <br />Here you
+       
+            <h1 class="RRhello__h1">
+                Hello and welcome to the Room of Requirement! <br />Here you
                 can choose your spell of the day, play some games and fill up
                 the form to get to our community!
             </h1>
-        </div>
+  
         <div class="spell">
-            <h2 class="spell__header h2">Choose your spell of the day</h2>
-            <p class="spell__p">Press the button and you will see the spell</p>
+            <h2 class="spell__header h2">Choose your spell of the day - Press the button and you will see the spell</h2>
             <div class="spell__rndm rndm">
-                <button class="rndm__btn" id="btn">Cast a spell</button>
+                <button class="rndm__btn" id="btn">
+                    <p class="rndm__btn__p">Cast a spell</p></button>
                 <div class="rndm__wrapper">
                     <p class="rndm__p" id="rndm__p">
                         Let's see what's your spell of the day!
@@ -59,98 +59,82 @@
                 <div class="cards__item card" data-framework="S">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/slytherin.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/slytherin.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="S">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/slytherin.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/slytherin.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="R">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/ravenclaw.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/ravenclaw.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="R">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/ravenclaw.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/ravenclaw.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="H">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/hufflepuff.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/hufflepuff.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="H">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/hufflepuff.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/hufflepuff.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="G">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/gryffindor.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/gryffindor.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
                 <div class="cards__item card" data-framework="G">
                     <img
                         class="card__FF"
-                        src="assets/images/img_main/gryffindor.png"
-                        alt="front_face"
-                    />
+                        src="/assets/images/img_main/gryffindor.png"
+                        alt="front_face" />
                     <img
                         class="card__BF"
-                        src="assets/images/img_main/logo.png"
-                        alt="back_face"
-                    />
+                        src="/assets/images/img_main/logo.png"
+                        alt="back_face" />
                 </div>
             </section>
         </div>
@@ -172,8 +156,7 @@
                         minlength="2"
                         maxlength="20"
                         id="userName"
-                        required
-                    />
+                        required />
                 </div>
                 <div class="form__wrapper">
                     <label for="userEmail" class="form__label"
@@ -185,8 +168,7 @@
                         class="form__input"
                         id="userEmail"
                         placeholder="your e-mail"
-                        required
-                    />
+                        required />
                 </div>
                 <div class="form__wrapper">
                     <label for="userAge" class="form__label"
@@ -200,8 +182,7 @@
                         min="0"
                         max="200"
                         placeholder="your age"
-                        required
-                    />
+                        required />
                 </div>
                 <div class="form__wrapper">
                     <div class="form__label">Sex</div>
@@ -211,8 +192,7 @@
                             class="form__input"
                             type="radio"
                             id="m"
-                            value="male"
-                        />
+                            value="male" />
                         <label for="m" class="form__minilabel">male</label>
                     </div>
                     <div class="form__sex">
@@ -221,8 +201,7 @@
                             class="form__input"
                             type="radio"
                             id="w"
-                            value="female"
-                        />
+                            value="female" />
                         <label for="w" class="form__minilabel" id="sex"
                             >female</label
                         >
@@ -236,8 +215,7 @@
                         name="house"
                         id="house"
                         class="form__input"
-                        required
-                    >
+                        required>
                         <option value="">your house</option>
                         <option value="Gryffindor">Gryffindor</option>
                         <option value="Ravenclaw">Ravenclaw</option>
@@ -261,8 +239,7 @@
                         placeholder="password"
                         required
                         minlength="8"
-                        pattern="^(?=.*\d)\w{8,}$"
-                    />
+                        pattern="^(?=.*\d)\w{8,}$" />
                 </div>
                 <div class="form__wrapper agreement-wrap">
                     <input
@@ -270,8 +247,7 @@
                         name="userAgreement"
                         value="I solemnly swear that I'm up to no good."
                         class="form__agreement userAgreement"
-                        required
-                    />
+                        required />
                     <span class="form__agreeText"
                         >I solemnly swear that I'm up to no good.
                     </span>
@@ -281,8 +257,7 @@
                         type="submit"
                         name="submitButton"
                         class="form__button"
-                        disabled
-                    >
+                        disabled>
                         Submit
                     </button>
                 </div>
@@ -302,13 +277,15 @@
                 <button
                     type="submit"
                     name="findFormButton"
-                    class="findfriend__button"
-                >
+                    class="findfriend__button">
                     Find a friend
                 </button>
             </form>
             <div class="findfriend__result"></div>
         </div>
+        <footer class="footer_RR">
+           <p class="footer_RR">Made with love by Viktoriia, Taisiya, Irina for <a href="https://itgirlschool.com/">IT Girls</a> JS project</p> 
+        </footer>
         <script src="js/random_spell.js"></script>
         <script src="js/play_cards.js"></script>
         <script src="js/form.js"></script>

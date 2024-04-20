@@ -4,7 +4,7 @@ let blockLocked = false;
 let firstCard, secondCard;
 
 const flipCard = e => {
-   if (blockLocked) return;
+ if (blockLocked) return;
 const trgt= e.target.parentElement;
 
 if (trgt === firstCard) return;
@@ -15,52 +15,34 @@ if (!hasCardFlipped) {
     firstCard = trgt;
 }
 else {
-    
     hasCardFlipped = false;
     secondCard = trgt;
-    //check for match
-checkForMatch()
+    checkForMatch()
 }
 };
 
-
-
 const checkForMatch = () => {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards();
-        // firstCard.removeEventListener('click',flipCard);
-        // secondCard.removeEventListener('click',flipCard);
+        firstCard.removeEventListener('click',flipCard);
+        secondCard.removeEventListener('click',flipCard);
     }
     else {
-        unflipCards();
-    //     blockLocked = true;
-    //    setTimeout(() => {
-    //     firstCard.classList.remove('flip');
-    //     secondCard.classList.remove('flip');
-    //    }, 1000)
-    //    blockLocked = false;
+        blockLocked = true;
+       setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        reset()
+       }, 1000)
+       blockLocked = false;
        
     }
 }
 
-const disableCards = () => {
-    firstCard.removeEventListener('click',flipCard);
-    secondCard.removeEventListener('click',flipCard);
-}
-
-const unflipCards = () => {
-    blockLocked = true;
-    setTimeout(() => {
-     firstCard.classList.remove('flip');
-     secondCard.classList.remove('flip');
-    }, 1000)
-    reset()
-}
-
 const reset = () => {
-    hasCardFlipped=hasCardFlipped=false;
+    hasCardFlipped=blockLocked=false;
     firstCard=secondCard=null;
-}
+    }
+
 cards.forEach(card => {
     card.addEventListener('click', flipCard);
     const rndmInex = Math.floor(Math.random()*cards.length);

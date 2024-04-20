@@ -1,53 +1,58 @@
-.RRhello__p {
-    text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
+@mixin font($fs, $fw) {
+    font-size: $fs;
+    font-weight: $fw;}
+
 .play__p {
-    text-align: center;
-    }
+   @include font(2vw, 500);
+   padding: 1vh;
+   text-align: center;
+  }
+    
 
 .play {
-background-color: white;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+margin-top: 2vh;
 }
 
 .play__cards {
+   background-color: white;
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   margin: auto;
    perspective: 1000px;
       }
 
 .card {
-    width: 20vw;
-    height: 30vh;
+    width: 25vw;
+    height: 25vh;
+    padding: 10px;
+    border-radius: 30px;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
     transform-style: preserve-3d;
-       }
+    border: 1px solid white;
+           }
  .card:active {
   transform: scale(0.95);
      transition: transform 0.3s;
        }
 
 .card.flip {
-   transform: rotateY('180deg');  
+   rotate: Y 180deg;
+// transform: rotateY('180');
        }
        
-.card__FF {
-padding: 20px;
+.card__FF,
+.card__BF  {
+padding: 5%;
+width: 24vw;
+height: 24vh;
 border-radius: 5px;
 position: absolute;
 backface-visibility: hidden;
-transform: rotateY('180deg');
 }
 
-.card__BF {
-padding: 20px;
-border-radius: 5px;
-position: absolute;
-backface-visibility: hidden;
-}
+.card__FF {
+   rotate: Y 180deg;
+          }
