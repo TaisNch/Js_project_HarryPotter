@@ -192,24 +192,26 @@
   justify-content: space-between;
   align-items: center;
 }
-.bodycontainer header {
+.bodycontainer main {
+  min-width: 100%;
+}
+
+footer {
+  min-width: 100%;
+  min-height: 100px;
+  border-top: 1px solid;
+}
+
+header {
   min-height: 200px;
   min-width: 100%;
   border-bottom: 1px solid;
 }
-.bodycontainer header #play {
+header #play {
   position: absolute;
   top: 1%;
   right: 1%;
   border: none;
-}
-.bodycontainer main {
-  min-width: 100%;
-}
-.bodycontainer footer {
-  min-width: 100%;
-  min-height: 100px;
-  border-top: 1px solid;
 }
 
 .header__wrapper {
