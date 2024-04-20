@@ -211,7 +211,7 @@ footer {
 }
 .container .container__box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 1%;
   justify-content: space-between;
   padding: 1%;
@@ -227,6 +227,10 @@ footer {
   align-items: center;
   font-size: 3vw;
   font-weight: 700;
+}
+.container .container__text {
+  font-size: 2.5vh;
+  font-weight: 500;
 }
 
 .active {
@@ -251,15 +255,15 @@ footer {
   height: 17vh;
 }
 
-.member__text,
-.container__text {
-  font-size: 1.5vh;
+.member__text {
+  font-size: 1.8vh;
   font-weight: 500;
 }
 
 .member__name {
   font-size: 2vh;
   font-weight: 700;
+  padding-bottom: 2%;
 }
 
 .spell__header {

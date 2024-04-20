@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
-        <div class="bodycontainer">
-      <header class="header">
+        <header class="header">
             <div class="header__wrapper">
                 <a href="./Gryffindor.html">Gryffindor</a>
                 <a href="./Hufflepuff.html">Hufflepuff</a>
                 <div class="header__center">
-                    <a href="./roomOfRequirement.html">Room of Requirement</a>
+                    <a href="./roomOfRequirement.html" class="active"
+                        >Room of Requirement</a
+                    >
                     <a class="header__logo" href="./index.html">
                         <img
                             src="./assets/images/img_main/logo.png"
@@ -27,264 +28,317 @@
             <button id="play">
                 <img
                     src="./assets/images/img_main/speaker.svg"
-                    alt="Play music" />
+                    alt="Play music"
+                />
             </button>
             <audio id="audio" src="./assets/581.mp3"></audio>
         </header>
-       
+        <main>
             <h1 class="RRhello__h1">
-                Hello and welcome to the Room of Requirement! <br />Here you
-                can choose your spell of the day, play some games and fill up
-                the form to get to our community!
+                Hello and welcome to the Room of Requirement! <br />Here you can
+                choose your spell of the day, play some games and fill up the
+                form to get to our community!
             </h1>
-  
-        <div class="spell">
-            <h2 class="spell__header h2">Choose your spell of the day - Press the button and you will see the spell</h2>
-            <div class="spell__rndm rndm">
-                <button class="rndm__btn" id="btn">
-                    <p class="rndm__btn__p">Cast a spell</p></button>
-                <div class="rndm__wrapper">
-                    <p class="rndm__p" id="rndm__p">
-                        Let's see what's your spell of the day!
-                    </p>
-                    <p class="rndm__p" id="rndm__p1">What does it do?</p>
+            <div class="spell">
+                <h2 class="spell__header h2">
+                    Choose your spell of the day - Press the button and you will
+                    see the spell
+                </h2>
+                <div class="spell__rndm rndm">
+                    <button class="rndm__btn" id="btn">
+                        <p class="rndm__btn__p">Cast a spell</p>
+                    </button>
+                    <div class="rndm__wrapper">
+                        <p class="rndm__p" id="rndm__p">
+                            Let's see what's your spell of the day!
+                        </p>
+                        <p class="rndm__p" id="rndm__p1">What does it do?</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="play">
-            <p class="play__p">
-                Let's play memory! Try to find two same cards!
-            </p>
-            <section class="play__cards cards">
-                <div class="cards__item card" data-framework="S">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/slytherin.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="S">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/slytherin.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="R">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/ravenclaw.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="R">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/ravenclaw.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="H">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/hufflepuff.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="H">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/hufflepuff.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="G">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/gryffindor.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-                <div class="cards__item card" data-framework="G">
-                    <img
-                        class="card__FF"
-                        src="/assets/images/img_main/gryffindor.png"
-                        alt="front_face" />
-                    <img
-                        class="card__BF"
-                        src="/assets/images/img_main/logo.png"
-                        alt="back_face" />
-                </div>
-            </section>
-        </div>
-
-        <div class="user">
-            <form name="form" class="form" novalidate>
-                <h2 class="form__title">
-                    Fill in the form to join our community
-                </h2>
-                <div class="form__wrapper">
-                    <label for="userName" class="form__label"
-                        >What's your name?</label
-                    >
-                    <input
-                        name="userName"
-                        type="text"
-                        class="form__input"
-                        placeholder="your name"
-                        minlength="2"
-                        maxlength="20"
-                        id="userName"
-                        required />
-                </div>
-                <div class="form__wrapper">
-                    <label for="userEmail" class="form__label"
-                        >Enter your e-mail?</label
-                    >
-                    <input
-                        name="userEmail"
-                        type="email"
-                        class="form__input"
-                        id="userEmail"
-                        placeholder="your e-mail"
-                        required />
-                </div>
-                <div class="form__wrapper">
-                    <label for="userAge" class="form__label"
-                        >How old are you?</label
-                    >
-                    <input
-                        name="userAge"
-                        type="number"
-                        class="form__input"
-                        id="userAge"
-                        min="0"
-                        max="200"
-                        placeholder="your age"
-                        required />
-                </div>
-                <div class="form__wrapper">
-                    <div class="form__label">Sex</div>
-                    <div class="form__sex">
-                        <input
-                            name="sex"
-                            class="form__input"
-                            type="radio"
-                            id="m"
-                            value="male" />
-                        <label for="m" class="form__minilabel">male</label>
+            <div class="play">
+                <p class="play__p">
+                    Let's play memory! Try to find two same cards!
+                </p>
+                <section class="play__cards cards">
+                    <div class="cards__item card" data-framework="S">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/slytherin.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
                     </div>
-                    <div class="form__sex">
-                        <input
-                            name="sex"
-                            class="form__input"
-                            type="radio"
-                            id="w"
-                            value="female" />
-                        <label for="w" class="form__minilabel" id="sex"
-                            >female</label
+                    <div class="cards__item card" data-framework="S">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/slytherin.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                    <div class="cards__item card" data-framework="R">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/ravenclaw.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                    <div class="cards__item card" data-framework="R">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/ravenclaw.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                    <div class="cards__item card" data-framework="H">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/hufflepuff.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                    <div class="cards__item card" data-framework="H">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/hufflepuff.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                    <div class="cards__item card" data-framework="G">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/gryffindor.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                    <div class="cards__item card" data-framework="G">
+                        <img
+                            class="card__FF"
+                            src="/assets/images/img_main/gryffindor.png"
+                            alt="front_face"
+                        />
+                        <img
+                            class="card__BF"
+                            src="/assets/images/img_main/logo.png"
+                            alt="back_face"
+                        />
+                    </div>
+                </section>
+            </div>
+            <div class="user">
+                <form name="form" class="form" novalidate>
+                    <h2 class="form__title">
+                        Fill in the form to join our community
+                    </h2>
+                    <div class="form__wrapper">
+                        <label for="userName" class="form__label"
+                            >What's your name?</label
                         >
+                        <input
+                            name="userName"
+                            type="text"
+                            class="form__input"
+                            placeholder="your name"
+                            minlength="2"
+                            maxlength="20"
+                            id="userName"
+                            required
+                        />
                     </div>
-                </div>
-                <div class="form__wrapper">
-                    <label for="house" class="form__label"
-                        >Choose your house</label
-                    >
-                    <select
-                        name="house"
-                        id="house"
-                        class="form__input"
-                        required>
-                        <option value="">your house</option>
+                    <div class="form__wrapper">
+                        <label for="userEmail" class="form__label"
+                            >Enter your e-mail?</label
+                        >
+                        <input
+                            name="userEmail"
+                            type="email"
+                            class="form__input"
+                            id="userEmail"
+                            placeholder="your e-mail"
+                            required
+                        />
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="userAge" class="form__label"
+                            >How old are you?</label
+                        >
+                        <input
+                            name="userAge"
+                            type="number"
+                            class="form__input"
+                            id="userAge"
+                            min="0"
+                            max="200"
+                            placeholder="your age"
+                            required
+                        />
+                    </div>
+                    <div class="form__wrapper">
+                        <div class="form__label">Sex</div>
+                        <div class="form__sex">
+                            <input
+                                name="sex"
+                                class="form__input"
+                                type="radio"
+                                id="m"
+                                value="male"
+                            />
+                            <label for="m" class="form__minilabel">male</label>
+                        </div>
+                        <div class="form__sex">
+                            <input
+                                name="sex"
+                                class="form__input"
+                                type="radio"
+                                id="w"
+                                value="female"
+                            />
+                            <label for="w" class="form__minilabel" id="sex"
+                                >female</label
+                            >
+                        </div>
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="house" class="form__label"
+                            >Choose your house</label
+                        >
+                        <select
+                            name="house"
+                            id="house"
+                            class="form__input"
+                            required
+                        >
+                            <option value="">your house</option>
+                            <option value="Gryffindor">Gryffindor</option>
+                            <option value="Ravenclaw">Ravenclaw</option>
+                            <option value="Slytherin">Slytherin</option>
+                            <option value="Hufflepuff">Hufflepuff</option>
+                        </select>
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="userPassword" class="form__label"
+                            >Password</label
+                        >
+                        <div class="form__text">
+                            Password must contain at least 1 capital letter, 1
+                            number
+                        </div>
+                        <input
+                            name="userPassword"
+                            type="password"
+                            class="form__input"
+                            id="userPassword"
+                            placeholder="password"
+                            required
+                            minlength="8"
+                            pattern="^(?=.*\d)\w{8,}$"
+                        />
+                    </div>
+                    <div class="form__wrapper agreement-wrap">
+                        <input
+                            type="checkbox"
+                            name="userAgreement"
+                            value="I solemnly swear that I'm up to no good."
+                            class="form__agreement userAgreement"
+                            required
+                        />
+                        <span class="form__agreeText"
+                            >I solemnly swear that I'm up to no good.
+                        </span>
+                    </div>
+                    <div class="form__wrapper">
+                        <button
+                            type="submit"
+                            name="submitButton"
+                            class="form__button"
+                            disabled
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <div class="usercard"></div>
+            </div>
+            <div class="findfriend">
+                <form name="findfriendForm" class="findfriend__form">
+                    <h2 class="findfriend__label">
+                        Choose your new friend house
+                    </h2>
+                    <select name="findHouse" class="findfriend__input">
+                        <option value="">I don't care</option>
                         <option value="Gryffindor">Gryffindor</option>
                         <option value="Ravenclaw">Ravenclaw</option>
                         <option value="Slytherin">Slytherin</option>
                         <option value="Hufflepuff">Hufflepuff</option>
                     </select>
-                </div>
-                <div class="form__wrapper">
-                    <label for="userPassword" class="form__label"
-                        >Password</label
-                    >
-                    <div class="form__text">
-                        Password must contain at least 1 capital letter, 1
-                        number
-                    </div>
-                    <input
-                        name="userPassword"
-                        type="password"
-                        class="form__input"
-                        id="userPassword"
-                        placeholder="password"
-                        required
-                        minlength="8"
-                        pattern="^(?=.*\d)\w{8,}$" />
-                </div>
-                <div class="form__wrapper agreement-wrap">
-                    <input
-                        type="checkbox"
-                        name="userAgreement"
-                        value="I solemnly swear that I'm up to no good."
-                        class="form__agreement userAgreement"
-                        required />
-                    <span class="form__agreeText"
-                        >I solemnly swear that I'm up to no good.
-                    </span>
-                </div>
-                <div class="form__wrapper">
                     <button
                         type="submit"
-                        name="submitButton"
-                        class="form__button"
-                        disabled>
-                        Submit
+                        name="findFormButton"
+                        class="findfriend__button"
+                    >
+                        Find a friend
                     </button>
-                </div>
-            </form>
-            <div class="usercard"></div>
-        </div>
-        <div class="findfriend">
-            <form name="findfriendForm" class="findfriend__form">
-                <h2 class="findfriend__label">Choose your new friend house</h2>
-                <select name="findHouse" class="findfriend__input">
-                    <option value="">I don't care</option>
-                    <option value="Gryffindor">Gryffindor</option>
-                    <option value="Ravenclaw">Ravenclaw</option>
-                    <option value="Slytherin">Slytherin</option>
-                    <option value="Hufflepuff">Hufflepuff</option>
-                </select>
-                <button
-                    type="submit"
-                    name="findFormButton"
-                    class="findfriend__button">
-                    Find a friend
-                </button>
-            </form>
-            <div class="findfriend__result"></div>
-        </div>
-        <footer class="footer_RR">
-           <p class="footer_RR">Made with love by Viktoriia, Taisiya, Irina for <a href="https://itgirlschool.com/">IT Girls</a> JS project</p> 
+                </form>
+                <div class="findfriend__result"></div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                Made with love by
+                <a
+                    href="https://github.com/vikrugpro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Viktoriia</a
+                >,
+                <a
+                    href="https://github.com/TaisNch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Taisiya</a
+                >,
+                <a
+                    href="https://github.com/Irina864"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Irina</a
+                >
+            </div>
+            <div>&copy; ItGirls, 2024</div>
         </footer>
         <script src="js/random_spell.js"></script>
         <script src="js/play_cards.js"></script>

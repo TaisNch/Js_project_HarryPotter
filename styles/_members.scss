@@ -3,7 +3,7 @@
     width: 100%;
     .container__box {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         gap: 1%;
         justify-content: space-between;
         padding: 1%;
@@ -16,6 +16,9 @@
         display: flex;
         @include flex(column, center, center);
         @include font(3vw, 700);
+    }
+    .container__text {
+        @include font(2.5vh, 500);
     }
 }
 .active {
@@ -37,10 +40,10 @@
     align-items: center;
     height: 17vh;
 }
-.member__text,
-.container__text {
-    @include font(1.5vh, 500);
+.member__text {
+    @include font(1.8vh, 500);
 }
 .member__name {
     @include font(2vh, 700);
+    padding-bottom: 2%;
 }
