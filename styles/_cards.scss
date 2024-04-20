@@ -1,64 +1,48 @@
+.RRhello__p {
+    text-align: center;
+}
 .game {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px 15px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.game__p {
+text-align: center;
 }
 
-.card {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height:50vh;
-    padding: 30vw;
-    background-image: url('../images/img_main/logo.png');
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-image .3s;
+.game__card {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+      }
+
+.cards__item {
+    border: solid 1px black;
+    width: 20vw;
+    height: 30vh;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    }
+
+.cards__item:active {
+    transform: scale(0.97);
+    transition: transform 0.3s;
 }
-
-// .card:hover {
-//     background-color: rgb(241, 213, 176);
-//     }
-
-// .card:active {
-//     background-color: rgb(204, 159, 100);
-//   ;
-// }
-
-.open {
-    font-size: 36px;
-    color: white;
-    background-image: none;
-    background-color: rgb(37, 60, 188);
-    cursor: default;
+.cards__item.flip {
+    transform: rotateY(180deg);
 }
-
-.open:hover{
-    background-color: rgb(37, 60, 188);
-}
-
-.open:active{
-    background-color: rgb(37, 60, 188);
-}
-
-.success {
-    font-size: 36px;
-    color: white;
-    background-image: none;
-     background-color: #009705;
-    cursor: default;
-}
-
-.success:hover{
-    background-image: none;
-    background-color: #009705;
-}
-
-.success:active{
-    background-image: none;
-    background-color: #009705;
+.card__FF,
+.card__BF
+ {
+border-radius: 10px;
+padding: 10px;
+//background-color: lightblue;
+position: absolute;
+backface-visibility: hidden;
+ }
+       
+.card__FF {
+    transform: rotateY(180deg);
 }

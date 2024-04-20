@@ -8,7 +8,11 @@
     align-items: center;
 }
 .rndm__btn {
-    border-radius: 10%;
+    border-radius:500px;
+    width: 15vw;
+    height: 10vh;
+    background-color: goldenrod;
+    margin: auto;
 }
 
 .rndm__spell,
@@ -19,11 +23,11 @@
 }
 
 
-.rndm__btn :hover {
+.rndm__btn:hover {
     cursor: pointer;
 }
 
-.rndm__btn :active {
+.rndm__btn:active {
     transform: scale(1.2);
     box-shadow: grey;
 }
