@@ -1,7 +1,9 @@
 const hat = document.querySelector('.hatbox');
 const container = document.querySelector('.container');
 const houseBox = document.createElement('div');
+const hatText = document.getElementById('hatText');
 container.append(houseBox);
+
 hat.addEventListener('click',sortHouse);
 const houses = [
     {

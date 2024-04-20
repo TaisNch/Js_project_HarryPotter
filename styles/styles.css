@@ -69,7 +69,7 @@
   max-width: 250px;
 }
 .form .form__input:required:valid {
-  border: 1.5px solid green;
+  border: 1.5px solid #433f77;
 }
 .form .agreement-wrap {
   flex-direction: row;
