@@ -35,7 +35,7 @@ function sortHouse() {
     showRandom(randomHouse);
     setTimeout(function() {
         showOthers(houses);
-    },1000)
+    },300)
 }
 function showRandom(randomHouse) {
     houseBox.innerText = 'Your house is: ';
