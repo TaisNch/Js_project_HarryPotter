@@ -184,7 +184,6 @@
                     <button
                         type="submit"
                         name="submitButton"
-                        value="Submit"
                         class="form__button"
                         disabled
                     >
@@ -193,6 +192,26 @@
                 </div>
             </form>
             <div class="usercard"></div>
+        </div>
+        <div class="findfriend">
+            <form name="findfriendForm" class="findfriend__form">
+                <h2 class="findfriend__label">Choose your new friend house</h2>
+                <select name="findHouse" class="friend__input">
+                    <option value="">I don't care</option>
+                    <option value="Gryffindor">Gryffindor</option>
+                    <option value="Ravenclaw">Ravenclaw</option>
+                    <option value="Slytherin">Slytherin</option>
+                    <option value="Hufflepuff">Hufflepuff</option>
+                </select>
+                <button
+                    type="submit"
+                    name="findFormButton"
+                    class="findfriend__button"
+                >
+                    Find a friend
+                </button>
+            </form>
+            <div class="findfriend__result"></div>
         </div>
         <script src="js/random_spell.js"></script>
         <script src="js/play_cards.js"></script>
