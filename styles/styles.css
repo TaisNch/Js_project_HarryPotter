@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
 .RRhello__p {
   text-align: center;
 }
@@ -36,7 +37,7 @@
 }
 
 .card.flip {
-  rotate: y 180deg;
+  transform: rotateY("180deg");
 }
 
 .card__FF {
@@ -44,7 +45,7 @@
   border-radius: 5px;
   position: absolute;
   backface-visibility: hidden;
-  rotate: y 180deg;
+  transform: rotateY("180deg");
 }
 
 .card__BF {
@@ -102,6 +103,10 @@
   display: inline;
 }
 
+.houseBox {
+  font-size: 2vw;
+}
+
 .container__box {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
@@ -151,32 +156,98 @@
 
 * {
   border: 1px solid;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
   cursor: url("/assets/images/img_main/wand.png"), auto;
-}
-
-body {
   background-color: #110727;
   color: goldenrod;
+  font-family: "Platypi", serif;
 }
 
-header {
+.bodycontainer {
+  min-height: 1000px;
+}
+
+.bodycontainer,
+body {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.bodycontainer header,
+body header {
+  min-height: 200px;
   max-width: 100%;
+  border-bottom: 1px solid;
+}
+.bodycontainer header #play,
+body header #play {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  border: none;
+}
+.bodycontainer footer,
+body footer {
+  min-height: 100px;
+  border-top: 1px solid;
 }
 
 .header__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
 }
 .header__wrapper a {
   text-decoration: none;
+  font-size: 2.5vw;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__wrapper .header__center {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.header__wrapper .header__center .header__logo {
+  width: 80%;
+}
+.header__wrapper .header__center .header__logo img {
+  max-width: 100%;
 }
 
-.member__img {
+.container_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container_main .container__info {
+  margin-top: 2%;
+  align-content: center;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.container_main .container__info .container__greet {
+  text-align: center;
+  margin-top: 0.5%;
+}
+.container_main .hatbox {
+  height: 40vh;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_main .hatbox #hat {
   width: 100%;
+  max-height: 100%;
 }/*# sourceMappingURL=styles.css.map */

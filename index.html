@@ -8,78 +8,86 @@
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
     <body>
-        <header class="header">
-            <div class="header__wrapper">
-                <a href="./Gryffindor.html">Gryffindor</a>
-                <a href="./Hufflepuff.html">Hufflepuff</a>
-                <div class="header__center">
-                    <a href="./roomOfRequirement.html">Room of Requirement</a>
-                    <a href="./index.html">
-                        <img
-                            src="./assets/images/img_main/logo.png"
-                            alt="Houses logo"
-                    /></a>
+        <div class="bodycontainer">
+            <header class="header">
+                <div class="header__wrapper">
+                    <a href="./Gryffindor.html">Gryffindor</a>
+                    <a href="./Hufflepuff.html">Hufflepuff</a>
+                    <div class="header__center">
+                        <a href="./roomOfRequirement.html"
+                            >Room of Requirement</a
+                        >
+                        <a class="header__logo" href="./index.html">
+                            <img
+                                src="./assets/images/img_main/logo.png"
+                                alt="Houses logo"
+                        /></a>
+                    </div>
+                    <a href="./Ravenclaw.html">Ravenclaw</a>
+                    <a href="./Slytherin.html">Slytherin</a>
                 </div>
-                <a href="./Ravenclaw.html">Ravenclaw</a>
-                <a href="./Slytherin.html">Slytherin</a>
-            </div>
-            <button id="play">
-                <img
-                    src="./assets/images/img_main/speaker.svg"
-                    alt="Play music"
-                />
-            </button>
-            <audio id="audio" src="./assets/581.mp3"></audio>
-        </header>
-        <main class="container">
-            <div class="container__info">
-                <div class="container__greet">Hello, my dear friend!</div>
-                <div class="container__greet">
-                    And welcome to our fun page for Harry Potter fans!
+                <button id="play">
+                    <img
+                        src="./assets/images/img_main/speaker.svg"
+                        alt="Play music"
+                    />
+                </button>
+                <audio id="audio" src="./assets/581.mp3"></audio>
+            </header>
+            <main class="container container_main">
+                <div class="container__info">
+                    <div class="container__greet">Hello, my dear friend!</div>
+                    <div class="container__greet">
+                        And welcome to our fun page for Harry Potter fans!
+                    </div>
+                    <div class="container__greet">
+                        Please click on our Sorting Hat and let her make a
+                        decision on your house.
+                    </div>
+                    <div class="container__greet">
+                        Let me tell you one little secret.
+                    </div>
+                    <div class="container__greet">
+                        If you don't like the hat's decision - here you have a
+                        chance to try endless times.
+                    </div>
+                    <div class="container__greet">
+                        You can also see some info about all of the houses and
+                        their members on the corresponding pages.
+                    </div>
+                    <div class="container__greet">
+                        Also, please visit our
+                        <a href="./roomOfRequirement.html"
+                            >Room of Requirement</a
+                        >
+                        and have some fun there!
+                    </div>
+                    <div class="container__greet">Enjoy!</div>
                 </div>
-                <div class="container__greet">
-                    Please click on our Sorting Hat and let her make a decision
-                    on your house.
+                <div class="container__item hatbox">
+                    <img
+                        src="./assets/images/img_main/hat.png"
+                        alt="Sorting Hat"
+                        id="hat"
+                    />
                 </div>
-                <div class="container__greet">
-                    Let me tell you one little secret.
-                </div>
-                <div class="container__greet">
-                    If you don't like the hat's decision - here you have a
-                    chance to try endless times.
-                </div>
-                <div class="container__greet">
-                    You can also see some info about all of the houses and their
-                    members on the corresponding pages.
-                </div>
-                <div class="container__greet">
-                    Also, please visit our Room of Requirement and have some fun
-                    there!
-                </div>
-                <div class="container__greet">Enjoy!</div>
-            </div>
-            <div class="container__item hatbox">
-                <img
-                    src="./assets/images/img_main/hat.png"
-                    alt="Sorting Hat"
-                    id="hat"
-                />
-                <div class="container__ text hatboxText" id="hatText">
+                <div class="container__text hatboxText" id="hatText">
                     <div id="animatedText">
-                        <span>
+                        <span id="animatedPhrase">
                             I've sorted high, I've sorted low, I've done the job
                             through thick and thin. So put me on and you will
                             know which house you should be in...</span
                         >
                     </div>
                 </div>
-            </div>
-        </main>
-        <footer>
-            <div class="madeby">
-                Made with love by Viktoriia, Taisiya, Irina
-            </div>
-        </footer>
+            </main>
+            <footer>
+                <div class="madeby">
+                    Made with love by Viktoriia, Taisiya, Irina
+                </div>
+            </footer>
+        </div>
+
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script src="js/random_hat.js"></script>
         <script src="js/common.js"></script>
