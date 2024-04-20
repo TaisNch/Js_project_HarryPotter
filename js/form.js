@@ -175,7 +175,6 @@ async function createUserCard() {
     <div class="usercard__info">
         <div class="usercard__label user__quote">Random quote for user:</div>
     </div>`;
-    console.log(localStorage.imgUrl);
     createNewElement(
         userLocalInfo.userName,
         'div',
@@ -223,50 +222,81 @@ function findFriendsForUser(e) {
     for (let i = 0; i < localStorage.length; i++) {
         users.push(localStorage.key(i));
     }
+    while (randoms.length < users.length) {
+        let randomIndex = Math.floor(Math.random() * users.length);
+        randoms.push(randomIndex);
+        randoms = [...new Set(randoms)];
+    }
+    console.log(users.length);
     const friendRandoms = [];
     const friendGryffindors = [];
     const friendRavenclaws = [];
     const friendSlytherins = [];
     const friendHufflepuffs = [];
     if (findFriendSelect.value === '') {
-        while (friendRandoms.length < 4) {
-            let randomIndex = Math.floor(Math.random() * users.length);
+        for (let i = 0; i < 4; i++) {
             let userInfo = JSON.parse(
-                window.localStorage.getItem(users[randomIndex])
+                window.localStorage.getItem(users[randoms[i]])
             );
             friendRandoms.push(userInfo);
-            if (users.length < 4) {
-                friendRandoms.push('');
-            }
         }
+        if (users.length < 4) {
+            friendRandoms.push('');
+        }
+        // while (friendRandoms.length < 4) {
+        //     let randomIndex = Math.floor(Math.random() * users.length);
+        //     let userInfo = JSON.parse(
+        //         window.localStorage.getItem(users[randomIndex])
+        //     );
+        //     friendRandoms.push(userInfo);
+        //     if (users.length < 4) {
+        //         friendRandoms.push('');
+        //     }
+        // }
+        randoms = [];
         createMemberCard(friendRandoms);
     }
-    findHouseMembers('Gryffindor', friendGryffindors);
-    findHouseMembers('Ravenclaw', friendRavenclaws);
-    findHouseMembers('Slytherin', friendSlytherins);
-    findHouseMembers('Hufflepuff', friendHufflepuffs);
+    findHouseMembers('Gryffindor', friendGryffindors, randoms);
+    findHouseMembers('Ravenclaw', friendRavenclaws, randoms);
+    findHouseMembers('Slytherin', friendSlytherins, randoms);
+    findHouseMembers('Hufflepuff', friendHufflepuffs, randoms);
     findFriendSelect.value === '';
 }
-function findHouseMembers(house, members) {
+function findHouseMembers(house, members, randoms) {
+    console.log(randoms);
     if (findFriendSelect.value === house) {
-        let count = 0;
-        users.forEach((user) => {
-            if (user.userHouse === house) {
-                count++;
-            }
-        });
-        while (members.length < 4) {
-            let randomIndex = Math.floor(Math.random() * users.length);
+        randoms.forEach((random) => {
             let userInfo = JSON.parse(
-                window.localStorage.getItem(users[randomIndex])
+                window.localStorage.getItem(users[random])
             );
             if (userInfo.userHouse === house) {
                 members.push(userInfo);
             }
-            if (count < 4) {
-                members.push('');
+            if (members.length > 4) {
+                return;
             }
-        }
+        });
+        randoms = [];
+        // let count = 0;
+        // users.forEach((user) => {
+        //     if (user.userHouse === house) {
+        //         count++;
+        //     }
+        // });
+        // while (members.length < 4) {
+        //     // let randomIndex = Math.floor(Math.random() * users.length);
+        //     let userInfo = JSON.parse(
+        //         window.localStorage.getItem(users[randomIndex])
+        //     );
+        //     if (userInfo.userHouse === house) {
+        //         members.push(userInfo);
+        //     }
+
+        //     if (count < 4) {
+        //         members.push('');
+        //     }
+        // }
+
         createMemberCard(members);
     }
 }

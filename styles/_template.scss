@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap');
 
 @mixin flex($fd, $jc, $ai) {
     flex-direction: $fd;
@@ -15,37 +15,37 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    cursor: url("/assets/images/img_main/wand.png"), auto;
+    cursor: url('/assets/images/img_main/wand.png'), auto;
     background-color: #110727;
     color: goldenrod;
-    font-family: "Platypi", serif;
+    font-family: 'Platypi', serif;
 }
 .bodycontainer {
     max-width: 100%;
     display: flex;
     height: 100%;
     @include flex(column, space-between, center);
-    header {
-        min-height: 200px;
-        min-width: 100%;
-        border-bottom: 1px solid;
-        #play {
-            position: absolute;
-            top: 1%;
-            right: 1%;
-            border: none;
-        }
-    }
+
     main {
         min-width: 100%;
     }
-    footer {
-        min-width: 100%;
-        min-height: 100px;
-        border-top: 1px solid;
+}
+footer {
+    min-width: 100%;
+    min-height: 100px;
+    border-top: 1px solid;
+}
+header {
+    min-height: 200px;
+    min-width: 100%;
+    border-bottom: 1px solid;
+    #play {
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        border: none;
     }
 }
-
 .header__wrapper {
     min-width: 100%;
     display: flex;
