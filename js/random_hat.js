@@ -1,4 +1,4 @@
-const animatedOne = new Typed('#hatText', {
+let animatedOne = new Typed('#hatText', {
     typeSpeed: 40,
     startDelay: 1000,
     stringsElement: '#animatedText',
@@ -8,6 +8,7 @@ const animatedOne = new Typed('#hatText', {
 const hat = document.querySelector('.hatbox');
 const container = document.querySelector('.container');
 const houseBox = document.createElement('div');
+houseBox.classList.add('houseBox');
 const hatText = document.getElementById('hatText');
 container.append(houseBox);
 
@@ -43,7 +44,10 @@ function sortHouse() {
     setTimeout(function() {
         showOthers(houses);
     },300)
-}
+    animatedOne = '';
+    document.getElementById('hatText').style.display = 'none';}
+
+    
 function showRandom(randomHouse) {
     houseBox.innerText = 'Your house is: ';
     const chosenHouse = document.createElement('a');
