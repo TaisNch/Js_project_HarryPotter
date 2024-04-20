@@ -1,64 +1,53 @@
-.game {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 40px 15px;
-    margin: 0 auto;
+.RRhello__p {
+    text-align: center;
 }
+.play__p {
+    text-align: center;
+    }
+
+.play {
+background-color: white;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.play__cards {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+   perspective: 1000px;
+      }
 
 .card {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height:50vh;
-    padding: 30vw;
-    background-image: url('../images/img_main/logo.png');
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-image .3s;
+    width: 20vw;
+    height: 30vh;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    transform-style: preserve-3d;
+       }
+ .card:active {
+  transform: scale(0.95);
+     transition: transform 0.3s;
+       }
+
+.card.flip {
+   transform: rotateY('180deg');  
+       }
+       
+.card__FF {
+padding: 20px;
+border-radius: 5px;
+position: absolute;
+backface-visibility: hidden;
+transform: rotateY('180deg');
 }
 
-// .card:hover {
-//     background-color: rgb(241, 213, 176);
-//     }
-
-// .card:active {
-//     background-color: rgb(204, 159, 100);
-//   ;
-// }
-
-.open {
-    font-size: 36px;
-    color: white;
-    background-image: none;
-    background-color: rgb(37, 60, 188);
-    cursor: default;
-}
-
-.open:hover{
-    background-color: rgb(37, 60, 188);
-}
-
-.open:active{
-    background-color: rgb(37, 60, 188);
-}
-
-.success {
-    font-size: 36px;
-    color: white;
-    background-image: none;
-     background-color: #009705;
-    cursor: default;
-}
-
-.success:hover{
-    background-image: none;
-    background-color: #009705;
-}
-
-.success:active{
-    background-image: none;
-    background-color: #009705;
+.card__BF {
+padding: 20px;
+border-radius: 5px;
+position: absolute;
+backface-visibility: hidden;
 }
