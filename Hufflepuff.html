@@ -4,41 +4,60 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hufflepuff</title>
-        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/normalize.css" />
         <link rel="stylesheet" href="styles/styles.css" />
     </head>
-    <header class="header">
-        <div class="header__wrapper">
-            <a href="./Gryffindor.html">Gryffindor</a>
-            <a href="./Hufflepuff.html">Hufflepuff</a>
-            <div class="header__center">
-                <a href="./roomOfRequirement.html">Room of Requirement</a>
-                <a href="./index.html">
-                    <img
-                        src="./assets/images/img_main/logo.png"
-                        alt="Houses logo"
-                /></a>
+    <body>
+        <header class="header">
+            <div class="header__wrapper">
+                <a href="./Gryffindor.html">Gryffindor</a>
+                <a href="./Hufflepuff.html" class="active">Hufflepuff</a>
+                <div class="header__center">
+                    <a href="./roomOfRequirement.html">Room of Requirement</a>
+                    <a href="./index.html">
+                        <img
+                            src="./assets/images/img_main/logo.png"
+                            alt="Houses logo"
+                    /></a>
+                </div>
+                <a href="./Ravenclaw.html">Ravenclaw</a>
+                <a href="./Slytherin.html">Slytherin</a>
             </div>
-            <a href="./Ravenclaw.html">Ravenclaw</a>
-            <a href="./Slytherin.html">Slytherin</a>
-        </div>
-        <button id="play">
-            <img
-                src="./assets/images/img_main/speaker.svg"
-                alt="Play music"
-            />
-        </button>
-        <audio id="audio" src="./assets/581.mp3"></audio>
-    </header>
+            <button id="play">
+                <img
+                    src="./assets/images/img_main/speaker.svg"
+                    alt="Play music"
+                />
+            </button>
+            <audio id="audio" src="./assets/581.mp3"></audio>
+        </header>
         <main class="container">
             <h1 class="container__title">Hufflepuff</h1>
             <div class="container__info">
-                <div class="container__text">Hufflepuff’s founder is the medieval witch Helga Hufflepuff. Hufflepuff is the most inclusive among the four houses, valuing hard work, dedication, patience, loyalty, and fair play rather than a particular aptitude in its members. Students sorted into Hufflepuff often demonstrated strong abilities in Herbology, owing to their correspondence to earth.</div>
-                <div class="container__text">The emblematic animal is a badger, and the house colors were yellow and black. The Hufflepuff point hourglass contained yellow diamonds.</div>
-                <div class="container__text">The House's patron ghost is the Fat Friar.</div>
+                <div class="container__text">
+                    Hufflepuff’s founder is the medieval witch Helga Hufflepuff.
+                    Hufflepuff is the most inclusive among the four houses,
+                    valuing hard work, dedication, patience, loyalty, and fair
+                    play rather than a particular aptitude in its members.
+                    Students sorted into Hufflepuff often demonstrated strong
+                    abilities in Herbology, owing to their correspondence to
+                    earth.
+                </div>
+                <div class="container__text">
+                    The emblematic animal is a badger, and the house colors were
+                    yellow and black. The Hufflepuff point hourglass contained
+                    yellow diamonds.
+                </div>
+                <div class="container__text">
+                    The House's patron ghost is the Fat Friar.
+                </div>
             </div>
             <div class="container__box" id="membersBoxHufflepuff"></div>
         </main>
+        <footer>
+            <div>Made with love by Viktoriia, Taisiya, Irina</div>
+            <div>&copy; ItGirls, 2024</div>
+        </footer>
         <script src="js/members.js"></script>
         <script src="js/common.js"></script>
     </body>

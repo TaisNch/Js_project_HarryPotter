@@ -1,9 +1,26 @@
-.container__box {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: 1%;
-    justify-content: space-between;
-    padding: 1%;
+@import './template';
+.container {
+    width: 100%;
+    .container__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 1%;
+        justify-content: space-between;
+        padding: 1%;
+        overflow: auto;
+    }
+    .container__info {
+        padding: 1%;
+    }
+    .container__title {
+        display: flex;
+        @include flex(column, center, center);
+        @include font(3vw, 700);
+    }
+}
+.active {
+    color: gold;
+    border-bottom: 2px solid;
 }
 .member {
     width: 100%;
@@ -19,4 +36,11 @@
     justify-content: center;
     align-items: center;
     height: 17vh;
+}
+.member__text,
+.container__text {
+    @include font(1.5vh, 500);
+}
+.member__name {
+    @include font(2vh, 700);
 }
