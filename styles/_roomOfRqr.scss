@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
+@mixin font($fs, $fw) {
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+.RRhello__h1 {
+    @include font(3vw, 700);
+    padding: 1vh;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.footer {
+width: 100vw;
+min-height: 2vh;
+}
+
+.footer_RR {
+    @include font(2vw, 700);
+    padding: 1vh;
+    text-align: center;
+}
