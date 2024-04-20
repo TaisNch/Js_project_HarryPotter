@@ -98,11 +98,16 @@
   margin: 20px 0;
 }
 
+<<<<<<< HEAD
 .findfriend__result {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+=======
+#animatedText {
+  display: inline;
+>>>>>>> main
 }
 
 .container__box {
@@ -158,7 +163,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #110727;
   color: goldenrod;
 }
 
