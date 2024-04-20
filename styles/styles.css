@@ -98,6 +98,10 @@
   margin: 20px 0;
 }
 
+#animatedText {
+  display: inline;
+}
+
 .container__box {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
@@ -147,7 +151,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #110727;
   color: goldenrod;
 }
 
