@@ -1,3 +1,10 @@
+const animatedOne = new Typed('#hatText', {
+    typeSpeed: 40,
+    startDelay: 1000,
+    stringsElement: '#animatedText',
+    loop: false,
+  });
+
 const hat = document.querySelector('.hatbox');
 const container = document.querySelector('.container');
 const houseBox = document.createElement('div');
