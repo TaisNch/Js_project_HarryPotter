@@ -6,7 +6,8 @@ class User {
         userSex,
         userHouse,
         quote,
-        speaker
+        speaker,
+        imgUrl
     ) {
         this.userName = userName;
         this.userMail = userMail;
@@ -15,9 +16,10 @@ class User {
         this.userHouse = userHouse;
         this.quote = quote;
         this.speaker = speaker;
+        this.imgUrl = imgUrl;
     }
 }
-
+const users = [];
 const form = document.forms.form;
 const inputs = document.querySelectorAll('input');
 const formAgreement = form.elements.userAgreement;
@@ -28,8 +30,13 @@ const ageData = form.elements.userAge;
 const houseData = form.elements.house;
 const male = document.getElementById('m');
 const female = document.getElementById('w');
+const findFriendForm = document.forms.findfriendForm;
+const findFriendSelect = findFriendForm.elements.findHouse;
+const findFriendButton = findFriendForm.elements.findFormButton;
+const findFriendResult = document.querySelector('.findfriend__result');
 
 form.addEventListener('submit', checkAllInputs);
+document.forms.findfriendForm.addEventListener('submit', findFriendsForUser);
 
 formAgreement.addEventListener('change', () => {
     formButton.disabled = !formAgreement.checked;
@@ -118,6 +125,20 @@ async function createUserCard() {
     if (female.checked) {
         sex = female.value;
     }
+    let imgUrl = './assets/images/img_main/';
+    if (houseData.value === 'Gryffindor') {
+        imgUrl = imgUrl + 'gryffindor.png';
+    }
+    if (houseData.value === 'Ravenclaw') {
+        imgUrl = imgUrl + 'ravenclaw.png';
+    }
+    if (houseData.value === 'Slytherin') {
+        imgUrl = imgUrl + 'slytherin.png';
+    }
+    if (houseData.value === 'Hufflepuff') {
+        imgUrl = imgUrl + 'hufflepuff.png';
+    }
+    console.log(imgUrl);
     let newUser = new User(
         nameData.value,
         mailData.value,
@@ -125,7 +146,8 @@ async function createUserCard() {
         sex,
         houseData.value,
         randomQuote,
-        randomSpeaker
+        randomSpeaker,
+        imgUrl
     );
     window.localStorage.setItem(mailData.value, JSON.stringify(newUser));
     const userLocalInfo = JSON.parse(
@@ -133,21 +155,8 @@ async function createUserCard() {
     );
     console.log(userLocalInfo);
     const userCard = document.querySelector('.usercard');
-    let imgUrl = './assets/images/img_main/';
-    if (userLocalInfo.userHouse === 'Gryffindor') {
-        imgUrl = imgUrl + 'gryffindor.png';
-    }
-    if (userLocalInfo.userHouse === 'Ravenclaw') {
-        imgUrl = imgUrl + 'ravenclaw.png';
-    }
-    if (userLocalInfo.userHouse === 'Slytherin') {
-        imgUrl = imgUrl + 'slytherin.png';
-    }
-    if (userLocalInfo.userHouse === 'Hufflepuff') {
-        imgUrl = imgUrl + 'hufflepuff.png';
-    }
     userCard.innerHTML = `<h2 class="usercard__title">User card</h2>
-    <img  alt="House symbol" class="usercard__housesymbol" src="${imgUrl}"/>
+    <img  alt="House symbol" class="usercard__housesymbol" src="${userLocalInfo.imgUrl}"/>
     <div class="usercard__info ">
         <div class="usercard__label user__name">User name:</div>
     </div>
@@ -166,6 +175,7 @@ async function createUserCard() {
     <div class="usercard__info">
         <div class="usercard__label user__quote">Random quote for user:</div>
     </div>`;
+    console.log(localStorage.imgUrl);
     createNewElement(
         userLocalInfo.userName,
         'div',
@@ -202,6 +212,78 @@ async function createUserCard() {
         document.querySelector('.user__quote'),
         'user-answer'
     );
+    // inputs.forEach((input) => {
+    //     input.value = '';
+    // });
+}
+
+function findFriendsForUser(e) {
+    e.preventDefault();
+    findFriendResult.innerHTML = '';
+    for (let i = 0; i < localStorage.length; i++) {
+        users.push(localStorage.key(i));
+    }
+    const friendRandoms = [];
+    const friendGryffindors = [];
+    const friendRavenclaws = [];
+    const friendSlytherins = [];
+    const friendHufflepuffs = [];
+    if (findFriendSelect.value === '') {
+        while (friendRandoms.length < 4) {
+            let randomIndex = Math.floor(Math.random() * users.length);
+            let userInfo = JSON.parse(
+                window.localStorage.getItem(users[randomIndex])
+            );
+            friendRandoms.push(userInfo);
+            if (users.length < 4) {
+                friendRandoms.push('');
+            }
+        }
+        createMemberCard(friendRandoms);
+    }
+    findHouseMembers('Gryffindor', friendGryffindors);
+    findHouseMembers('Ravenclaw', friendRavenclaws);
+    findHouseMembers('Slytherin', friendSlytherins);
+    findHouseMembers('Hufflepuff', friendHufflepuffs);
+    findFriendSelect.value === '';
+}
+function findHouseMembers(house, members) {
+    if (findFriendSelect.value === house) {
+        let count = 0;
+        users.forEach((user) => {
+            if (user.userHouse === house) {
+                count++;
+            }
+        });
+        while (members.length < 4) {
+            let randomIndex = Math.floor(Math.random() * users.length);
+            let userInfo = JSON.parse(
+                window.localStorage.getItem(users[randomIndex])
+            );
+            if (userInfo.userHouse === house) {
+                members.push(userInfo);
+            }
+            if (count < 4) {
+                members.push('');
+            }
+        }
+        createMemberCard(members);
+    }
+}
+function createMemberCard(members) {
+    members.forEach((element) => {
+        if (element !== '') {
+            const memberCard = `
+        <img  alt="House symbol" class="findfriend__housesymbol" src="${element.imgUrl}"/>
+        <div class="findfriend__username">Name: ${element.userName}</div>
+        <div class="finduser__house">House: ${element.userHouse}</div>
+        <div class="user__mail">e-mail:${element.userMail}</div>`;
+            const member = document.createElement('div');
+            member.classList.add('finduser__member');
+            member.innerHTML = memberCard;
+            findFriendResult.append(member);
+        }
+    });
 }
 function createNewElement(content, tag, elem, classNew) {
     const newElem = document.createElement(tag);
