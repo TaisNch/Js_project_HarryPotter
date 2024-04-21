@@ -15,25 +15,40 @@ const allMembers = {
 document.addEventListener('DOMContentLoaded', function (event) {
     getData();
 });
-
-const getData = () => {
-    return fetch('https://potterhead-api.vercel.app/api/characters')
-        .then((response) => response.json())
-        .then((response) => {
-            response.forEach((element) => {
-                if (element.house === 'Gryffindor') {
-                    allMembers.Gryffindor.push(element);
-                } else if (element.house === 'Slytherin') {
-                    allMembers.Slytherin.push(element);
-                } else if (element.house === 'Hufflepuff') {
-                    allMembers.Hufflepuff.push(element);
-                } else if (element.house === 'Ravenclaw') {
-                    allMembers.Ravenclaw.push(element);
-                }
-            });
-        })
-        .catch((error) => console.error(error));
-};
+async function getData() {
+    const url = 'https://potterhead-api.vercel.app/api/characters';
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error('No connection to the server');
+    }
+    const data = await response.json();
+    data.forEach(async (element) => {
+        await makeArrays(element);
+    });
+    allMembers.Gryffindor.forEach(
+        async (element) => await addNew(element, box.boxForGryffindor)
+    );
+    allMembers.Ravenclaw.forEach(
+        async (element) => await addNew(element, box.boxForRavenclaw)
+    );
+    allMembers.Slytherin.forEach(
+        async (element) => await addNew(element, box.boxForSlytherin)
+    );
+    allMembers.Hufflepuff.forEach(
+        async (element) => await addNew(element, box.boxForHufflepuff)
+    );
+}
+function makeArrays(element) {
+    if (element.house === 'Gryffindor') {
+        allMembers.Gryffindor.push(element);
+    } else if (element.house === 'Slytherin') {
+        allMembers.Slytherin.push(element);
+    } else if (element.house === 'Hufflepuff') {
+        allMembers.Hufflepuff.push(element);
+    } else if (element.house === 'Ravenclaw') {
+        allMembers.Ravenclaw.push(element);
+    }
+}
 
 function addNew(response, box) {
     const member = document.createElement('div');
@@ -47,7 +62,7 @@ function addNew(response, box) {
     const memberInfo = document.createElement('div');
     memberInfo.innerHTML =
         `
-  <h2 class="member__name">${response.name}</h2>` +
+        <h2 class="member__name">${response.name}</h2>` +
         (response.yearOfBirth === null
             ? `<div class="member__text">Year of birth: No information available</div>`
             : `<div class="member__text">Year of birth: ${response.yearOfBirth}</div>`) +
@@ -61,122 +76,3 @@ function addNew(response, box) {
     member.appendChild(memberPic);
     member.appendChild(memberInfo);
 }
-
-setTimeout(() => {
-    allMembers.Gryffindor.forEach((element) =>
-        addNew(element, box.boxForGryffindor)
-    );
-}, 200);
-
-setTimeout(() => {
-    allMembers.Ravenclaw.forEach((element) =>
-        addNew(element, box.boxForRavenclaw)
-    );
-}, 200);
-
-setTimeout(() => {
-    allMembers.Slytherin.forEach((element) =>
-        addNew(element, box.boxForSlytherin)
-    );
-}, 200);
-
-setTimeout(() => {
-    allMembers.Hufflepuff.forEach((element) =>
-        addNew(element, box.boxForHufflepuff)
-    );
-}, 200);
-
-// const boxForGryffindor = document.getElementById('membersBoxGryffindor');
-// const boxForHufflepuff = document.getElementById('membersBoxHufflepuff');
-// const boxForRavenclaw = document.getElementById('membersBoxRavenclaw');
-// const boxForSlytherin = document.getElementById('membersBoxSlytherin');
-// const gryffindorMembers = [];
-// const slytherinMembers = [];
-// const hufflepuffMembers = [];
-// const ravenclawMembers = [];
-// document.addEventListener('DOMContentLoaded', function(event) {
-//     getData();
-// });
-// const getData = () => {
-//     fetch('https://potterhead-api.vercel.app/api/characters')
-//     .then ((response) => (response.json()))
-//     .then ((response) => {
-//         response.forEach( (element) => {
-//             if (element.house === 'Slytherin') {
-//                 slytherinMembers.push(element);
-//             }
-//             if (element.house === 'Gryffindor') {
-//                 gryffindorMembers.push(element);
-//             }
-//             if (element.house === 'Hufflepuff') {
-//                 hufflepuffMembers.push(element);
-//             }
-//             if (element.house === 'Ravenclaw') {
-//                 ravenclawMembers.push(element);
-//             }})
-//             ravenclawMembers.forEach ((element) => ( addNew(element,boxForRavenclaw)));
-//             gryffindorMembers.forEach ((element) => ( addNew(element,boxForGryffindor)));
-//             hufflepuffMembers.forEach ((element) => ( addNew(element,boxForHufflepuff)));
-//             slytherinMembers.forEach ((element) => ( addNew(element,boxForSlytherin)));
-//     })
-//     .catch ((error) => (console.error(error)));
-// }
-
-// function addNew (response,box) {
-//     console.log(response);
-//     const memberPic = document.createElement('img');
-//     memberPic.src = ((response.image === '') ? ('/assets/images/img_main/logo.png'): (response.image));
-//     const newMember = document.createElement('div');
-//     newMember.innerHTML = `<h2>${response.name}</h2>` + ((response.yearOfBirth === '') ? `Year of birth: No information available` : `<div>Year of birth: ${response.yearOfBirth}</div>`) + ((response.ancestry === '') ? `Ancestry: No information available` : `<div>Ancestry: ${response.ancestry}</div>`) + ((response.actor === '') ? `Actor: No information available` : `<div>Actor: ${response.actor}</div>`);
-//     box.appendChild(memberPic);
-//     box.appendChild(newMember);
-// }
-
-// document.addEventListener('DOMContentLoaded', function(event) {
-//     loadData();
-// });
-// const boxForGryffindor = document.getElementById('membersBoxGryffindor');
-// const boxForHufflepuff = document.getElementById('membersBoxHufflepuff');
-// const boxForRavenclaw = document.getElementById('membersBoxRavenclaw');
-// const boxForSlytherin = document.getElementById('membersBoxSlytherin');
-// const gryffindorMembers = [];
-// const slytherinMembers = [];
-// const hufflepuffMembers = [];
-// const ravenclawMembers = [];
-
-// function loadData() { sortData();
-//     ravenclawMembers.forEach ((element) => ( addNew(element,boxForRavenclaw)));
-//     hufflepuffMembers.forEach ((element) => ( addNew(element,boxForHufflepuff)));
-//     gryffindorMembers.forEach ((element) => ( addNew(element,boxForGryffindor)));
-//     slytherinMembers.forEach ((element) => ( addNew(element,boxForSlytherin)));
-// }
-
-// const sortData = () => {
-//     fetch('https://potterhead-api.vercel.app/api/characters')
-//     .then ((response) => (response.json()))
-//     .then ((response) => {
-//         response.forEach( (element) => {
-//             if (element.house === 'Slytherin') {
-//                 slytherinMembers.push(element);
-//             }
-//             if (element.house === 'Gryffindor') {
-//                 gryffindorMembers.push(element);
-//             }
-//             if (element.house === 'Hufflepuff') {
-//                 hufflepuffMembers.push(element);
-//             }
-//             if (element.house === 'Ravenclaw') {
-//                 ravenclawMembers.push(element);
-//             }})
-//     })
-//     .catch ((error) => (console.error(error)));
-// }
-
-// function addNew (response,box) {
-//     const memberPic = document.createElement('img');
-//     memberPic.src = response.image;
-//     const newMember = document.createElement('div');
-//     newMember.innerHTML = `<h2>${response.name}</h2> <div>${response.alternate_names}</div> <div>${response.patronus}</div>`;
-//     box.appendChild(memberPic);
-//     box.appendChild(newMember);
-// }
