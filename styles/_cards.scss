@@ -25,12 +25,9 @@ perspective: 1000px;
       }
 
 .card {
-   //background-color: plum;
-   margin: 0;
+    margin: 0;
    padding: 10px;
-   //  width: 15vw;
-   // height: 10vh;
-    padding: 25px;
+   padding: 25px;
     border-radius: 30px;
     transform: scale(1);
     transition: transform 0.5s;
@@ -44,12 +41,12 @@ perspective: 1000px;
   transform: scale(0.95);
    transition: transform 0.3s;
    background-color: goldenrod;
-               color: #110727;
-               box-shadow:
-                   0 0 5px gold,
-                   0 0 25px gold,
-                   0 0 50px gold,
-                   0 0 200px gold;  
+   color: #110727;
+   box-shadow:
+      0 0 5px gold,
+      0 0 25px gold,
+      0 0 50px gold,
+      0 0 200px gold;  
        }
 
 .card.flip {
@@ -58,7 +55,6 @@ perspective: 1000px;
        
 .card__FF,
 .card__BF  {
-//box-sizing: border-box;
 width: 15vw;
 max-height: 30vh;
 background-color: none;
@@ -70,3 +66,7 @@ backface-visibility: hidden;
 .card__FF {
     rotate: Y 180deg;
              }
+
+ .btnReStrt {
+    margin: 2% 45% 0 45%;
+   }

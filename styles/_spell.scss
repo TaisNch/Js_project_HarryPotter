@@ -3,9 +3,7 @@
     font-weight: $fw;
 }
 @import url('https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap');
-// .spell {
-//     text-align: center;
-// }
+
 
 .spell__header {
     @include font(2vw, 500);
@@ -24,24 +22,12 @@
     justify-items: center;
 }
 .rndm__btn {
-    padding: 1%;
     margin: 2% 0;
-    background-color: goldenrod;
-    border-radius: 10px;
     min-height: 5vw;
     max-width: 20vw;
     margin-bottom: 3%;
-    &:hover {
-        box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
     }
-}
 
-.rndm__btn__p {
-    @include font(2.5vw, 700);
-    background-color: goldenrod;
-    color: black;
-    text-align: center;
-}
 
 .rndm__wrapper {
     display: grid;
@@ -60,6 +46,8 @@
     box-shadow: grey;
 }
 .rndm__img {
+   background-color: goldenrod;
+   color: black;
     border-radius: 10%;
 }
 .rndm__p {
