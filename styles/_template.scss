@@ -49,6 +49,9 @@ header {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        img {
+            background-color: transparent;
+        }
     }
     .header__logo {
         width: 80%;

@@ -21,11 +21,10 @@
 }
 .rndm {
     display: grid;
-   justify-items: center;
-    
+    justify-items: center;
 }
 .rndm__btn {
-   padding: 1%;
+    padding: 1%;
     margin: 2% 0;
     background-color: goldenrod;
     border-radius: 10px;
@@ -33,21 +32,16 @@
     max-width: 20vw;
     margin-bottom: 3%;
     &:hover {
-        box-shadow:
-            0 0 5px gold,
-            0 0 25px gold,
-            0 0 50px gold,
-            0 0 200px gold;
+        box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
     }
-} 
-    
- 
+}
+
 .rndm__btn__p {
     @include font(2.5vw, 700);
     background-color: goldenrod;
     color: black;
     text-align: center;
-   }
+}
 
 .rndm__wrapper {
     display: grid;
@@ -59,11 +53,7 @@
 .rndm__btn:hover {
     cursor: pointer;
     background-color: goldenrod;
-    box-shadow:
-                   0 0 5px gold,
-                   0 0 25px gold,
-                   0 0 50px gold,
-                   0 0 200px gold;  
+    box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
 }
 .rndm__btn:active {
     transform: scale(1.2);

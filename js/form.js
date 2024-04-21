@@ -196,7 +196,7 @@ const findFriendForm = document.forms.findfriendForm;
 const findFriendSelect = findFriendForm.elements.findHouse;
 const findFriendButton = findFriendForm.elements.findFormButton;
 const findFriendResult = document.querySelector('.findfriend__result');
-
+const formTitle = document.querySelector('.user__title');
 for (let i = 0; i < localStorage.length; i++) {
     users.push(localStorage.key(i));
 }
@@ -327,7 +327,7 @@ async function createUserCard() {
         window.localStorage.getItem(mailData.value)
     );
     const userCard = document.querySelector('.usercard');
-    userCard.innerHTML = `<h2 class="usercard__title">User card</h2>
+    userCard.innerHTML = `
     <div class="usercard__housesymbol-wrap">
         <img  alt="House symbol" class="usercard__housesymbol" src="${userLocalInfo.imgUrl}"/>
     </div>
@@ -385,7 +385,10 @@ async function createUserCard() {
         document.querySelector('.user__quote'),
         'user-answer'
     );
-    userCard.classList.add('usercard_new');
+    userCard.style.display = 'inline-block';
+    form.style.display = 'none';
+    formTitle.textContent = 'Hooray! You joined our community!';
+    formTitle.style.color = 'gold';
     inputs.forEach((input) => {
         input.value = '';
     });

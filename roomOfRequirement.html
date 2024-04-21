@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="./assets/icon.ico"
+            type="image/x-icon"
+        />
         <title>Room of Requirement</title>
         <link rel="stylesheet" href="styles/normalize.css" />
         <link rel="stylesheet" href="styles/styles.css" />
@@ -164,139 +169,135 @@
                 <h2 class="user__title">
                     Fill in the form to join our community
                 </h2>
-                <div class="user__information">
-                    <form name="form" class="user__form form" novalidate>
-                        <div class="form__wrapper">
-                            <label for="userName" class="form__label"
-                                >What's your name?</label
-                            >
+                <form name="form" class="user__form form" novalidate>
+                    <div class="form__wrapper">
+                        <label for="userName" class="form__label"
+                            >What's your name?</label
+                        >
+                        <input
+                            name="userName"
+                            type="text"
+                            class="form__input"
+                            placeholder="your name"
+                            minlength="2"
+                            maxlength="20"
+                            id="userName"
+                            required
+                        />
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="userEmail" class="form__label"
+                            >Enter your e-mail?</label
+                        >
+                        <input
+                            name="userEmail"
+                            type="email"
+                            class="form__input"
+                            id="userEmail"
+                            placeholder="your e-mail"
+                            required
+                        />
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="userAge" class="form__label"
+                            >How old are you?</label
+                        >
+                        <input
+                            name="userAge"
+                            type="number"
+                            class="form__input"
+                            id="userAge"
+                            min="0"
+                            max="1000"
+                            placeholder="your age"
+                            required
+                        />
+                    </div>
+                    <div class="form__wrapper">
+                        <div class="form__label">Sex</div>
+                        <div class="form__sex">
                             <input
-                                name="userName"
-                                type="text"
-                                class="form__input"
-                                placeholder="your name"
-                                minlength="2"
-                                maxlength="20"
-                                id="userName"
-                                required
+                                name="sex"
+                                class="form__input input_sex"
+                                type="radio"
+                                id="m"
+                                value="male"
                             />
+                            <label for="m" class="form__minilabel">male</label>
                         </div>
-                        <div class="form__wrapper">
-                            <label for="userEmail" class="form__label"
-                                >Enter your e-mail?</label
-                            >
+                        <div class="form__sex">
                             <input
-                                name="userEmail"
-                                type="email"
-                                class="form__input"
-                                id="userEmail"
-                                placeholder="your e-mail"
-                                required
+                                name="sex"
+                                class="form__input input_sex"
+                                type="radio"
+                                id="w"
+                                value="female"
                             />
-                        </div>
-                        <div class="form__wrapper">
-                            <label for="userAge" class="form__label"
-                                >How old are you?</label
+                            <label for="w" class="form__minilabel" id="sex"
+                                >female</label
                             >
-                            <input
-                                name="userAge"
-                                type="number"
-                                class="form__input"
-                                id="userAge"
-                                min="0"
-                                max="1000"
-                                placeholder="your age"
-                                required
-                            />
                         </div>
-                        <div class="form__wrapper">
-                            <div class="form__label">Sex</div>
-                            <div class="form__sex">
-                                <input
-                                    name="sex"
-                                    class="form__input input_sex"
-                                    type="radio"
-                                    id="m"
-                                    value="male"
-                                />
-                                <label for="m" class="form__minilabel"
-                                    >male</label
-                                >
-                            </div>
-                            <div class="form__sex">
-                                <input
-                                    name="sex"
-                                    class="form__input input_sex"
-                                    type="radio"
-                                    id="w"
-                                    value="female"
-                                />
-                                <label for="w" class="form__minilabel" id="sex"
-                                    >female</label
-                                >
-                            </div>
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="house" class="form__label"
+                            >Choose your house</label
+                        >
+                        <select
+                            name="house"
+                            id="house"
+                            class="form__input"
+                            required
+                        >
+                            <option value="">your house</option>
+                            <option value="Gryffindor">Gryffindor</option>
+                            <option value="Ravenclaw">Ravenclaw</option>
+                            <option value="Slytherin">Slytherin</option>
+                            <option value="Hufflepuff">Hufflepuff</option>
+                        </select>
+                    </div>
+                    <div class="form__wrapper">
+                        <label for="userPassword" class="form__label"
+                            >Password</label
+                        >
+                        <div class="form__text">
+                            Password must contain at least 1 capital letter, 1
+                            number
                         </div>
-                        <div class="form__wrapper">
-                            <label for="house" class="form__label"
-                                >Choose your house</label
-                            >
-                            <select
-                                name="house"
-                                id="house"
-                                class="form__input"
-                                required
-                            >
-                                <option value="">your house</option>
-                                <option value="Gryffindor">Gryffindor</option>
-                                <option value="Ravenclaw">Ravenclaw</option>
-                                <option value="Slytherin">Slytherin</option>
-                                <option value="Hufflepuff">Hufflepuff</option>
-                            </select>
-                        </div>
-                        <div class="form__wrapper">
-                            <label for="userPassword" class="form__label"
-                                >Password</label
-                            >
-                            <div class="form__text">
-                                Password must contain at least 1 capital letter,
-                                1 number
-                            </div>
-                            <input
-                                name="userPassword"
-                                type="password"
-                                class="form__input"
-                                id="userPassword"
-                                placeholder="password"
-                                required
-                                minlength="8"
-                                pattern="^(?=.*\d)\w{8,}$"
-                            />
-                        </div>
-                        <div class="form__wrapper agreement-wrap">
-                            <input
-                                type="checkbox"
-                                name="userAgreement"
-                                value="I solemnly swear that I'm up to no good."
-                                class="form__agreement userAgreement"
-                                required
-                            />
-                            <span class="form__agreeText"
-                                >I solemnly swear that I'm up to no good.
-                            </span>
-                        </div>
-                        <div class="form__wrapper">
-                            <button
-                                type="submit"
-                                name="submitButton"
-                                class="form__button btn_all"
-                                disabled
-                            >
-                                Submit
-                            </button>
-                        </div>
-                    </form>
-                    <div class="user__card usercard"></div>
-                </div>
+                        <input
+                            name="userPassword"
+                            type="password"
+                            class="form__input"
+                            id="userPassword"
+                            placeholder="password"
+                            required
+                            minlength="8"
+                            pattern="^(?=.*\d)\w{8,}$"
+                        />
+                    </div>
+                    <div class="form__wrapper agreement-wrap">
+                        <input
+                            type="checkbox"
+                            name="userAgreement"
+                            value="I solemnly swear that I'm up to no good."
+                            class="form__agreement userAgreement"
+                            required
+                        />
+                        <span class="form__agreeText"
+                            >I solemnly swear that I'm up to no good.
+                        </span>
+                    </div>
+                    <div class="form__wrapper button_wrap">
+                        <button
+                            type="submit"
+                            name="submitButton"
+                            class="form__button btn_all"
+                            disabled
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <div class="user__card usercard"></div>
             </section>
             <section class="findfriend">
                 <h2 class="findfriend__title">Choose your new friend house</h2>
@@ -317,6 +318,104 @@
                     </button>
                 </form>
                 <div class="findfriend__result"></div>
+            </section>
+            <section class="rating">
+                <div class="rating__box info">
+                    <div class="rating__emogi emoji"></div>
+                    <div class="rating__status status"></div>
+                </div>
+                <div class="rating__stars stars">
+                    <div class="stars__item star" data-rate="5">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stars__svg feather feather-star"
+                        >
+                            <polygon
+                                class="stars__poligon"
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
+                        </svg>
+                    </div>
+                    <div class="stars__item star" data-rate="4">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stars__svg feather feather-star"
+                        >
+                            <polygon
+                                class="stars__poligon"
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
+                        </svg>
+                    </div>
+                    <div class="stars__item star" data-rate="3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stars__svg feather feather-star"
+                        >
+                            <polygon
+                                class="stars__poligon"
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
+                        </svg>
+                    </div>
+                    <div class="stars__item star" data-rate="2">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stars__svg feather feather-star"
+                        >
+                            <polygon
+                                class="stars__poligon"
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
+                        </svg>
+                    </div>
+                    <div class="stars__item star" data-rate="1">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="stars__svg feather feather-star"
+                        >
+                            <polygon
+                                class="stars__poligon"
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
+                        </svg>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
@@ -347,5 +446,6 @@
         <script src="js/play_cards.js"></script>
         <script src="js/form.js"></script>
         <script src="js/common.js"></script>
+        <script src="js/rating.js"></script>
     </body>
 </html>
