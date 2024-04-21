@@ -15,15 +15,11 @@
     .container__title {
         display: flex;
         @include flex(column, center, center);
-        @include font(5vw, 700);
+        @include font(5vh, 700);
     }
     .container__text {
         @include font(3.5vh, 500);
     }
-}
-.active {
-    color: gold;
-    border-bottom: 2px solid;
 }
 .member {
     width: 100%;
