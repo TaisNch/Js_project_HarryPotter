@@ -15,26 +15,27 @@ box-sizing: border-box;
 }
 
 .play__cards {
-  width: 70vw;
-  height: 70vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-   perspective: 1000px;
+min-width: 70vw;
+min-height:70vh ;
+display: grid;
+grid-template-columns:repeat(auto-fill, minmax(280px, 25%));
+justify-content: space-evenly;
+padding-left: 5%;
+perspective: 1000px;
       }
 
 .card {
    //background-color: plum;
    margin: 0;
    padding: 10px;
-    width: 15vw;
-    height: 20vh;
-    padding: 5px;
+   //  width: 15vw;
+   // height: 10vh;
+    padding: 25px;
     border-radius: 30px;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
+    display: inline-block;
     transform-style: preserve-3d;
                }
 
@@ -57,8 +58,9 @@ box-sizing: border-box;
        
 .card__FF,
 .card__BF  {
+//box-sizing: border-box;
 width: 15vw;
-height: 30vh;
+max-height: 30vh;
 background-color: none;
 border-radius: 30px;
 position: absolute;
