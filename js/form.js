@@ -328,7 +328,9 @@ async function createUserCard() {
     );
     const userCard = document.querySelector('.usercard');
     userCard.innerHTML = `<h2 class="usercard__title">User card</h2>
-    <img  alt="House symbol" class="usercard__housesymbol" src="${userLocalInfo.imgUrl}"/>
+    <div class="usercard__housesymbol-wrap">
+        <img  alt="House symbol" class="usercard__housesymbol" src="${userLocalInfo.imgUrl}"/>
+    </div>
     <div class="usercard__info ">
         <div class="usercard__label user__name">User name:</div>
     </div>
@@ -383,6 +385,7 @@ async function createUserCard() {
         document.querySelector('.user__quote'),
         'user-answer'
     );
+    userCard.classList.add('usercard_new');
     inputs.forEach((input) => {
         input.value = '';
     });
@@ -442,7 +445,9 @@ function createMemberCard(members) {
     members.forEach((element) => {
         if (element !== '') {
             const memberCard = `
+        <div class="findfriend__housesymbol-wrap">
         <img  alt="House symbol" class="findfriend__housesymbol" src="${element.imgUrl}"/>
+        </div>        
         <div class="findfriend__username">Name: <br>${element.userName}</div>
         <div class="finduser__info">House: <br>${element.userHouse}</div>
         <div class="finduser__info">Age: ${element.userAge} y.o.</div>
