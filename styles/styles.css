@@ -426,6 +426,10 @@ footer a {
 }
 #chosenH img {
   height: 30vh;
+  transition: transform 0.2s ease;
+}
+#chosenH img:hover {
+  transform: scale(1.1);
 }
 
 #tryButton {
@@ -453,6 +457,10 @@ footer a {
 }
 .otherH img {
   height: 20vh;
+  transition: transform 0.2s ease;
+}
+.otherH img:hover {
+  transform: scale(1.1);
 }
 
 * {
