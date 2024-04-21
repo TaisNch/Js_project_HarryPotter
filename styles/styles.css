@@ -127,6 +127,10 @@ footer {
   font-size: 1.8vw;
   font-weight: 500;
 }
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 
 .container_main {
   display: flex;
@@ -144,6 +148,10 @@ footer {
   text-align: center;
   margin-top: 0.5%;
 }
+.container_main .container__info a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 .container_main .hatbox {
   height: 40vh;
   width: 27%;
@@ -155,6 +163,11 @@ footer {
 .container_main .hatbox #hat {
   width: 100%;
   max-height: 100%;
+}
+
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
 }
 
 .user {
@@ -473,6 +486,10 @@ footer {
   font-size: 1.8vw;
   font-weight: 500;
 }
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 
 .container_main {
   display: flex;
@@ -490,6 +507,10 @@ footer {
   text-align: center;
   margin-top: 0.5%;
 }
+.container_main .container__info a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 .container_main .hatbox {
   height: 40vh;
   width: 27%;
@@ -501,6 +522,11 @@ footer {
 .container_main .hatbox #hat {
   width: 100%;
   max-height: 100%;
+}
+
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
 }
 
 .container {
@@ -522,17 +548,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 5vw;
+  font-size: 5vh;
   font-weight: 700;
 }
 .container .container__text {
   font-size: 3.5vh;
   font-weight: 500;
-}
-
-.active {
-  color: gold;
-  border-bottom: 2px solid;
 }
 
 .member {
@@ -715,6 +736,10 @@ footer {
   font-size: 1.8vw;
   font-weight: 500;
 }
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 
 .container_main {
   display: flex;
@@ -732,6 +757,10 @@ footer {
   text-align: center;
   margin-top: 0.5%;
 }
+.container_main .container__info a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 .container_main .hatbox {
   height: 40vh;
   width: 27%;
@@ -743,4 +772,9 @@ footer {
 .container_main .hatbox #hat {
   width: 100%;
   max-height: 100%;
+}
+
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
 }/*# sourceMappingURL=styles.css.map */
