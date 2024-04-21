@@ -37,7 +37,9 @@ const findFriendResult = document.querySelector('.findfriend__result');
 
 form.addEventListener('submit', checkAllInputs);
 document.forms.findfriendForm.addEventListener('submit', findFriendsForUser);
-
+for (let i = 0; i < localStorage.length; i++) {
+    users.push(localStorage.key(i));
+}
 formAgreement.addEventListener('change', () => {
     formButton.disabled = !formAgreement.checked;
     if (formAgreement.checked === true) {
@@ -103,7 +105,6 @@ function checkAllInputs(e) {
     }
     formAgreement.checked = false;
     formButton.disabled = !formAgreement.checked;
-    console.log(document.querySelectorAll('.error').length);
     if (document.querySelectorAll('.error').length === 0) {
         createUserCard();
     }
@@ -138,7 +139,6 @@ async function createUserCard() {
     if (houseData.value === 'Hufflepuff') {
         imgUrl = imgUrl + 'hufflepuff.png';
     }
-    console.log(imgUrl);
     let newUser = new User(
         nameData.value,
         mailData.value,
@@ -153,7 +153,6 @@ async function createUserCard() {
     const userLocalInfo = JSON.parse(
         window.localStorage.getItem(mailData.value)
     );
-    console.log(userLocalInfo);
     const userCard = document.querySelector('.usercard');
     userCard.innerHTML = `<h2 class="usercard__title">User card</h2>
     <img  alt="House symbol" class="usercard__housesymbol" src="${userLocalInfo.imgUrl}"/>
@@ -211,23 +210,20 @@ async function createUserCard() {
         document.querySelector('.user__quote'),
         'user-answer'
     );
-    // inputs.forEach((input) => {
-    //     input.value = '';
-    // });
+    inputs.forEach((input) => {
+        input.value = '';
+    });
 }
 
 function findFriendsForUser(e) {
     e.preventDefault();
+    let randoms = [];
     findFriendResult.innerHTML = '';
-    for (let i = 0; i < localStorage.length; i++) {
-        users.push(localStorage.key(i));
-    }
     while (randoms.length < users.length) {
         let randomIndex = Math.floor(Math.random() * users.length);
         randoms.push(randomIndex);
         randoms = [...new Set(randoms)];
     }
-    console.log(users.length);
     const friendRandoms = [];
     const friendGryffindors = [];
     const friendRavenclaws = [];
@@ -243,16 +239,6 @@ function findFriendsForUser(e) {
         if (users.length < 4) {
             friendRandoms.push('');
         }
-        // while (friendRandoms.length < 4) {
-        //     let randomIndex = Math.floor(Math.random() * users.length);
-        //     let userInfo = JSON.parse(
-        //         window.localStorage.getItem(users[randomIndex])
-        //     );
-        //     friendRandoms.push(userInfo);
-        //     if (users.length < 4) {
-        //         friendRandoms.push('');
-        //     }
-        // }
         randoms = [];
         createMemberCard(friendRandoms);
     }
@@ -263,7 +249,6 @@ function findFriendsForUser(e) {
     findFriendSelect.value === '';
 }
 function findHouseMembers(house, members, randoms) {
-    console.log(randoms);
     if (findFriendSelect.value === house) {
         randoms.forEach((random) => {
             let userInfo = JSON.parse(
@@ -277,26 +262,6 @@ function findHouseMembers(house, members, randoms) {
             }
         });
         randoms = [];
-        // let count = 0;
-        // users.forEach((user) => {
-        //     if (user.userHouse === house) {
-        //         count++;
-        //     }
-        // });
-        // while (members.length < 4) {
-        //     // let randomIndex = Math.floor(Math.random() * users.length);
-        //     let userInfo = JSON.parse(
-        //         window.localStorage.getItem(users[randomIndex])
-        //     );
-        //     if (userInfo.userHouse === house) {
-        //         members.push(userInfo);
-        //     }
-
-        //     if (count < 4) {
-        //         members.push('');
-        //     }
-        // }
-
         createMemberCard(members);
     }
 }
@@ -306,8 +271,8 @@ function createMemberCard(members) {
             const memberCard = `
         <img  alt="House symbol" class="findfriend__housesymbol" src="${element.imgUrl}"/>
         <div class="findfriend__username">Name: ${element.userName}</div>
-        <div class="finduser__house">House: ${element.userHouse}</div>
-        <div class="user__mail">e-mail:${element.userMail}</div>`;
+        <div class="finduser__info">House: ${element.userHouse}</div>
+        <div class="finduser__info">e-mail: ${element.userMail}</div>`;
             const member = document.createElement('div');
             member.classList.add('finduser__member');
             member.innerHTML = memberCard;
