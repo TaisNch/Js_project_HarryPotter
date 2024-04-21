@@ -19,7 +19,48 @@ class User {
         this.imgUrl = imgUrl;
     }
 }
-const programUser
+const programUsers = [
+    new User(
+        'Cora',
+        'cora25@gmail.com',
+        25,
+        'female',
+        'Gryffindor',
+        '',
+        '',
+        './assets/images/img_main/gryffindor.png'
+    ),
+    new User(
+        'Nora',
+        'nora1995@gmail.com',
+        20,
+        'female',
+        'Ravenclaw',
+        '',
+        '',
+        './assets/images/img_main/ravenclaw.png'
+    ),
+    new User(
+        'Daniel',
+        'daniel.5678@gmail.com',
+        27,
+        'male',
+        'Slytherin',
+        '',
+        '',
+        './assets/images/img_main/slytherin.png'
+    ),
+    new User(
+        'Michaelis',
+        'michaelis7518@gmail.com',
+        35,
+        'male',
+        'Hufflepuff',
+        '',
+        '',
+        './assets/images/img_main/hufflepuff.png'
+    ),
+];
 const users = [];
 const form = document.forms.form;
 const inputs = document.querySelectorAll('input');
@@ -49,11 +90,8 @@ for (let i = 0; i < localStorage.length; i++) {
     users.push(localStorage.key(i));
 }
 if (localStorage.length < 16) {
-    for (let i = users.length; i < 16; i++){
-        
-    }
+    for (let i = users.length; i < 16; i++) {}
 }
-    
 
 for (let input of inputs) {
     input.addEventListener('focus', function () {
