@@ -1,9 +1,9 @@
-@import './template';
+@import "./template";
 .container {
     width: 100%;
     .container__box {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
         gap: 1%;
         justify-content: space-between;
         padding: 1%;
@@ -15,15 +15,11 @@
     .container__title {
         display: flex;
         @include flex(column, center, center);
-        @include font(3vw, 700);
+        @include font(5vh, 700);
     }
     .container__text {
-        @include font(2.5vh, 500);
+        @include font(3.5vh, 500);
     }
-}
-.active {
-    color: gold;
-    border-bottom: 2px solid;
 }
 .member {
     width: 100%;
@@ -38,12 +34,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 17vh;
+    height: 27vh;
 }
 .member__text {
-    @include font(1.8vh, 500);
+    @include font(3vh, 500);
 }
 .member__name {
-    @include font(2vh, 700);
+    @include font(4vh, 700);
     padding-bottom: 2%;
 }

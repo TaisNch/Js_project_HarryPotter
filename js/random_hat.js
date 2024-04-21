@@ -2,7 +2,7 @@ let animatedOne = new Typed('#hatText', {
     typeSpeed: 40,
     startDelay: 1000,
     stringsElement: '#animatedText',
-    loop: false,
+    loop: true,
   });
 
 const hat = document.querySelector('.hatbox');
@@ -45,7 +45,8 @@ function sortHouse() {
         showOthers(houses);
     },300)
     animatedOne = '';
-    document.getElementById('hatText').style.display = 'none';}
+    document.getElementById('hatText').style.display = 'none';
+}
 
     
 function showRandom(randomHouse) {
@@ -53,20 +54,64 @@ function showRandom(randomHouse) {
     const chosenHouse = document.createElement('a');
     houseBox.appendChild(chosenHouse);
     chosenHouse.href = randomHouse.url;
+    chosenHouse.id = 'chosenH'; 
     const imgChH = document.createElement('img');
     imgChH.src = randomHouse.img;
     chosenHouse.appendChild(imgChH);
+    const newTry = document.createElement('button');
+    newTry.innerText = `Try again`;
+    houseBox.append(newTry);
+    newTry.id = 'tryButton';
+    newTry.addEventListener('click',sortAgain);
 }
 function showOthers (houses) {
     const otherHouses = document.createElement('div');
     houseBox.appendChild(otherHouses);
-    otherHouses.innerText = 'To see information about the other houses - click the house logo:';
+    const oHText = document.createElement('div');
+    oHText.innerText = 'To see information about the other houses - click the house logo:';
+    houseBox.insertBefore(oHText,otherHouses);
+    oHText.className = 'oHText';
+    otherHouses.className = 'otherH'; 
     houses.forEach((house) => {
         const otherHouse = document.createElement('a');
-        houseBox.appendChild(otherHouse);
+        otherHouses.appendChild(otherHouse);
         otherHouse.href = house.url;
         const imgOH = document.createElement('img');
         imgOH.src = house.img;
         otherHouse.appendChild(imgOH);
     })
+}
+function sortAgain () {
+    let fullHouses = [
+        {
+            name: 'Gryffindor',
+            img: './assets/images/img_main/gryffindor.png',
+            url: './Gryffindor.html',
+        },
+        {
+            name: 'Hufflepuff',
+            img: './assets/images/img_main/hufflepuff.png',
+            url: './Hufflepuff.html',
+        },
+        {
+            name: 'Ravenclaw',
+            img: './assets/images/img_main/ravenclaw.png',
+            url: './Ravenclaw.html',
+        },
+        {
+            name: 'Slytherin',
+            img: './assets/images/img_main/slytherin.png',
+            url: './Slytherin.html',
+        }
+    ];
+    let randomIndex = Math.floor(Math.random() * fullHouses.length);
+    let randomHouse = fullHouses[randomIndex]; 
+    hat.style.display='none';
+    fullHouses.splice(randomIndex,1);
+    showRandom(randomHouse);
+    setTimeout(function() {
+        showOthers(fullHouses);
+    },300)
+    animatedOne = '';
+    document.getElementById('hatText').style.display = 'none';
 }

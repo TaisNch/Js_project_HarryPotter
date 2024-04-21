@@ -63,7 +63,6 @@
 }
 
 * {
-  border: 1px solid;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -132,6 +131,10 @@ footer {
   font-size: 1.8vw;
   font-weight: 500;
 }
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 
 .container_main {
   display: flex;
@@ -149,6 +152,10 @@ footer {
   text-align: center;
   margin-top: 0.5%;
 }
+.container_main .container__info a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 .container_main .hatbox {
   height: 40vh;
   width: 27%;
@@ -160,6 +167,11 @@ footer {
 .container_main .hatbox #hat {
   width: 100%;
   max-height: 100%;
+}
+
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
 }
 
 .user {
@@ -360,16 +372,56 @@ footer {
   font-weight: 500;
 }
 
-#animatedText {
+#hatText {
   display: inline;
+  font-size: 1.5vw;
+  font-weight: 500;
 }
 
 .houseBox {
-  font-size: 2vw;
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#chosenH {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+#chosenH img {
+  height: 30vh;
+}
+
+#tryButton {
+  color: black;
+  background-color: goldenrod;
+  border-radius: 10px;
+  min-height: 5vw;
+  max-width: 20vw;
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+
+.otherH {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin-bottom: 3%;
+}
+.otherH img {
+  height: 20vh;
 }
 
 * {
-  border: 1px solid;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -438,6 +490,10 @@ footer {
   font-size: 1.8vw;
   font-weight: 500;
 }
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 
 .container_main {
   display: flex;
@@ -455,6 +511,10 @@ footer {
   text-align: center;
   margin-top: 0.5%;
 }
+.container_main .container__info a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 .container_main .hatbox {
   height: 40vh;
   width: 27%;
@@ -468,12 +528,17 @@ footer {
   max-height: 100%;
 }
 
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
+}
+
 .container {
   width: 100%;
 }
 .container .container__box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   gap: 1%;
   justify-content: space-between;
   padding: 1%;
@@ -487,17 +552,12 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3vw;
+  font-size: 5vh;
   font-weight: 700;
 }
 .container .container__text {
-  font-size: 2.5vh;
+  font-size: 3.5vh;
   font-weight: 500;
-}
-
-.active {
-  color: gold;
-  border-bottom: 2px solid;
 }
 
 .member {
@@ -514,16 +574,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 17vh;
+  height: 27vh;
 }
 
 .member__text {
-  font-size: 1.8vh;
+  font-size: 3vh;
   font-weight: 500;
 }
 
 .member__name {
-  font-size: 2vh;
+  font-size: 4vh;
   font-weight: 700;
   padding-bottom: 2%;
 }
@@ -613,7 +673,6 @@ footer {
 }
 
 * {
-  border: 1px solid;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
@@ -682,6 +741,10 @@ footer {
   font-size: 1.8vw;
   font-weight: 500;
 }
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 
 .container_main {
   display: flex;
@@ -699,6 +762,10 @@ footer {
   text-align: center;
   margin-top: 0.5%;
 }
+.container_main .container__info a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
 .container_main .hatbox {
   height: 40vh;
   width: 27%;
@@ -710,4 +777,9 @@ footer {
 .container_main .hatbox #hat {
   width: 100%;
   max-height: 100%;
+}
+
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
 }/*# sourceMappingURL=styles.css.map */
