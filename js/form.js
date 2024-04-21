@@ -19,6 +19,7 @@ class User {
         this.imgUrl = imgUrl;
     }
 }
+const programUser
 const users = [];
 const form = document.forms.form;
 const inputs = document.querySelectorAll('input');
@@ -37,15 +38,22 @@ const findFriendResult = document.querySelector('.findfriend__result');
 
 form.addEventListener('submit', checkAllInputs);
 document.forms.findfriendForm.addEventListener('submit', findFriendsForUser);
-for (let i = 0; i < localStorage.length; i++) {
-    users.push(localStorage.key(i));
-}
 formAgreement.addEventListener('change', () => {
     formButton.disabled = !formAgreement.checked;
     if (formAgreement.checked === true) {
         formButton.removeAttribute(disabled);
     }
 });
+
+for (let i = 0; i < localStorage.length; i++) {
+    users.push(localStorage.key(i));
+}
+if (localStorage.length < 16) {
+    for (let i = users.length; i < 16; i++){
+        
+    }
+}
+    
 
 for (let input of inputs) {
     input.addEventListener('focus', function () {
