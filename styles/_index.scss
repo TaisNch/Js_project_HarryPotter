@@ -27,11 +27,12 @@
     display: inline-block;
     height: 40vh;
     width: 27%;
+    margin-top: 2%;
     display: flex;
     @include flex(column, center, center);
     transition: transform 0.5s ease;
     &:hover {
-        transform: scale(1.25);
+        transform: scale(1.2);
     }
     #hat {
         width: 100%;
@@ -40,6 +41,7 @@
 }
 
 #hatText {
+    margin-top: 5%;
     display: inline;
     @include font(1.5vw, 500);
 }
