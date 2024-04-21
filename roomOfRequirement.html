@@ -18,6 +18,7 @@
                     >
                     <a class="header__logo" href="./index.html">
                         <img
+                            id="logo"
                             src="./assets/images/img_main/logo.png"
                             alt="Houses logo"
                     /></a>
@@ -28,7 +29,8 @@
             <button id="play">
                 <img
                     src="./assets/images/img_main/speaker.svg"
-                    alt="Play music" />
+                    alt="Play music"
+                />
             </button>
             <audio id="audio" src="./assets/581.mp3"></audio>
         </header>
@@ -64,81 +66,97 @@
                         <img
                             class="card__FF"
                             src="assets/images/img_main/slytherin.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="S">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/slytherin.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="R">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/ravenclaw.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="R">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/ravenclaw.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="H">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/hufflepuff.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="H">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/hufflepuff.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="G">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/gryffindor.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="G">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/gryffindor.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="/assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                 </section>
             </div>
@@ -160,7 +178,8 @@
                                 minlength="2"
                                 maxlength="20"
                                 id="userName"
-                                required />
+                                required
+                            />
                         </div>
                         <div class="form__wrapper">
                             <label for="userEmail" class="form__label"
@@ -172,7 +191,8 @@
                                 class="form__input"
                                 id="userEmail"
                                 placeholder="your e-mail"
-                                required />
+                                required
+                            />
                         </div>
                         <div class="form__wrapper">
                             <label for="userAge" class="form__label"
@@ -186,7 +206,8 @@
                                 min="0"
                                 max="200"
                                 placeholder="your age"
-                                required />
+                                required
+                            />
                         </div>
                         <div class="form__wrapper">
                             <div class="form__label">Sex</div>
@@ -196,7 +217,8 @@
                                     class="form__input input_sex"
                                     type="radio"
                                     id="m"
-                                    value="male" />
+                                    value="male"
+                                />
                                 <label for="m" class="form__minilabel"
                                     >male</label
                                 >
@@ -207,7 +229,8 @@
                                     class="form__input input_sex"
                                     type="radio"
                                     id="w"
-                                    value="female" />
+                                    value="female"
+                                />
                                 <label for="w" class="form__minilabel" id="sex"
                                     >female</label
                                 >
@@ -221,7 +244,8 @@
                                 name="house"
                                 id="house"
                                 class="form__input"
-                                required>
+                                required
+                            >
                                 <option value="">your house</option>
                                 <option value="Gryffindor">Gryffindor</option>
                                 <option value="Ravenclaw">Ravenclaw</option>
@@ -245,7 +269,8 @@
                                 placeholder="password"
                                 required
                                 minlength="8"
-                                pattern="^(?=.*\d)\w{8,}$" />
+                                pattern="^(?=.*\d)\w{8,}$"
+                            />
                         </div>
                         <div class="form__wrapper agreement-wrap">
                             <input
@@ -253,7 +278,8 @@
                                 name="userAgreement"
                                 value="I solemnly swear that I'm up to no good."
                                 class="form__agreement userAgreement"
-                                required />
+                                required
+                            />
                             <span class="form__agreeText"
                                 >I solemnly swear that I'm up to no good.
                             </span>
@@ -263,7 +289,8 @@
                                 type="submit"
                                 name="submitButton"
                                 class="form__button"
-                                disabled>
+                                disabled
+                            >
                                 Submit
                             </button>
                         </div>
@@ -284,7 +311,8 @@
                     <button
                         type="submit"
                         name="findFormButton"
-                        class="findfriend__button">
+                        class="findfriend__button"
+                    >
                         Find a friend
                     </button>
                 </form>
