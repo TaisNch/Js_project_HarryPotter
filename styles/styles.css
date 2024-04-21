@@ -13,26 +13,30 @@
 
 .play {
   margin-top: 2vh;
+  box-sizing: border-box;
 }
 
 .play__cards {
-  background-color: white;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
   perspective: 1000px;
 }
 
 .card {
-  width: 25vw;
-  height: 25vh;
+  background-color: plum;
+  margin: 0;
   padding: 10px;
+  width: 15vw;
+  height: 20vh;
+  padding: 5px;
   border-radius: 30px;
   transform: scale(1);
   transition: transform 0.5s;
   position: relative;
   transform-style: preserve-3d;
-  border: 1px solid white;
 }
 
 .card:active {
@@ -41,15 +45,15 @@
 }
 
 .card.flip {
-  rotate: Y 180deg;
+  rotate: y 180deg;
 }
 
 .card__FF,
 .card__BF {
-  padding: 5%;
-  width: 24vw;
-  height: 24vh;
-  border-radius: 5px;
+  width: 15vw;
+  height: 17vh;
+  background-color: none;
+  border-radius: 30px;
   position: absolute;
   backface-visibility: hidden;
 }
@@ -614,9 +618,10 @@ footer a {
 }
 
 .rndm__btn__p {
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   font-weight: 500;
-  padding: 1vh;
+  background-color: goldenrod;
+  color: purple;
   text-align: center;
 }
 
