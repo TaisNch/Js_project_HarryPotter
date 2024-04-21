@@ -1,43 +1,169 @@
+@import './template';
 .user {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 20px;
+    display: flex;
+    @include flex(column, center, center);
+    width: 100%;
+    padding: 3% 0;
+    .user__title {
+        padding: 1%;
+        margin-bottom: 5%;
+        @include font(3vw, 700);
+    }
+    .user__information {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 48%));
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
 }
 .form {
+    margin: 3%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 30px;
     .form__wrapper {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
         gap: 10px;
+        margin: 0;
     }
     .form__label {
+        margin: 0;
         font-weight: 800;
+        @include font(2.5vw, 600);
     }
     .form__input {
-        min-width: 20px;
-        max-width: 250px;
+        margin: 0;
+        border: 1px solid silver;
+        border-radius: 5px;
+        min-width: 2.5vh;
+        max-width: 50vh;
+        min-height: 3.5vh;
+        @include font(2.5vw, 500);
+    }
+    .form__sex {
+        margin: 0;
+        .form__minilabel {
+            @include font(2.5vw, 500);
+        }
     }
     .form__input:required:valid {
+        margin: 0;
         border: 1.5px solid #433f77;
     }
+    .form__input::-webkit-input-placeholder {
+        padding-left: 3%;
+        color: silver;
+        @include font(2.3vw, 500);
+    }
+    .form__input::-moz-placeholder {
+        padding-left: 35%;
+        color: silver;
+        @include font(2.3vw, 500);
+    }
+    .input_sex {
+        min-height: 1vh;
+        margin: 0;
+        padding: 0;
+    }
+    .input_sex::-webkit-input-placeholder {
+        padding: 0;
+    }
+    .input_sex::-moz-placeholder {
+        padding: 0;
+    }
     .agreement-wrap {
+        display: flex;
         flex-direction: row;
         align-items: center;
+        margin: 0;
+        .form__agreeText {
+            @include font(2vw, 500);
+        }
+    }
+    .form__text {
+        @include font(2vw, 500);
     }
     .error {
+        @include font(2.5vw, 700);
         color: red;
+        margin: 0;
+    }
+    .form__button {
+        color: black;
+        background-color: goldenrod;
+        border-radius: 10px;
+        min-height: 5vw;
+        min-width: 20vw;
+        @include font(2.5vw, 700);
     }
 }
 .usercard {
     .usercard__label {
-        font-weight: 800;
+        @include font(2.5vw, 700);
     }
     .usercard__info {
+        @include font(2.5vw, 500);
         margin: 20px 0;
+    }
+    .usercard__title {
+        padding: 1%;
+        margin-bottom: 5%;
+        @include font(2.7vw, 700);
+    }
+}
+.findfriend {
+    display: flex;
+    @include flex(column, center, center);
+    .findfriend__title {
+        padding: 1%;
+        margin-bottom: 2%;
+        @include font(3vw, 700);
+    }
+}
+.findfriend__form {
+    display: flex;
+    @include flex(column, center, center);
+    .findfriend__input {
+        margin: 0;
+        border: 1px solid silver;
+        border-radius: 5px;
+        min-width: 2.5vh;
+        max-width: 50vh;
+        min-height: 3.5vh;
+        @include font(2.5vw, 500);
+    }
+    .findfriend__input::-webkit-input-placeholder {
+        color: silver;
+        @include font(2.3vw, 500);
+    }
+    .findfriend__input::-moz-placeholder {
+        color: silver;
+        @include font(2.3vw, 500);
+    }
+    .findfriend__button {
+        margin: 10% 0;
+        color: black;
+        background-color: goldenrod;
+        border-radius: 10px;
+        min-height: 5vw;
+        min-width: 20vw;
+        @include font(2.5vw, 700);
+    }
+}
+.findfriend__result {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20vh);
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    .findfriend__username {
+        @include font(2.5vw, 600);
+    }
+    .finduser__info {
+        @include font(2vw, 500);
     }
 }
