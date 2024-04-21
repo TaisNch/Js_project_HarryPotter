@@ -50,7 +50,7 @@ stars.forEach((star) => {
             document.querySelector(
                 '.rating'
             ).innerHTML = `<div>Thank you for your feedback!</div>
-            <img src='./assets/icon.ico' alt='cat'>`;
+            <img src='./assets/images/icon.ico' alt='cat'>`;
         }, 1500);
         document.querySelector('.rating').style.color = 'gold';
     });
