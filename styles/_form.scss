@@ -4,10 +4,11 @@
     @include flex(column, center, center);
     width: 100%;
     padding: 3% 0;
+    @include font(2vw, 500);
     .user__title {
         padding: 1%;
         margin-bottom: 5%;
-        @include font(3vw, 700);
+        @include font(2.5vw, 500);
     }
     .user__information {
         display: grid;
@@ -15,6 +16,18 @@
         align-items: center;
         gap: 20px;
         width: 100%;
+    }
+    .usercard {
+        .usercard__label {
+            @include font(2.5vw, 700);
+        }
+        .usercard__info {
+            margin: 20px 0;
+        }
+        .usercard__title {
+            padding: 1%;
+            margin-bottom: 5%;
+        }
     }
 }
 .form {
@@ -42,13 +55,9 @@
         min-width: 2.5vh;
         max-width: 50vh;
         min-height: 3.5vh;
-        @include font(2.5vw, 500);
     }
     .form__sex {
         margin: 0;
-        .form__minilabel {
-            @include font(2.5vw, 500);
-        }
     }
     .form__input:required:valid {
         margin: 0;
@@ -57,15 +66,13 @@
     .form__input::-webkit-input-placeholder {
         padding-left: 3%;
         color: silver;
-        @include font(2.3vw, 500);
     }
     .form__input::-moz-placeholder {
         padding-left: 35%;
         color: silver;
-        @include font(2.3vw, 500);
     }
     .input_sex {
-        min-height: 1vh;
+        min-height: 1.5vh;
         margin: 0;
         padding: 0;
     }
@@ -80,15 +87,11 @@
         flex-direction: row;
         align-items: center;
         margin: 0;
-        .form__agreeText {
-            @include font(2vw, 500);
+        .form__agreement {
+            min-height: 2.5vh;
         }
     }
-    .form__text {
-        @include font(2vw, 500);
-    }
     .error {
-        @include font(2.5vw, 700);
         color: red;
         margin: 0;
     }
@@ -101,69 +104,50 @@
         @include font(2.5vw, 700);
     }
 }
-.usercard {
-    .usercard__label {
-        @include font(2.5vw, 700);
-    }
-    .usercard__info {
-        @include font(2.5vw, 500);
-        margin: 20px 0;
-    }
-    .usercard__title {
-        padding: 1%;
-        margin-bottom: 5%;
-        @include font(2.7vw, 700);
-    }
-}
 .findfriend {
     display: flex;
     @include flex(column, center, center);
+    @include font(2vw, 400);
     .findfriend__title {
         padding: 1%;
         margin-bottom: 2%;
-        @include font(3vw, 700);
-    }
-}
-.findfriend__form {
-    display: flex;
-    @include flex(column, center, center);
-    .findfriend__input {
-        margin: 0;
-        border: 1px solid silver;
-        border-radius: 5px;
-        min-width: 2.5vh;
-        max-width: 50vh;
-        min-height: 3.5vh;
-        @include font(2.5vw, 500);
-    }
-    .findfriend__input::-webkit-input-placeholder {
-        color: silver;
-        @include font(2.3vw, 500);
-    }
-    .findfriend__input::-moz-placeholder {
-        color: silver;
-        @include font(2.3vw, 500);
-    }
-    .findfriend__button {
-        margin: 10% 0;
-        color: black;
-        background-color: goldenrod;
-        border-radius: 15px;
-        min-height: 5vw;
-        min-width: 20vw;
         @include font(2.5vw, 700);
     }
-}
-.findfriend__result {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 30vh);
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    .findfriend__username {
-        @include font(2.5vw, 600);
+    .findfriend__form {
+        display: flex;
+        @include flex(column, center, center);
+        .findfriend__input {
+            margin: 0;
+            border: 1px solid silver;
+            border-radius: 5px;
+            min-width: 2.5vh;
+            max-width: 50vh;
+            min-height: 3.5vh;
+        }
+        .findfriend__button {
+            margin: 10% 0;
+            color: black;
+            background-color: goldenrod;
+            border-radius: 15px;
+            min-height: 5vw;
+            min-width: 20vw;
+            @include font(2.5vw, 700);
+        }
     }
-    .finduser__info {
-        @include font(2vw, 500);
+    .findfriend__result {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 30vw);
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        width: 100%;
+        padding: 1%;
+        .findfriend__username {
+            @include font(2.5vw, 600);
+            padding-bottom: 1.5%;
+        }
+        .finduser__info {
+            padding-bottom: 1.5%;
+        }
     }
 }
