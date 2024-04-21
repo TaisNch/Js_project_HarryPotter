@@ -36,6 +36,15 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            &:hover {
+                background-color: goldenrod;
+                color: #110727;
+                box-shadow:
+                    0 0 5px gold,
+                    0 0 25px gold,
+                    0 0 50px gold,
+                    0 0 200px gold;
+            }
         }
     }
     .header__center {
@@ -55,6 +64,15 @@ header {
         top: 1%;
         right: 1%;
         border: none;
+        img:hover {
+            background-color: goldenrod;
+            border-radius: 50px;
+            box-shadow:
+                0 0 5px gold,
+                0 0 25px gold,
+                0 0 50px gold,
+                0 0 200px gold;
+        }
     }
 }
 .bodycontainer {
@@ -114,4 +132,20 @@ footer {
         1px 1px 2px red,
         0 0 2em blue,
         0 0 1em blue;
+    &:hover {
+        text-shadow:
+            1px 1px 2px gold,
+            0 0 2em blue,
+            0 0 1em blue;
+    }
+}
+
+#logo:hover {
+    background-color: goldenrod;
+    border-radius: 100%;
+    box-shadow:
+        0 0 5px goldenrod,
+        0 0 25px goldenrod,
+        0 0 50px goldenrod,
+        0 0 200px goldenrod;
 }
