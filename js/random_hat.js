@@ -1,6 +1,6 @@
 let animatedOne = new Typed('#hatText', {
     typeSpeed: 40,
-    startDelay: 3000,
+    startDelay: 1000,
     stringsElement: '#animatedText',
     loop: true,
   });
