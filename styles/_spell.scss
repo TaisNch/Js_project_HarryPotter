@@ -48,6 +48,12 @@
 
 .rndm__btn:hover {
     cursor: pointer;
+    background-color: goldenrod;
+    box-shadow:
+                   0 0 5px gold,
+                   0 0 25px gold,
+                   0 0 50px gold,
+                   0 0 200px gold;  
 }
 .rndm__btn:active {
     transform: scale(1.2);
