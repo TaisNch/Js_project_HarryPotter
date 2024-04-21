@@ -9,50 +9,52 @@
    text-align: center;
   }
     
-
 .play {
 margin-top: 2vh;
+box-sizing: border-box;
 }
 
 .play__cards {
-   background-color: white;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
    perspective: 1000px;
       }
 
 .card {
-    width: 25vw;
-    height: 25vh;
-    padding: 10px;
+   background-color: plum;
+   margin: 0;
+   padding: 10px;
+    width: 15vw;
+    height: 20vh;
+    padding: 5px;
     border-radius: 30px;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
     transform-style: preserve-3d;
-    border: 1px solid white;
-           }
+               }
  .card:active {
   transform: scale(0.95);
-     transition: transform 0.3s;
+   transition: transform 0.3s;
        }
 
 .card.flip {
-   rotate: Y 180deg;
-// transform: rotateY('180');
+   rotate: y 180deg;
        }
        
 .card__FF,
 .card__BF  {
-padding: 5%;
-width: 24vw;
-height: 24vh;
-border-radius: 5px;
+width: 15vw;
+height: 17vh;
+background-color: none;
+border-radius: 30px;
 position: absolute;
 backface-visibility: hidden;
 }
 
 .card__FF {
-   rotate: Y 180deg;
-          }
+    rotate: Y 180deg;
+             }
