@@ -154,48 +154,83 @@ footer a {
   box-shadow: 0 0 5px goldenrod, 0 0 25px goldenrod, 0 0 50px goldenrod, 0 0 200px goldenrod;
 }
 
+.btn_all {
+  color: black;
+  background-color: goldenrod;
+  border-radius: 10px;
+  padding: 1%;
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+.btn_all:hover {
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
+}
+
 .user {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 3% 0;
+  padding: 3% 1%;
   font-size: 2vw;
   font-weight: 500;
 }
 .user .user__title {
   padding: 1%;
   margin-bottom: 5%;
-  font-size: 2.5vw;
+  font-size: 2vw;
   font-weight: 500;
 }
 .user .user__information {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 48%));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
 }
-.user .usercard .usercard__label {
-  font-size: 2.5vw;
-  font-weight: 700;
+.user .usercard {
+  width: 40%;
+}
+.user .usercard .usercard__housesymbol-wrap {
+  width: 100%;
+}
+.user .usercard .usercard__housesymbol {
+  max-width: 70%;
 }
 .user .usercard .usercard__info {
+  font-size: 2vw;
+  font-weight: 500;
+  padding-bottom: 1%;
   margin: 20px 0;
 }
 .user .usercard .usercard__title {
-  padding: 1%;
+  font-size: 2vw;
+  font-weight: 500;
+  padding: 3%;
   margin-bottom: 5%;
+}
+.user .usercard_new {
+  font-size: 2vw;
+  font-weight: 500;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 3%;
 }
 
 .form {
+  width: 40%;
   margin: 3%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 30px;
+  font-size: 2vw;
+  font-weight: 500;
 }
 .form .form__wrapper {
   display: flex;
@@ -205,9 +240,6 @@ footer a {
 }
 .form .form__label {
   margin: 0;
-  font-weight: 800;
-  font-size: 2.5vw;
-  font-weight: 600;
 }
 .form .form__input {
   margin: 0;
@@ -215,10 +247,7 @@ footer a {
   border-radius: 5px;
   min-width: 2.5vh;
   max-width: 50vh;
-  min-height: 3.5vh;
-}
-.form .form__sex {
-  margin: 0;
+  min-height: 4vw;
 }
 .form .form__input:required:valid {
   margin: 0;
@@ -232,16 +261,18 @@ footer a {
   padding-left: 35%;
   color: silver;
 }
-.form .input_sex {
-  min-height: 1.5vh;
+.form .form__sex {
   margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
 }
-.form .input_sex::-webkit-input-placeholder {
-  padding: 0;
+.form .form__sex .form__minilabel {
+  margin: 0;
 }
-.form .input_sex::-moz-placeholder {
-  padding: 0;
+.form .form__sex .input_sex {
+  transform: scale(1.1);
+  min-height: 1.2vh;
+  margin-right: 5%;
 }
 .form .agreement-wrap {
   display: flex;
@@ -250,20 +281,21 @@ footer a {
   margin: 0;
 }
 .form .agreement-wrap .form__agreement {
-  min-height: 2.5vw;
+  transform: scale(1.2);
 }
 .form .error {
   color: red;
   margin: 0;
 }
 .form .form__button {
-  color: black;
-  background-color: goldenrod;
-  border-radius: 15px;
   min-height: 5vw;
-  min-width: 20vw;
-  font-size: 2.5vw;
-  font-weight: 700;
+  min-width: 15vw;
+}
+.form .form__button:disabled {
+  background-color: rgb(149, 110, 12);
+}
+.form .form__button:disabled:hover {
+  box-shadow: 0 0 0px gold, 0 0 0px gold, 0 0 0px gold, 0 0 0px gold;
 }
 
 .findfriend {
@@ -272,13 +304,13 @@ footer a {
   justify-content: center;
   align-items: center;
   font-size: 2vw;
-  font-weight: 400;
+  font-weight: 500;
 }
 .findfriend .findfriend__title {
   padding: 1%;
   margin-bottom: 2%;
-  font-size: 2.5vw;
-  font-weight: 700;
+  font-size: 2vw;
+  font-weight: 500;
 }
 .findfriend .findfriend__form {
   display: flex;
@@ -292,32 +324,31 @@ footer a {
   border-radius: 5px;
   min-width: 2.5vh;
   max-width: 50vh;
-  min-height: 3.5vh;
+  min-height: 4vw;
 }
 .findfriend .findfriend__form .findfriend__button {
   margin: 10% 0;
-  color: black;
-  background-color: goldenrod;
-  border-radius: 15px;
   min-height: 5vw;
   min-width: 20vw;
-  font-size: 2.5vw;
-  font-weight: 700;
 }
 .findfriend .findfriend__result {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 30vw);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  gap: 1vw;
+  flex-wrap: wrap;
+  gap: 5vw;
   width: 100%;
   padding: 1%;
 }
-.findfriend .findfriend__result .findfriend__username {
-  font-size: 2.5vw;
-  font-weight: 600;
-  padding-bottom: 1.5%;
+.findfriend .findfriend__result .findfriend__housesymbol-wrap {
+  width: 80%;
+  padding: 2%;
 }
+.findfriend .findfriend__result .findfriend__housesymbol {
+  max-width: 100%;
+}
+.findfriend .findfriend__result .findfriend__username,
 .findfriend .findfriend__result .finduser__info {
   padding-bottom: 1.5%;
 }
@@ -520,6 +551,19 @@ footer a {
   background-color: goldenrod;
   border-radius: 100%;
   box-shadow: 0 0 5px goldenrod, 0 0 25px goldenrod, 0 0 50px goldenrod, 0 0 200px goldenrod;
+}
+
+.btn_all {
+  color: black;
+  background-color: goldenrod;
+  border-radius: 10px;
+  padding: 1%;
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+.btn_all:hover {
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
 }
 
 .container {
@@ -760,4 +804,17 @@ footer a {
   background-color: goldenrod;
   border-radius: 100%;
   box-shadow: 0 0 5px goldenrod, 0 0 25px goldenrod, 0 0 50px goldenrod, 0 0 200px goldenrod;
+}
+
+.btn_all {
+  color: black;
+  background-color: goldenrod;
+  border-radius: 10px;
+  padding: 1%;
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+.btn_all:hover {
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
 }/*# sourceMappingURL=styles.css.map */

@@ -3,40 +3,55 @@
     display: flex;
     @include flex(column, center, center);
     width: 100%;
-    padding: 3% 0;
+    padding: 3% 1%;
     @include font(2vw, 500);
     .user__title {
         padding: 1%;
         margin-bottom: 5%;
-        @include font(2.5vw, 500);
+        @include font(2vw, 500);
     }
     .user__information {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 48%));
-        align-items: center;
+        display: flex;
+        @include flex(row, space-between, center);
+        flex-wrap: wrap;
         gap: 20px;
         width: 100%;
     }
     .usercard {
-        .usercard__label {
-            @include font(2.5vw, 700);
+        width: 40%;
+        .usercard__housesymbol-wrap {
+            width: 100%;
+        }
+        .usercard__housesymbol {
+            max-width: 70%;
         }
         .usercard__info {
+            @include font(2vw, 500);
+            padding-bottom: 1%;
             margin: 20px 0;
         }
         .usercard__title {
-            padding: 1%;
+            @include font(2vw, 500);
+            padding: 3%;
             margin-bottom: 5%;
         }
     }
+    .usercard_new {
+        @include font(2vw, 500);
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 3%;
+    }
 }
 .form {
+    width: 40%;
     margin: 3%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
+    @include font(2vw, 500);
     .form__wrapper {
         display: flex;
         flex-direction: column;
@@ -45,8 +60,6 @@
     }
     .form__label {
         margin: 0;
-        font-weight: 800;
-        @include font(2.5vw, 600);
     }
     .form__input {
         margin: 0;
@@ -54,10 +67,7 @@
         border-radius: 5px;
         min-width: 2.5vh;
         max-width: 50vh;
-        min-height: 3.5vh;
-    }
-    .form__sex {
-        margin: 0;
+        min-height: 4vw;
     }
     .form__input:required:valid {
         margin: 0;
@@ -71,16 +81,18 @@
         padding-left: 35%;
         color: silver;
     }
-    .input_sex {
-        min-height: 1.5vh;
+    .form__sex {
         margin: 0;
-        padding: 0;
-    }
-    .input_sex::-webkit-input-placeholder {
-        padding: 0;
-    }
-    .input_sex::-moz-placeholder {
-        padding: 0;
+        display: flex;
+        align-items: center;
+        .form__minilabel {
+            margin: 0;
+        }
+        .input_sex {
+            transform: scale(1.1);
+            min-height: 1.2vh;
+            margin-right: 5%;
+        }
     }
     .agreement-wrap {
         display: flex;
@@ -88,7 +100,7 @@
         align-items: center;
         margin: 0;
         .form__agreement {
-            min-height: 2.5vw;
+            transform: scale(1.2);
         }
     }
     .error {
@@ -96,22 +108,24 @@
         margin: 0;
     }
     .form__button {
-        color: black;
-        background-color: goldenrod;
-        border-radius: 15px;
         min-height: 5vw;
-        min-width: 20vw;
-        @include font(2.5vw, 700);
+        min-width: 15vw;
+    }
+    .form__button:disabled {
+        background-color: rgb(149, 110, 12);
+        &:hover {
+            box-shadow: 0 0 0px gold, 0 0 0px gold, 0 0 0px gold, 0 0 0px gold;
+        }
     }
 }
 .findfriend {
     display: flex;
     @include flex(column, center, center);
-    @include font(2vw, 400);
+    @include font(2vw, 500);
     .findfriend__title {
         padding: 1%;
         margin-bottom: 2%;
-        @include font(2.5vw, 700);
+        @include font(2vw, 500);
     }
     .findfriend__form {
         display: flex;
@@ -122,30 +136,29 @@
             border-radius: 5px;
             min-width: 2.5vh;
             max-width: 50vh;
-            min-height: 3.5vh;
+            min-height: 4vw;
         }
         .findfriend__button {
             margin: 10% 0;
-            color: black;
-            background-color: goldenrod;
-            border-radius: 15px;
             min-height: 5vw;
             min-width: 20vw;
-            @include font(2.5vw, 700);
         }
     }
     .findfriend__result {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 30vw);
-        align-items: center;
-        justify-content: center;
-        gap: 1vw;
+        display: flex;
+        @include flex(row, space-around, center);
+        flex-wrap: wrap;
+        gap: 5vw;
         width: 100%;
         padding: 1%;
-        .findfriend__username {
-            @include font(2.5vw, 600);
-            padding-bottom: 1.5%;
+        .findfriend__housesymbol-wrap {
+            width: 80%;
+            padding: 2%;
         }
+        .findfriend__housesymbol {
+            max-width: 100%;
+        }
+        .findfriend__username,
         .finduser__info {
             padding-bottom: 1.5%;
         }

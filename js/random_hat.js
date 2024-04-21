@@ -3,7 +3,7 @@ let animatedOne = new Typed('#hatText', {
     startDelay: 1000,
     stringsElement: '#animatedText',
     loop: true,
-  });
+});
 
 const hat = document.querySelector('.hatbox');
 const container = document.querySelector('.container');
@@ -12,7 +12,7 @@ houseBox.classList.add('houseBox');
 const hatText = document.getElementById('hatText');
 container.append(houseBox);
 
-hat.addEventListener('click',sortHouse);
+hat.addEventListener('click', sortHouse);
 const houses = [
     {
         name: 'Gryffindor',
@@ -33,28 +33,27 @@ const houses = [
         name: 'Slytherin',
         img: './assets/images/img_main/slytherin.png',
         url: './Slytherin.html',
-    }
+    },
 ];
 function sortHouse() {
     let randomIndex = Math.floor(Math.random() * houses.length);
-    let randomHouse = houses[randomIndex]; 
-    hat.style.display='none';
-    houses.splice(randomIndex,1);
+    let randomHouse = houses[randomIndex];
+    hat.style.display = 'none';
+    houses.splice(randomIndex, 1);
     showRandom(randomHouse);
-    setTimeout(function() {
+    setTimeout(function () {
         showOthers(houses);
-    },300)
+    }, 300);
     animatedOne = '';
     document.getElementById('hatText').style.display = 'none';
 }
 
-    
 function showRandom(randomHouse) {
     houseBox.innerText = 'Your house is: ';
     const chosenHouse = document.createElement('a');
     houseBox.appendChild(chosenHouse);
     chosenHouse.href = randomHouse.url;
-    chosenHouse.id = 'chosenH'; 
+    chosenHouse.id = 'chosenH';
     const imgChH = document.createElement('img');
     imgChH.src = randomHouse.img;
     chosenHouse.appendChild(imgChH);
@@ -62,16 +61,18 @@ function showRandom(randomHouse) {
     newTry.innerText = `Try again`;
     houseBox.append(newTry);
     newTry.id = 'tryButton';
-    newTry.addEventListener('click',sortAgain);
+    newTry.classList.add('btn_all');
+    newTry.addEventListener('click', sortAgain);
 }
-function showOthers (houses) {
+function showOthers(houses) {
     const otherHouses = document.createElement('div');
     houseBox.appendChild(otherHouses);
     const oHText = document.createElement('div');
-    oHText.innerText = 'To see information about the other houses - click the house logo:';
-    houseBox.insertBefore(oHText,otherHouses);
+    oHText.innerText =
+        'To see information about the other houses - click the house logo:';
+    houseBox.insertBefore(oHText, otherHouses);
     oHText.className = 'oHText';
-    otherHouses.className = 'otherH'; 
+    otherHouses.className = 'otherH';
     houses.forEach((house) => {
         const otherHouse = document.createElement('a');
         otherHouses.appendChild(otherHouse);
@@ -79,9 +80,9 @@ function showOthers (houses) {
         const imgOH = document.createElement('img');
         imgOH.src = house.img;
         otherHouse.appendChild(imgOH);
-    })
+    });
 }
-function sortAgain () {
+function sortAgain() {
     let fullHouses = [
         {
             name: 'Gryffindor',
@@ -102,16 +103,16 @@ function sortAgain () {
             name: 'Slytherin',
             img: './assets/images/img_main/slytherin.png',
             url: './Slytherin.html',
-        }
+        },
     ];
     let randomIndex = Math.floor(Math.random() * fullHouses.length);
-    let randomHouse = fullHouses[randomIndex]; 
-    hat.style.display='none';
-    fullHouses.splice(randomIndex,1);
+    let randomHouse = fullHouses[randomIndex];
+    hat.style.display = 'none';
+    fullHouses.splice(randomIndex, 1);
     showRandom(randomHouse);
-    setTimeout(function() {
+    setTimeout(function () {
         showOthers(fullHouses);
-    },300)
+    }, 300);
     animatedOne = '';
     document.getElementById('hatText').style.display = 'none';
 }
