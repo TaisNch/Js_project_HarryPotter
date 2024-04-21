@@ -19,6 +19,168 @@ class User {
         this.imgUrl = imgUrl;
     }
 }
+const programUsers = [
+    new User(
+        'Cora',
+        'cora25@gmail.com',
+        25,
+        'female',
+        'Gryffindor',
+        '',
+        '',
+        './assets/images/img_main/gryffindor.png'
+    ),
+    new User(
+        'Nora',
+        'nora1995@gmail.com',
+        20,
+        'female',
+        'Ravenclaw',
+        '',
+        '',
+        './assets/images/img_main/ravenclaw.png'
+    ),
+    new User(
+        'Daniel',
+        'daniel.5678@gmail.com',
+        27,
+        'male',
+        'Slytherin',
+        '',
+        '',
+        './assets/images/img_main/slytherin.png'
+    ),
+    new User(
+        'Michaelis',
+        'michaelis7518@gmail.com',
+        35,
+        'male',
+        'Hufflepuff',
+        '',
+        '',
+        './assets/images/img_main/hufflepuff.png'
+    ),
+    new User(
+        'Jin',
+        'jin.ger23@gmail.com',
+        22,
+        'female',
+        'Gryffindor',
+        '',
+        '',
+        './assets/images/img_main/gryffindor.png'
+    ),
+    new User(
+        'Yura',
+        'yura.sakamoto99@gmail.com',
+        24,
+        'female',
+        'Ravenclaw',
+        '',
+        '',
+        './assets/images/img_main/ravenclaw.png'
+    ),
+    new User(
+        'Grab',
+        'grab.hettler@gmail.com',
+        45,
+        'male',
+        'Slytherin',
+        '',
+        '',
+        './assets/images/img_main/slytherin.png'
+    ),
+    new User(
+        'Rony',
+        'rony2002@gmail.com',
+        22,
+        'male',
+        'Hufflepuff',
+        '',
+        '',
+        './assets/images/img_main/hufflepuff.png'
+    ),
+    new User(
+        'Ruswelt',
+        'ruswelt.iris45@gmail.com',
+        30,
+        'male',
+        'Gryffindor',
+        '',
+        '',
+        './assets/images/img_main/gryffindor.png'
+    ),
+    new User(
+        'Rory',
+        'robert567@gmail.com',
+        32,
+        'male',
+        'Ravenclaw',
+        '',
+        '',
+        './assets/images/img_main/ravenclaw.png'
+    ),
+    new User(
+        'Diana',
+        'diana6548@gmail.com',
+        35,
+        'female',
+        'Slytherin',
+        '',
+        '',
+        './assets/images/img_main/slytherin.png'
+    ),
+    new User(
+        'George',
+        'georgina.smith23@gmail.com',
+        35,
+        'Female',
+        'Hufflepuff',
+        '',
+        '',
+        './assets/images/img_main/hufflepuff.png'
+    ),
+    new User(
+        'Luna',
+        'luna123@gmail.com',
+        30,
+        'female',
+        'Gryffindor',
+        '',
+        '',
+        './assets/images/img_main/gryffindor.png'
+    ),
+    new User(
+        'Josie',
+        'josefina32@gmail.com',
+        32,
+        'female',
+        'Ravenclaw',
+        '',
+        '',
+        './assets/images/img_main/ravenclaw.png'
+    ),
+    new User(
+        'Ilion',
+        'ilion.grey@gmail.com',
+        32,
+        'male',
+        'Slytherin',
+        '',
+        '',
+        './assets/images/img_main/slytherin.png'
+    ),
+    new User(
+        'Serg',
+        'serg.harwey@gmail.com',
+        35,
+        'male',
+        'Hufflepuff',
+        '',
+        '',
+        './assets/images/img_main/hufflepuff.png'
+    ),
+];
 const users = [];
 const form = document.forms.form;
 const inputs = document.querySelectorAll('input');
@@ -35,17 +197,18 @@ const findFriendSelect = findFriendForm.elements.findHouse;
 const findFriendButton = findFriendForm.elements.findFormButton;
 const findFriendResult = document.querySelector('.findfriend__result');
 
-form.addEventListener('submit', checkAllInputs);
-document.forms.findfriendForm.addEventListener('submit', findFriendsForUser);
 for (let i = 0; i < localStorage.length; i++) {
     users.push(localStorage.key(i));
 }
-formAgreement.addEventListener('change', () => {
-    formButton.disabled = !formAgreement.checked;
-    if (formAgreement.checked === true) {
-        formButton.removeAttribute(disabled);
+if (localStorage.length < 16) {
+    for (let i = localStorage.length; i < 16; i++) {
+        let randomIndex = Math.floor(Math.random() * 16);
+        window.localStorage.setItem(
+            programUsers[randomIndex].userMail,
+            JSON.stringify(programUsers[randomIndex])
+        );
     }
-});
+}
 
 for (let input of inputs) {
     input.addEventListener('focus', function () {
@@ -55,6 +218,16 @@ for (let input of inputs) {
         input.style.border = '';
     });
 }
+
+form.addEventListener('submit', checkAllInputs);
+document.forms.findfriendForm.addEventListener('submit', findFriendsForUser);
+formAgreement.addEventListener('change', () => {
+    formButton.disabled = !formAgreement.checked;
+    if (formAgreement.checked === true) {
+        formButton.removeAttribute(disabled);
+    }
+});
+
 function checkValidity(input) {
     const validity = input.validity;
     if (validity.valueMissing) {

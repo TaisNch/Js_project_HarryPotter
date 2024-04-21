@@ -283,7 +283,7 @@ footer a {
 .form .form__button {
   color: black;
   background-color: goldenrod;
-  border-radius: 10px;
+  border-radius: 15px;
   min-height: 5vw;
   min-width: 20vw;
   font-size: 2.5vw;
@@ -349,7 +349,7 @@ footer a {
   margin: 10% 0;
   color: black;
   background-color: goldenrod;
-  border-radius: 10px;
+  border-radius: 15px;
   min-height: 5vw;
   min-width: 20vw;
   font-size: 2.5vw;
@@ -358,7 +358,7 @@ footer a {
 
 .findfriend__result {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20vh);
+  grid-template-columns: repeat(auto-fit, 30vh);
   align-items: center;
   gap: 20px;
   width: 100%;
