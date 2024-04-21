@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
 
 @mixin flex($fd, $jc, $ai) {
     flex-direction: $fd;
@@ -11,14 +11,14 @@
 }
 
 * {
-    border: 1px solid;
+    // border: 1px solid;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    cursor: url('/assets/images/img_main/wand.png'), auto;
+    cursor: url("/assets/images/img_main/wand.png"), auto;
     background-color: #110727;
     color: goldenrod;
-    font-family: 'Platypi', serif;
+    font-family: "Platypi", serif;
 }
 
 header {
