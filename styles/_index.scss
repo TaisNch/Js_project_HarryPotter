@@ -1,3 +1,44 @@
+.bodycontainer {
+    display: flex;
+    min-height: 100vh;
+    @include flex(column, space-between, center);
+}
+.container_main {
+    display: flex;
+    @include flex(column, space-between, center);
+    .container__info {
+        margin-top: 2%;
+        align-content: center;
+        @include font(2vw, 500);
+        .container__greet {
+            text-align: center;
+            margin-top: 0.5%;
+        }
+        a {
+            text-decoration: none;
+            text-shadow:
+                1px 1px 2px red,
+                0 0 1em blue,
+                0 0 0.2em blue;
+        }
+    }
+}
+.hatbox {
+    display: inline-block;
+    height: 40vh;
+    width: 27%;
+    display: flex;
+    @include flex(column, center, center);
+    transition: transform 0.5s ease;
+    &:hover {
+        transform: scale(1.25);
+    }
+    #hat {
+        width: 100%;
+        max-height: 100%;
+    }
+}
+
 #hatText {
     display: inline;
     @include font(1.5vw, 500);

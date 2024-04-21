@@ -75,11 +75,6 @@ header {
         }
     }
 }
-.bodycontainer {
-    display: flex;
-    min-height: 100vh;
-    @include flex(column, space-between, center);
-}
 footer {
     display: flex;
     @include flex(column, center, center);
@@ -96,36 +91,6 @@ footer {
     }
 }
 
-.container_main {
-    display: flex;
-    @include flex(column, space-between, center);
-    .container__info {
-        margin-top: 2%;
-        align-content: center;
-        @include font(2vw, 500);
-        .container__greet {
-            text-align: center;
-            margin-top: 0.5%;
-        }
-        a {
-            text-decoration: none;
-            text-shadow:
-                1px 1px 2px red,
-                0 0 1em blue,
-                0 0 0.2em blue;
-        }
-    }
-    .hatbox {
-        height: 40vh;
-        width: 27%;
-        display: flex;
-        @include flex(column, center, center);
-        #hat {
-            width: 100%;
-            max-height: 100%;
-        }
-    }
-}
 .active {
     text-decoration: none;
     text-shadow:

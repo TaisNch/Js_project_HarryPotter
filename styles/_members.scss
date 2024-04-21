@@ -8,6 +8,7 @@
         justify-content: space-between;
         padding: 1%;
         overflow: auto;
+        overflow: hidden;
     }
     .container__info {
         padding: 1%;
@@ -23,12 +24,17 @@
 }
 .member {
     width: 100%;
+    display: inline-block;
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
     border: 1px solid;
     border-radius: 15px;
     padding: 2%;
+    transition: transform 0.2s ease;
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 .member__img {
     display: flex;
