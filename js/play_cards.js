@@ -17,7 +17,7 @@ if (!hasCardFlipped) {
 else {
     hasCardFlipped = false;
     secondCard = trgt;
-    checkForMatch()
+    checkForMatch();
 }
 };
 
@@ -31,10 +31,9 @@ const checkForMatch = () => {
        setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        reset()
+         reset();
        }, 1000)
-       blockLocked = false;
-       
+      
     }
 }
 

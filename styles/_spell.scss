@@ -15,6 +15,7 @@
 
 .spell__p {
     @include font(1.5vw, 500);
+
     padding: 1vh;
     text-align: center;
 }
@@ -32,10 +33,11 @@
     margin: auto;
 }
 .rndm__btn__p {
-    @include font(1.5vw, 500);
-    padding: 1vh;
+    @include font(1.1vw, 500);
+    background-color: goldenrod;
+    color: purple;
     text-align: center;
-}
+   }
 
 .rndm__wrapper {
     display: grid;
