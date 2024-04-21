@@ -270,7 +270,7 @@ footer a {
   margin: 0;
 }
 .form .agreement-wrap .form__agreement {
-  min-height: 2.5vh;
+  min-height: 2.5vw;
 }
 .form .error {
   color: red;
