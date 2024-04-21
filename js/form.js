@@ -134,7 +134,7 @@ const programUsers = [
         'George',
         'georgina.smith23@gmail.com',
         35,
-        'Female',
+        'female',
         'Hufflepuff',
         '',
         '',
@@ -443,9 +443,11 @@ function createMemberCard(members) {
         if (element !== '') {
             const memberCard = `
         <img  alt="House symbol" class="findfriend__housesymbol" src="${element.imgUrl}"/>
-        <div class="findfriend__username">Name: ${element.userName}</div>
-        <div class="finduser__info">House: ${element.userHouse}</div>
-        <div class="finduser__info">e-mail: ${element.userMail}</div>`;
+        <div class="findfriend__username">Name: <br>${element.userName}</div>
+        <div class="finduser__info">House: <br>${element.userHouse}</div>
+        <div class="finduser__info">Age: ${element.userAge} y.o.</div>
+        <div class="finduser__info">Sex: ${element.userSex}</div>
+        <div class="finduser__info">e-mail: <br>${element.userMail}</div>`;
             const member = document.createElement('div');
             member.classList.add('finduser__member');
             member.innerHTML = memberCard;

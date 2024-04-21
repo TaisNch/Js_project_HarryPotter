@@ -200,12 +200,14 @@ footer a {
   align-items: center;
   width: 100%;
   padding: 3% 0;
+  font-size: 2vw;
+  font-weight: 500;
 }
 .user .user__title {
   padding: 1%;
   margin-bottom: 5%;
-  font-size: 3vw;
-  font-weight: 700;
+  font-size: 2.5vw;
+  font-weight: 500;
 }
 .user .user__information {
   display: grid;
@@ -213,6 +215,17 @@ footer a {
   align-items: center;
   gap: 20px;
   width: 100%;
+}
+.user .usercard .usercard__label {
+  font-size: 2.5vw;
+  font-weight: 700;
+}
+.user .usercard .usercard__info {
+  margin: 20px 0;
+}
+.user .usercard .usercard__title {
+  padding: 1%;
+  margin-bottom: 5%;
 }
 
 .form {
@@ -242,15 +255,9 @@ footer a {
   min-width: 2.5vh;
   max-width: 50vh;
   min-height: 3.5vh;
-  font-size: 2.5vw;
-  font-weight: 500;
 }
 .form .form__sex {
   margin: 0;
-}
-.form .form__sex .form__minilabel {
-  font-size: 2.5vw;
-  font-weight: 500;
 }
 .form .form__input:required:valid {
   margin: 0;
@@ -259,17 +266,13 @@ footer a {
 .form .form__input::-webkit-input-placeholder {
   padding-left: 3%;
   color: silver;
-  font-size: 2.3vw;
-  font-weight: 500;
 }
 .form .form__input::-moz-placeholder {
   padding-left: 35%;
   color: silver;
-  font-size: 2.3vw;
-  font-weight: 500;
 }
 .form .input_sex {
-  min-height: 1vh;
+  min-height: 1.5vh;
   margin: 0;
   padding: 0;
 }
@@ -285,17 +288,10 @@ footer a {
   align-items: center;
   margin: 0;
 }
-.form .agreement-wrap .form__agreeText {
-  font-size: 2vw;
-  font-weight: 500;
-}
-.form .form__text {
-  font-size: 2vw;
-  font-weight: 500;
+.form .agreement-wrap .form__agreement {
+  min-height: 2.5vw;
 }
 .form .error {
-  font-size: 2.5vw;
-  font-weight: 700;
   color: red;
   margin: 0;
 }
@@ -309,62 +305,35 @@ footer a {
   font-weight: 700;
 }
 
-.usercard .usercard__label {
-  font-size: 2.5vw;
-  font-weight: 700;
-}
-.usercard .usercard__info {
-  font-size: 2.5vw;
-  font-weight: 500;
-  margin: 20px 0;
-}
-.usercard .usercard__title {
-  padding: 1%;
-  margin-bottom: 5%;
-  font-size: 2.7vw;
-  font-weight: 700;
-}
-
 .findfriend {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 2vw;
+  font-weight: 400;
 }
 .findfriend .findfriend__title {
   padding: 1%;
   margin-bottom: 2%;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: 700;
 }
-
-.findfriend__form {
+.findfriend .findfriend__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.findfriend__form .findfriend__input {
+.findfriend .findfriend__form .findfriend__input {
   margin: 0;
   border: 1px solid silver;
   border-radius: 5px;
   min-width: 2.5vh;
   max-width: 50vh;
   min-height: 3.5vh;
-  font-size: 2.5vw;
-  font-weight: 500;
 }
-.findfriend__form .findfriend__input::-webkit-input-placeholder {
-  color: silver;
-  font-size: 2.3vw;
-  font-weight: 500;
-}
-.findfriend__form .findfriend__input::-moz-placeholder {
-  color: silver;
-  font-size: 2.3vw;
-  font-weight: 500;
-}
-.findfriend__form .findfriend__button {
+.findfriend .findfriend__form .findfriend__button {
   margin: 10% 0;
   color: black;
   background-color: goldenrod;
@@ -374,21 +343,22 @@ footer a {
   font-size: 2.5vw;
   font-weight: 700;
 }
-
-.findfriend__result {
+.findfriend .findfriend__result {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 30vh);
+  grid-template-columns: repeat(auto-fit, 30vw);
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 1vw;
   width: 100%;
+  padding: 1%;
 }
-.findfriend__result .findfriend__username {
+.findfriend .findfriend__result .findfriend__username {
   font-size: 2.5vw;
   font-weight: 600;
+  padding-bottom: 1.5%;
 }
-.findfriend__result .finduser__info {
-  font-size: 2vw;
-  font-weight: 500;
+.findfriend .findfriend__result .finduser__info {
+  padding-bottom: 1.5%;
 }
 
 #hatText {
