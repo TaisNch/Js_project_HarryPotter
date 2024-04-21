@@ -7,19 +7,19 @@
     @include font(2vw, 500);
     .user__title {
         padding: 1%;
-        margin-bottom: 5%;
         @include font(2vw, 500);
     }
-    .user__information {
-        display: flex;
-        @include flex(row, space-between, center);
-        flex-wrap: wrap;
-        gap: 20px;
-        width: 100%;
-    }
     .usercard {
+        display: none;
+        @include font(2vw, 500);
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 3%;
+        margin-top: 3%;
         width: 40%;
         .usercard__housesymbol-wrap {
+            display: flex;
+            @include flex(row, center, center);
             width: 100%;
         }
         .usercard__housesymbol {
@@ -36,14 +36,11 @@
             margin-bottom: 5%;
         }
     }
-    .usercard_new {
-        @include font(2vw, 500);
-        border: 1px solid;
-        border-radius: 10px;
-        padding: 3%;
-    }
 }
 .form {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 3%;
     width: 40%;
     margin: 3%;
     display: flex;
@@ -51,7 +48,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
-    @include font(2vw, 500);
+    @include font(1.8vw, 500);
     .form__wrapper {
         display: flex;
         flex-direction: column;
@@ -107,6 +104,11 @@
         color: red;
         margin: 0;
     }
+    .button_wrap {
+        width: 100%;
+        display: flex;
+        @include flex(row, center, center);
+    }
     .form__button {
         min-height: 5vw;
         min-width: 15vw;
@@ -122,6 +124,7 @@
     display: flex;
     @include flex(column, center, center);
     @include font(2vw, 500);
+    background-color: transparent;
     .findfriend__title {
         padding: 1%;
         margin-bottom: 2%;

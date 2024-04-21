@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
 .play__p {
   font-size: 2vw;
   font-weight: 500;
@@ -106,6 +107,9 @@ header .header__center {
   align-items: center;
   gap: 10px;
 }
+header .header__center img {
+  background-color: transparent;
+}
 header .header__logo {
   width: 80%;
 }
@@ -179,23 +183,24 @@ footer a {
 }
 .user .user__title {
   padding: 1%;
-  margin-bottom: 5%;
   font-size: 2vw;
   font-weight: 500;
 }
-.user .user__information {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-}
 .user .usercard {
+  display: none;
+  font-size: 2vw;
+  font-weight: 500;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 3%;
+  margin-top: 3%;
   width: 40%;
 }
 .user .usercard .usercard__housesymbol-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 .user .usercard .usercard__housesymbol {
@@ -213,15 +218,11 @@ footer a {
   padding: 3%;
   margin-bottom: 5%;
 }
-.user .usercard_new {
-  font-size: 2vw;
-  font-weight: 500;
+
+.form {
   border: 1px solid;
   border-radius: 10px;
   padding: 3%;
-}
-
-.form {
   width: 40%;
   margin: 3%;
   display: flex;
@@ -229,7 +230,7 @@ footer a {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 30px;
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 500;
 }
 .form .form__wrapper {
@@ -287,6 +288,13 @@ footer a {
   color: red;
   margin: 0;
 }
+.form .button_wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .form .form__button {
   min-height: 5vw;
   min-width: 15vw;
@@ -305,6 +313,7 @@ footer a {
   align-items: center;
   font-size: 2vw;
   font-weight: 500;
+  background-color: transparent;
 }
 .findfriend .findfriend__title {
   padding: 1%;
@@ -504,6 +513,9 @@ header .header__center {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+}
+header .header__center img {
+  background-color: transparent;
 }
 header .header__logo {
   width: 80%;
@@ -758,6 +770,9 @@ header .header__center {
   align-items: center;
   gap: 10px;
 }
+header .header__center img {
+  background-color: transparent;
+}
 header .header__logo {
   width: 80%;
 }
@@ -817,4 +832,166 @@ footer a {
 }
 .btn_all:hover {
   box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  cursor: url("/assets/images/img_main/wand.png"), auto;
+  background-color: #110727;
+  color: goldenrod;
+  font-family: "Platypi", serif;
+}
+
+header {
+  min-height: 200px;
+  min-width: 100%;
+  border-bottom: 1px solid;
+}
+header .header__wrapper {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+header .header__wrapper a {
+  text-decoration: none;
+  font-size: 2vw;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__wrapper a:hover {
+  background-color: goldenrod;
+  color: #110727;
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
+}
+header .header__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+header .header__center img {
+  background-color: transparent;
+}
+header .header__logo {
+  width: 80%;
+}
+header .header__logo img {
+  max-width: 100%;
+}
+header #play {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  border: none;
+}
+header #play img:hover {
+  background-color: goldenrod;
+  border-radius: 50px;
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100px;
+  border-top: 1px solid;
+  font-size: 1.8vw;
+  font-weight: 500;
+}
+footer a {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.active {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
+}
+.active:hover {
+  text-shadow: 1px 1px 2px gold, 0 0 2em blue, 0 0 1em blue;
+}
+
+#logo:hover {
+  background-color: goldenrod;
+  border-radius: 100%;
+  box-shadow: 0 0 5px goldenrod, 0 0 25px goldenrod, 0 0 50px goldenrod, 0 0 200px goldenrod;
+}
+
+.btn_all {
+  color: black;
+  background-color: goldenrod;
+  border-radius: 10px;
+  padding: 1%;
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 3%;
+}
+.btn_all:hover {
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
+}
+
+.rating {
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+  min-height: 200px;
+  font-size: 2vw;
+  font-weight: 500;
+}
+.rating::after {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.rating .rating__box {
+  margin-bottom: 1rem;
+}
+.rating .rating__box .rating__emogi {
+  font-size: 4vw;
+  font-weight: 500;
+  height: 5vw;
+  margin-bottom: 1rem;
+}
+.rating .rating__box .rating__status {
+  font-size: 2vw;
+  font-weight: 500;
+  color: goldenrod;
+}
+.rating .rating__stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.rating .rating__stars .stars__item {
+  height: 5vw;
+  width: 5vw;
+  cursor: pointer;
+}
+.rating .rating__stars .stars__item svg {
+  fill: none;
+  width: 100%;
+  height: 100%;
+  stroke: none;
+  fill: gray;
+}
+.rating .rating__stars .selected svg,
+.rating .rating__stars .selected ~ .star svg {
+  fill: #ffc107;
+}
+.rating .rating__stars .stars__item:hover svg,
+.rating .rating__stars .stars__item:hover ~ .star svg {
+  fill: gold;
 }/*# sourceMappingURL=styles.css.map */
