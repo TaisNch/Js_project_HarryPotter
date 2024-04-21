@@ -18,6 +18,7 @@
 
 .play__cards {
   width: 70vw;
+  height: 70vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -26,7 +27,6 @@
 }
 
 .card {
-  background-color: plum;
   margin: 0;
   padding: 10px;
   width: 15vw;
@@ -42,6 +42,9 @@
 .card:active {
   transform: scale(0.95);
   transition: transform 0.3s;
+  background-color: goldenrod;
+  color: #110727;
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
 }
 
 .card.flip {
@@ -51,7 +54,7 @@
 .card__FF,
 .card__BF {
   width: 15vw;
-  height: 17vh;
+  height: 30vh;
   background-color: none;
   border-radius: 30px;
   position: absolute;
@@ -645,6 +648,8 @@ footer a {
 
 .rndm__btn:hover {
   cursor: pointer;
+  background-color: goldenrod;
+  box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
 }
 
 .rndm__btn:active {
