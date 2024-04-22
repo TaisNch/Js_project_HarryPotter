@@ -4,7 +4,7 @@ let blockLocked = false;
 let firstCard, secondCard;
 
 const flipCard = e => {
- if (blockLocked) return;
+if (blockLocked) return;
 const trgt= e.target.parentElement;
 
 if (trgt === firstCard) return;
@@ -41,25 +41,25 @@ const reset = () => {
     hasCardFlipped=blockLocked=false;
     firstCard=secondCard=null;
     }
+const game = ()=> {
+    cards.forEach(card => {
+        card.addEventListener('click', flipCard);
+        const rndmInex = Math.floor(Math.random()*cards.length);
+        card.style.order = rndmInex;
+    })
+}
 
-cards.forEach(card => {
-    card.addEventListener('click', flipCard);
-    const rndmInex = Math.floor(Math.random()*cards.length);
-    card.style.order = rndmInex;
-})
-
+game()
 const btnReStrt = document.getElementById('btnReStrt')
-
 btnReStrt.addEventListener('click', restart = ()=> {
     for (let i = 0; i < cards.length; i++) {
     if (cards[i].classList.contains("flip")) {
-        btnReStrt.setAttribute('disabled', false)
+        btnReStrt.setAttribute('disabled', false);
         cards[i].classList.remove("flip");
-        cards.forEach(card => {
-            card.addEventListener('click', flipCard);
-            const rndmInex = Math.floor(Math.random()*cards.length);
-            card.style.order = rndmInex;
-        })
+        game();
+        } 
+    else {
+        btnReStrt.setAttribute('disabled', true)
     }
   }
  });
