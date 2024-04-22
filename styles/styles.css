@@ -592,7 +592,6 @@ footer a {
   justify-content: space-between;
   padding: 1%;
   overflow: auto;
-  overflow: hidden;
 }
 .container .container__info {
   padding: 1%;
