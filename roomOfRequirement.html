@@ -6,7 +6,8 @@
         <link
             rel="shortcut icon"
             href="./assets/images/icon.ico"
-            type="image/x-icon" />
+            type="image/x-icon"
+        />
         <title>Room of Requirement</title>
         <link rel="stylesheet" href="styles/normalize.css" />
         <link rel="stylesheet" href="styles/styles.css" />
@@ -33,117 +34,131 @@
             <button id="play">
                 <img
                     src="./assets/images/img_main/speaker.svg"
-                    alt="Play music" />
+                    alt="Play music"
+                />
             </button>
             <audio id="audio" src="./assets/581.mp3"></audio>
         </header>
         <main>
             <h1 class="RRhello__h1">
                 Hello and welcome to the Room of Requirement! <br />Here you can
-                choose your spell of the day, play some games and fill up the
-                form to get to our community!
+                choose your spell of the day, play some games, fill up the form
+                to join our community and find some friends with similar
+                interests!
             </h1>
             <div class="spell">
                 <h2 class="spell__header h2">
-                    Choose your spell of the day - Press the button and you will
-                    see the spell
+                    Let's see what is your spell of the day - Press the button
+                    below!
                 </h2>
                 <div class="spell__rndm rndm">
                     <button class="rndm__btn btn_all" id="btn">
                         Cast a spell
                     </button>
                     <div class="rndm__wrapper">
-                        <p class="rndm__p" id="rndm__p">
-                            Let's see what's your spell of the day!
-                        </p>
-                        <p class="rndm__p" id="rndm__p1">What does it do?</p>
+                        <p class="rndm__p" id="rndm__p"></p>
+                        <p class="rndm__p" id="rndm__p1"></p>
                     </div>
                 </div>
             </div>
             <div class="play">
-                <p class="play__p">
-                    Let's play memory! Try to find two same cards!
-                </p>
+                <p class="play__p">Let's play memory! Find some pairs!</p>
                 <section class="play__cards cards">
                     <div class="cards__item card" data-framework="S">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/slytherin.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="S">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/slytherin.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="R">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/ravenclaw.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="R">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/ravenclaw.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="H">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/hufflepuff.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="H">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/hufflepuff.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="G">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/gryffindor.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                     <div class="cards__item card" data-framework="G">
                         <img
                             class="card__FF"
                             src="assets/images/img_main/gryffindor.png"
-                            alt="front_face" />
+                            alt="front_face"
+                        />
                         <img
                             class="card__BF"
                             src="/assets/images/img_main/logo.png"
-                            alt="back_face" />
+                            alt="back_face"
+                        />
                     </div>
                 </section>
                 <button class="btnReStrt btn_all" id="btnReStrt">
@@ -167,7 +182,8 @@
                             minlength="2"
                             maxlength="20"
                             id="userName"
-                            required />
+                            required
+                        />
                     </div>
                     <div class="form__wrapper">
                         <label for="userEmail" class="form__label"
@@ -179,7 +195,8 @@
                             class="form__input"
                             id="userEmail"
                             placeholder="your e-mail"
-                            required />
+                            required
+                        />
                     </div>
                     <div class="form__wrapper">
                         <label for="userAge" class="form__label"
@@ -193,9 +210,10 @@
                             min="0"
                             max="1000"
                             placeholder="your age"
-                            required />
+                            required
+                        />
                     </div>
-                    <div class="form__wrapper">
+                    <div class="form__wrapper" id="sex">
                         <div class="form__label">Sex</div>
                         <div class="form__sex">
                             <input
@@ -203,7 +221,8 @@
                                 class="form__input input_sex"
                                 type="radio"
                                 id="m"
-                                value="male" />
+                                value="male"
+                            />
                             <label for="m" class="form__minilabel">male</label>
                         </div>
                         <div class="form__sex">
@@ -212,8 +231,9 @@
                                 class="form__input input_sex"
                                 type="radio"
                                 id="w"
-                                value="female" />
-                            <label for="w" class="form__minilabel" id="sex"
+                                value="female"
+                            />
+                            <label for="w" class="form__minilabel"
                                 >female</label
                             >
                         </div>
@@ -226,7 +246,8 @@
                             name="house"
                             id="house"
                             class="form__input"
-                            required>
+                            required
+                        >
                             <option value="">your house</option>
                             <option value="Gryffindor">Gryffindor</option>
                             <option value="Ravenclaw">Ravenclaw</option>
@@ -250,7 +271,8 @@
                             placeholder="password"
                             required
                             minlength="8"
-                            pattern="^(?=.*\d)\w{8,}$" />
+                            pattern="^(?=.*\d)\w{8,}$"
+                        />
                     </div>
                     <div class="form__wrapper agreement-wrap">
                         <input
@@ -258,7 +280,8 @@
                             name="userAgreement"
                             value="I solemnly swear that I'm up to no good."
                             class="form__agreement userAgreement"
-                            required />
+                            required
+                        />
                         <span class="form__agreeText"
                             >I solemnly swear that I'm up to no good.
                         </span>
@@ -268,7 +291,8 @@
                             type="submit"
                             name="submitButton"
                             class="form__button btn_all"
-                            disabled>
+                            disabled
+                        >
                             Submit
                         </button>
                     </div>
@@ -276,7 +300,9 @@
                 <div class="user__card usercard"></div>
             </section>
             <section class="findfriend">
-                <h2 class="findfriend__title">Choose your new friend house</h2>
+                <h2 class="findfriend__title">
+                    Choose the house of your new friend
+                </h2>
                 <form name="findfriendForm" class="findfriend__form">
                     <select name="findHouse" class="findfriend__input">
                         <option value="">I don't care</option>
@@ -288,7 +314,8 @@
                     <button
                         type="submit"
                         name="findFormButton"
-                        class="findfriend__button btn_all">
+                        class="findfriend__button btn_all"
+                    >
                         Find a friend
                     </button>
                 </form>
@@ -310,10 +337,12 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="stars__svg feather feather-star">
+                            class="stars__svg feather feather-star"
+                        >
                             <polygon
                                 class="stars__poligon"
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
                         </svg>
                     </div>
                     <div class="stars__item star" data-rate="4">
@@ -326,10 +355,12 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="stars__svg feather feather-star">
+                            class="stars__svg feather feather-star"
+                        >
                             <polygon
                                 class="stars__poligon"
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
                         </svg>
                     </div>
                     <div class="stars__item star" data-rate="3">
@@ -342,10 +373,12 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="stars__svg feather feather-star">
+                            class="stars__svg feather feather-star"
+                        >
                             <polygon
                                 class="stars__poligon"
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
                         </svg>
                     </div>
                     <div class="stars__item star" data-rate="2">
@@ -358,10 +391,12 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="stars__svg feather feather-star">
+                            class="stars__svg feather feather-star"
+                        >
                             <polygon
                                 class="stars__poligon"
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
                         </svg>
                     </div>
                     <div class="stars__item star" data-rate="1">
@@ -374,10 +409,12 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="stars__svg feather feather-star">
+                            class="stars__svg feather feather-star"
+                        >
                             <polygon
                                 class="stars__poligon"
-                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                            ></polygon>
                         </svg>
                     </div>
                 </div>
@@ -405,7 +442,15 @@
                     >Irina</a
                 >
             </div>
-            <div>&copy; ItGirls, 2024</div>
+            <div>
+                &copy; training project for
+                <a
+                    href="https://itgirlschool.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >ITgirlsSchool</a
+                >, 2024
+            </div>
         </footer>
         <script src="js/random_spell.js"></script>
         <script src="js/play_cards.js"></script>

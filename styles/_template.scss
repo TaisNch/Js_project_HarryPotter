@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap");
 
 @mixin flex($fd, $jc, $ai) {
     flex-direction: $fd;
@@ -11,14 +11,13 @@
 }
 
 * {
-    // border: 1px solid;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    cursor: url('/assets/images/img_main/wand.png'), auto;
+    cursor: url("/assets/images/img_main/wand.png"), auto;
     background-color: #110727;
     color: goldenrod;
-    font-family: 'Platypi', serif;
+    font-family: "Platypi", serif;
 }
 
 header {
@@ -39,7 +38,10 @@ header {
             &:hover {
                 background-color: goldenrod;
                 color: #110727;
-                box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold,
+                box-shadow:
+                    0 0 5px gold,
+                    0 0 25px gold,
+                    0 0 50px gold,
                     0 0 200px gold;
             }
         }
@@ -67,7 +69,10 @@ header {
         img:hover {
             background-color: goldenrod;
             border-radius: 50px;
-            box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold,
+            box-shadow:
+                0 0 5px gold,
+                0 0 25px gold,
+                0 0 50px gold,
                 0 0 200px gold;
         }
     }
@@ -81,22 +86,34 @@ footer {
     @include font(1.8vw, 500);
     a {
         text-decoration: none;
-        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+        text-shadow:
+            1px 1px 2px red,
+            0 0 1em blue,
+            0 0 0.2em blue;
     }
 }
 
 .active {
     text-decoration: none;
-    text-shadow: 1px 1px 2px red, 0 0 2em blue, 0 0 1em blue;
+    text-shadow:
+        1px 1px 2px red,
+        0 0 2em blue,
+        0 0 1em blue;
     &:hover {
-        text-shadow: 1px 1px 2px gold, 0 0 2em blue, 0 0 1em blue;
+        text-shadow:
+            1px 1px 2px gold,
+            0 0 2em blue,
+            0 0 1em blue;
     }
 }
 
 #logo:hover {
     background-color: goldenrod;
     border-radius: 100%;
-    box-shadow: 0 0 5px goldenrod, 0 0 25px goldenrod, 0 0 50px goldenrod,
+    box-shadow:
+        0 0 5px goldenrod,
+        0 0 25px goldenrod,
+        0 0 50px goldenrod,
         0 0 200px goldenrod;
 }
 .btn_all {
@@ -107,6 +124,10 @@ footer {
     @include font(2.5vw, 700);
     margin-bottom: 3%;
     &:hover {
-        box-shadow: 0 0 5px gold, 0 0 25px gold, 0 0 50px gold, 0 0 200px gold;
+        box-shadow:
+            0 0 5px gold,
+            0 0 25px gold,
+            0 0 50px gold,
+            0 0 200px gold;
     }
 }
